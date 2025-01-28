@@ -8,7 +8,7 @@
 #import "URLBlockerRuleController.h"
 #import "URLBlocker.h"
 
-#import "OnionBrowser-Swift.h"
+#import "AnyoneBrowser-Swift.h"
 
 @implementation URLBlockerRuleController
 

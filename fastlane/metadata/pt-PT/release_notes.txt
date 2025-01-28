@@ -1,4 +1,0 @@
-- Corrigido o erro em que um transporte selecionado era ignorado durante o arranque e só tinha efeito depois de o alterar.
-- Atualização do Tor para a versão mais recente 0.4.8.13.
-- Atualização do Snowflake para a versão mais recente 2.10.1.
-- Atualização do Lyrebird para a versão mais recente 0.5.0.

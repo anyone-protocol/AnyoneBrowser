@@ -1,4 +1,0 @@
-- Fixed bug where a selected transport was ignored during startup and only took effect after changing it.
-- Updated Tor to latest version 0.4.8.13.
-- Updated Snowflake to latest version 2.10.1.
-- Updated Lyrebird to latest version 0.5.0.

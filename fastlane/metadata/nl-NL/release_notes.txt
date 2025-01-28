@@ -1,4 +1,0 @@
-- Bug opgelost waarbij een geselecteerd transport werd genegeerd tijdens het opstarten en pas van kracht werd na het wijzigen ervan.
-- Tor bijgewerkt naar de nieuwste versie 0.4.8.13.
-- Snowflake bijgewerkt naar de nieuwste versie 2.10.1.
-- Lyrebird bijgewerkt naar de nieuwste versie 0.5.0.

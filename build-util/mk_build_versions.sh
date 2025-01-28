@@ -37,7 +37,7 @@ OB_BUNDLE_VERSION="${MINUTES_SINCE_DATE}"."${DECIMALIZED_GIT_HASH}"
 echo $OB_BUNDLE_SHORT_VERSION_STRING
 echo $OB_BUNDLE_VERSION
 
-cat <<EOF > "${SRCROOT}"/OnionBrowser/version.h
+cat <<EOF > "${SRCROOT}"/AnyoneBrowser/version.h
 #define OBBundleShortVersionString ${OB_BUNDLE_SHORT_VERSION_STRING}
 #define OBBundleVersion ${OB_BUNDLE_VERSION}
 EOF

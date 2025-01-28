@@ -6,7 +6,7 @@ platform :ios, '15.0'
 #source 'https://cocoapods-cdn.netlify.app/'
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'OnionBrowser' do
+target 'AnyoneBrowser' do
   pod 'DTFoundation/DTASN1'
   pod 'TUSafariActivity'
 
@@ -28,7 +28,7 @@ target 'OnionBrowser' do
   pod 'OrbotKit', '~> 1.1'
 end
 
-target 'OnionBrowser Tests' do
+target 'AnyoneBrowser Tests' do
   pod 'OCMock'
   pod 'DTFoundation/DTASN1'
 end
