@@ -103,7 +103,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		BlurredSnapshot.remove()
 
-		let vc = OrbotManager.shared.checkStatus()
+		let vc = AnonManager.shared.checkStatus()
 
 		show(vc)
 

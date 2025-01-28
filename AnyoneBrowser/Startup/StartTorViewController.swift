@@ -72,7 +72,7 @@ class StartTorViewController: UIViewController {
 					tab.reinitWebView()
 				}
 
-				self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
+				self?.view.sceneDelegate?.show(AnonManager.shared.checkStatus())
 			}
 		}
 	}

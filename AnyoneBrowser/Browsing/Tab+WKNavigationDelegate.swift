@@ -23,7 +23,7 @@ extension Tab: WKNavigationDelegate {
 			return decisionHandler(.cancel, preferences)
 		}
 
-		guard OrbotManager.shared.allowRequests() else {
+		guard AnonManager.shared.allowRequests() else {
 			return decisionHandler(.cancel, preferences)
 		}
 

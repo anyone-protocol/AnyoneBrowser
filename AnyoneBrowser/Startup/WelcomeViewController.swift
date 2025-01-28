@@ -34,6 +34,6 @@ class WelcomeViewController: UIViewController {
 	func next() {
 		Settings.didWelcome = true
 
-		view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
+		view.sceneDelegate?.show(AnonManager.shared.checkStatus())
 	}
 }

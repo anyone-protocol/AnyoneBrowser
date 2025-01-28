@@ -236,6 +236,30 @@ class AnonManager {
 	}
 
 
+	/**
+	 Check's Anyone's status, and if not working, returns a view controller to show instead of the browser UI.
+
+	 - returns: A view controller to show instead of the browser UI, if status is not good.
+	 */
+	func checkStatus() -> UIViewController? {
+		if !Settings.didWelcome {
+			return WelcomeViewController()
+		}
+
+		if status == .started {
+			// Built-in Anyone running. Ok.
+			return nil
+		}
+
+		// No built-in Anyone running. Let the user start it!
+		return StartTorViewController()
+	}
+
+	func allowRequests() -> Bool {
+		return status == .started
+	}
+
+
 	// MARK: Private Methods
 
 	private func log(_ message: String) {
