@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Закладки";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Конфигурация моста";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Бронзовый";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Закрыть вкладку";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Настроить мосты";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Подключитесь к веб-сайту, чтобы увидеть вашу схему.";

@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Бележници";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Мост конфигурација";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Бронзено";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Затвори таб";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Конфигурирање на мостови";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Поврзи се на веб страна за да го видите вашиот круг.";

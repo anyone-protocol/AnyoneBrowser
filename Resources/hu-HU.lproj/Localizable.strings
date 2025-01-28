@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Könyvjelzők";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Híd konfiguráció";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronz";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Fül bezárása";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Hidak konfigurálása";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Csatlakozzon egy weboldalhoz, hogy megtekinthesse áramkörét.";

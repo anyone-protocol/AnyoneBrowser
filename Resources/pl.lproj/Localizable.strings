@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Zakładki";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Konfiguracja Mostu";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Brązowy";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Zamknij Kartę";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Konfiguruj Mosty";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Połącz się z witryną, aby zobaczyć swój obwód.";

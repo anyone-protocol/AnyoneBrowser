@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "お気に入り";
 
-/* CircuitViewController */
-"Bridge Configuration" = "ブリッジの設定";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "ブロンズ";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "タブを閉じる";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "ブリッジの設定";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "ウェブサイトに接続して、経路を確認して下さい。";

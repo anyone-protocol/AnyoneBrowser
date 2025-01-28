@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Dấu trang";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Cài đặt Cầu nối";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Đồng";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Đóng cửa sổ";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Cài đặt cầu nối";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Kết nối tới một trang web để xem mạch Tor của bạn.";

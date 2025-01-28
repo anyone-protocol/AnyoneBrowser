@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Leabharmharcanna";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Cumraíocht Droichid";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Cré-Umha";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Dún an Cluaisín";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Cumraigh Droichid";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Ceangail le suíomh Gréasáin chun an ciorcad a fheiceáil.";

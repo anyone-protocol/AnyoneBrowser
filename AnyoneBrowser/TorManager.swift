@@ -8,7 +8,6 @@
 
 import NetworkExtension
 import Tor
-import IPtProxyUI
 import Network
 
 
@@ -61,47 +60,35 @@ class TorManager {
 
 	private lazy var controllerQueue = DispatchQueue.global(qos: .userInitiated)
 
-	private var transport = Transport.none
-
-	private var ipStatus = IpSupport.Status.unavailable
+//	private var ipStatus = IpSupport.Status.unavailable
 
 	private var progressObs: Any?
 	private var establishedObs: Any?
 
 
 	private init() {
-		IpSupport.shared.start({ [weak self] status in
-			self?.ipStatus = status
-
-			if (self?.torRunning ?? false) && (self?.torController?.isConnected ?? false) {
-				self?.torController?.setConfs(status.torConf(self?.transport ?? .none, Transport.asConf))
-				{ success, error in
-					if let error = error {
-						self?.log("error: \(error)")
-					}
-
-					self?.torController?.resetConnection()
-				}
-			}
-		})
+//		IpSupport.shared.start({ [weak self] status in
+//			self?.ipStatus = status
+//
+//			if (self?.torRunning ?? false) && (self?.torController?.isConnected ?? false) {
+//				self?.torController?.setConfs(status.torConf(self?.transport ?? .none, Transport.asConf))
+//				{ success, error in
+//					if let error = error {
+//						self?.log("error: \(error)")
+//					}
+//
+//					self?.torController?.resetConnection()
+//				}
+//			}
+//		})
 	}
 
-	func start(_ transport: Transport,
-			   _ progressCallback: @escaping (_ progress: Int?) -> Void,
+	func start(_ progressCallback: @escaping (_ progress: Int?) -> Void,
 			   _ completion: @escaping (Error?) -> Void)
 	{
 		status = .starting
 
-		self.transport = transport
-
 		if !torRunning {
-			do {
-				try startTransport()
-			}
-			catch {
-				return completion(error)
-			}
-
 			torConf = getTorConf()
 
 //			if let debug = torConf?.compile().joined(separator: ", ") {
@@ -111,9 +98,6 @@ class TorManager {
 			torThread = TorThread(configuration: torConf)
 
 			torThread?.start()
-		}
-		else {
-			updateConfig(transport)
 		}
 
 		controllerQueue.asyncAfter(deadline: .now() + 0.65) {
@@ -209,42 +193,6 @@ class TorManager {
 		}
 	}
 
-	func updateConfig(_ transport: Transport) {
-		self.transport = transport
-
-		do {
-			try startTransport()
-		}
-		catch {
-			return log("error=\(error)")
-		}
-
-		guard let torController = torController else {
-			return
-		}
-
-		let group = DispatchGroup()
-
-		let resetKeys = ["UseBridges", "ClientTransportPlugin", "Bridge",
-						 "EntryNodes", "ExitNodes", "ExcludeNodes", "StrictNodes"]
-
-		for key in resetKeys {
-			group.enter()
-
-			torController.resetConf(forKey: key) { [weak self] _, error in
-				if let error = error {
-					self?.log("error=\(error)")
-				}
-
-				group.leave()
-			}
-
-			group.wait()
-		}
-
-		torController.setConfs(transportConf(Transport.asConf))
-	}
-
 	func stop() {
 		status = .stopped
 
@@ -258,8 +206,6 @@ class TorManager {
 		torThread = nil
 
 		torConf = nil
-
-		transport.stop()
 	}
 
 	func getCircuits(_ completion: @escaping ([TorCircuit]) -> Void) {
@@ -312,8 +258,7 @@ class TorManager {
 		conf.geoip6File = Bundle.geoIp?.geoip6File
 
 		var arguments = [String]()
-		arguments.append(contentsOf: transportConf(Transport.asArguments).joined())
-		arguments.append(contentsOf: ipStatus.torConf(transport, Transport.asArguments).joined())
+//		arguments.append(contentsOf: ipStatus.torConf(transport, Transport.asArguments).joined())
 
 		// Urgh. Transports and IP settings where ignored on first start.
 		// Careful: `arguments as? NSMutableCopy == nil`
@@ -335,27 +280,5 @@ class TorManager {
 			"SocksPort": "auto"]
 
 		return conf
-	}
-
-	private func transportConf<T>(_ cv: (String, String) -> T) -> [T] {
-
-		var arguments = transport.torConf(cv)
-
-		if transport == .custom, let bridgeLines = Settings.customBridges {
-			arguments += bridgeLines.map({ cv("Bridge", $0) })
-		}
-
-		arguments.append(cv("UseBridges", transport == .none ? "0" : "1"))
-
-		return arguments
-	}
-
-	private func startTransport() throws {
-		Transport.custom.stop()
-		Transport.meekAzure.stop()
-		Transport.obfs4.stop()
-		Transport.snowflake.stop()
-
-		try transport.start()
 	}
 }

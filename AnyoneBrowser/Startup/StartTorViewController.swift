@@ -9,9 +9,8 @@
 //
 
 import UIKit
-import IPtProxyUI
 
-class StartTorViewController: UIViewController, BridgesConfDelegate {
+class StartTorViewController: UIViewController {
 
 	@IBOutlet weak var titleLb: UILabel! {
 		didSet {
@@ -31,42 +30,11 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 
 	@IBOutlet weak var errorLb: UILabel!
 
-	@IBOutlet weak var bridgesBt: UIButton! {
-		didSet {
-			bridgesBt.setTitle(NSLocalizedString("Configure Bridges", comment: ""))
-		}
-	}
-
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
 		retry()
-	}
-
-
-	// MARK: BridgesConfDelegate
-
-	var transport: IPtProxyUI.Transport {
-		get {
-			Settings.transport
-		}
-		set {
-			Settings.transport = newValue
-		}
-	}
-
-	var customBridges: [String]? {
-		get {
-			Settings.customBridges
-		}
-		set {
-			Settings.customBridges = newValue
-		}
-	}
-
-	func save() {
-		TorManager.shared.updateConfig(Settings.transport)
 	}
 
 
@@ -79,7 +47,7 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 		progressView.progress = 0
 		errorLb.isHidden = true
 
-		TorManager.shared.start(Settings.transport) { [weak self] progress in
+		TorManager.shared.start() { [weak self] progress in
 			guard let progress = progress else {
 				return
 			}
@@ -107,13 +75,5 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 				self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
 			}
 		}
-	}
-
-	@IBAction
-	func configureBridges() {
-		let vc = BridgesConfViewController()
-		vc.delegate = self
-
-		present(UINavigationController(rootViewController: vc))
 	}
 }

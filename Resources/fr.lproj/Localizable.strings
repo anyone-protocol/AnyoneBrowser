@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Marque-pages";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Configuration des ponts";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronze";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Fermer l’onglet";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Configurer des ponts";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Connectez-vous à un site Web pour visualiser votre circuit.";

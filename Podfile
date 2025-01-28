@@ -19,11 +19,6 @@ target 'AnyoneBrowser' do
   pod 'Tor/GeoIP',
     '~> 408.13'
 #    :path => '../Tor.framework'
-
-  pod 'IPtProxyUI',
-    '~> 4.7'
-#    :git => 'https://github.com/tladesignz/IPtProxyUI-ios'
-#    :path => '../IPtProxyUI'
 end
 
 target 'AnyoneBrowser Tests' do

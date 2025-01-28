@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "סימניות";
 
-/* CircuitViewController */
-"Bridge Configuration" = "תצורת גשר";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "ארד";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "סגור לשונית";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "תצר גשרים";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "התחבר אל אתר כדי לראות את המעגל שלך.";

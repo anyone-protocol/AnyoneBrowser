@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Закладки";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Налаштування Мосту";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Бронза";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Закрити вкладку";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Налаштувати Мости";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Під'єднайтесь до вебсайту, щоб побачити свій ланцюг.";

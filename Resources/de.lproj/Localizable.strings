@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Lesezeichen";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Brückenkonfiguration";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronze";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Schließe Reiter";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Konfiguriere Brücken";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Website aufrufen, um den Kanal zu sehen.";

@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartTorViewController" customModule="OnionBrowser" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartTorViewController" customModule="AnyoneBrowser" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="IBe-eF-CC3" id="Vii-kW-xIs"/>
-                <outlet property="bridgesBt" destination="L2B-a3-z1h" id="RvA-Fd-Mql"/>
                 <outlet property="errorLb" destination="NND-ut-fqm" id="ABM-zl-lcc"/>
                 <outlet property="progressView" destination="W12-Kd-f1x" id="4hU-m7-plB"/>
                 <outlet property="retryBt" destination="FTE-nZ-cuA" id="jrA-KQ-QrU"/>
@@ -30,7 +28,7 @@
                     <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2x-hQ-zT8">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="433"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="301.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-onion-browser" translatesAutoresizingMaskIntoConstraints="NO" id="SkE-MW-aJG">
                                     <rect key="frame" x="128" y="64" width="64" height="64"/>
@@ -54,7 +52,7 @@
                                     <rect key="frame" x="141.5" y="193" width="37" height="40"/>
                                 </activityIndicatorView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="FTE-nZ-cuA">
-                                    <rect key="frame" x="76" y="193" width="168" height="40"/>
+                                    <rect key="frame" x="96" y="193" width="128" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="Sss-zD-1nm"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="lCQ-Y9-Irf"/>
@@ -84,44 +82,23 @@
                                     <color key="textColor" systemColor="systemRedColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="L2B-a3-z1h">
-                                    <rect key="frame" x="76" y="373" width="168" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="nHi-eh-tfn"/>
-                                        <constraint firstAttribute="height" constant="40" id="prt-uE-Hqo"/>
-                                    </constraints>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Configure Bridges">
-                                        <backgroundConfiguration key="background">
-                                            <color key="backgroundColor" name="Accent"/>
-                                        </backgroundConfiguration>
-                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </buttonConfiguration>
-                                    <connections>
-                                        <action selector="configureBridges" destination="-1" eventType="touchUpInside" id="oFq-wj-hN9"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="3xa-ZU-uuf" firstAttribute="top" secondItem="SkE-MW-aJG" secondAttribute="bottom" constant="8" symbolic="YES" id="59N-rl-zCX"/>
                                 <constraint firstAttribute="trailing" secondItem="3xa-ZU-uuf" secondAttribute="trailing" constant="20" symbolic="YES" id="9Bh-eu-6dx"/>
                                 <constraint firstItem="NND-ut-fqm" firstAttribute="top" secondItem="W12-Kd-f1x" secondAttribute="bottom" constant="8" symbolic="YES" id="Bfx-rG-ch8"/>
-                                <constraint firstItem="L2B-a3-z1h" firstAttribute="width" secondItem="FTE-nZ-cuA" secondAttribute="width" id="BkW-Am-ddf"/>
                                 <constraint firstItem="W12-Kd-f1x" firstAttribute="top" secondItem="IBe-eF-CC3" secondAttribute="bottom" constant="16" id="C8h-LM-aWP"/>
                                 <constraint firstItem="W12-Kd-f1x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G2x-hQ-zT8" secondAttribute="leading" constant="20" symbolic="YES" id="D4M-ym-gHZ"/>
                                 <constraint firstItem="NND-ut-fqm" firstAttribute="leading" secondItem="G2x-hQ-zT8" secondAttribute="leading" constant="20" symbolic="YES" id="DfF-c4-Ffa"/>
+                                <constraint firstAttribute="bottom" secondItem="NND-ut-fqm" secondAttribute="bottom" constant="20" symbolic="YES" id="G0M-Vz-vLV"/>
                                 <constraint firstItem="W12-Kd-f1x" firstAttribute="centerX" secondItem="G2x-hQ-zT8" secondAttribute="centerX" id="Hvx-Ve-vW9"/>
                                 <constraint firstAttribute="trailing" secondItem="NND-ut-fqm" secondAttribute="trailing" constant="20" symbolic="YES" id="Nx7-7d-ndJ"/>
-                                <constraint firstItem="L2B-a3-z1h" firstAttribute="centerX" secondItem="G2x-hQ-zT8" secondAttribute="centerX" id="P2g-GM-kJq"/>
-                                <constraint firstItem="L2B-a3-z1h" firstAttribute="top" secondItem="W12-Kd-f1x" secondAttribute="bottom" constant="120" id="TPY-vb-sme"/>
                                 <constraint firstItem="SkE-MW-aJG" firstAttribute="top" secondItem="G2x-hQ-zT8" secondAttribute="top" constant="64" id="Vbb-tl-Cgj"/>
                                 <constraint firstItem="W12-Kd-f1x" firstAttribute="top" secondItem="FTE-nZ-cuA" secondAttribute="bottom" constant="16" id="acy-8B-bcI"/>
                                 <constraint firstItem="3xa-ZU-uuf" firstAttribute="leading" secondItem="G2x-hQ-zT8" secondAttribute="leading" constant="20" symbolic="YES" id="cep-de-e16"/>
                                 <constraint firstItem="FTE-nZ-cuA" firstAttribute="top" secondItem="3xa-ZU-uuf" secondAttribute="bottom" constant="16" id="e17-2M-2Nf"/>
                                 <constraint firstItem="IBe-eF-CC3" firstAttribute="top" secondItem="3xa-ZU-uuf" secondAttribute="bottom" constant="16" id="esR-Oc-1qk"/>
-                                <constraint firstAttribute="bottom" secondItem="L2B-a3-z1h" secondAttribute="bottom" constant="20" symbolic="YES" id="gzs-Qv-fPE"/>
                                 <constraint firstItem="SkE-MW-aJG" firstAttribute="centerX" secondItem="G2x-hQ-zT8" secondAttribute="centerX" id="ls7-ZW-YWw"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W12-Kd-f1x" secondAttribute="trailing" constant="20" symbolic="YES" id="mBS-iq-W4n"/>
                                 <constraint firstItem="IBe-eF-CC3" firstAttribute="centerX" secondItem="G2x-hQ-zT8" secondAttribute="centerX" id="oK9-s6-8VT"/>

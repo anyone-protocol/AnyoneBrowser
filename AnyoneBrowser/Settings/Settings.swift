@@ -9,7 +9,6 @@
 //
 
 import UIKit
-import IPtProxyUI
 
 struct SearchEngine: Equatable {
 
@@ -126,34 +125,7 @@ enum TabSecurityLevel: String, CustomStringConvertible {
 
 
 @objcMembers
-class Settings: IPtProxyUI.Settings {
-
-	private static let transportTranslationTable = [
-		// Type .none is identical in IPtProxyUI and OnionBrowser.
-		0: 0,
-
-		// Type .obfs4 is identical in IPtProxyUI and OnionBrowser.
-		1: 1,
-
-		// Deprecated legacy type .meekamazon. Retaining this number for future use if meek-amazon comes back.
-		2: 0,
-
-		/**
-		Deprecated legacy type .meekazure. Retaining this number for future use if meek-azure comes back.
-
-		Microsoft announced to start blocking domain fronting:
-		[Microsoft: Securing our approach to domain fronting within Azure](https://www.microsoft.com/security/blog/2021/03/26/securing-our-approach-to-domain-fronting-within-azure/)
-		*/
-		3: 0,
-
-		// Type .snowflake is 4 in OnionBrowser and 2 in IPtProxyUI.
-		4: 2,
-
-		// Type .snowflakeAmp is 5 in OnionBrowser and 4 in IPtProxyUI.
-		5: 4,
-
-		// Type .custom is 99 in OnionBrowser and 3 in IPtProxyUI.
-		99: 3]
+class Settings {
 
 
 	class var stateRestoreLock: Bool {

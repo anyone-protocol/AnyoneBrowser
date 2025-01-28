@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Kirjamerkit";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Silltamääritys";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Pronssi";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Sulje välilehti";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Määritä sillat";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Yhdistä sivustoon nähdäksesi ketjusi.";

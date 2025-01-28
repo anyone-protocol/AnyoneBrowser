@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "書籤";
 
-/* CircuitViewController */
-"Bridge Configuration" = "橋接器設定";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "銅級";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "關閉分頁";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "設定橋接器";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "連到某個網站以查看您的迴路狀況。";

@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Bókamerki";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Uppsetning brúa";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Brons";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Loka flipa";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Stilla brýr";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Tengstu við vefsvæði til að sjá rásina þína.";

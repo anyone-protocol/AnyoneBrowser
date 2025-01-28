@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Кыстыргычлар";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Күпер көйләве";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Бакыр";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Табны ябу";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Күперләрне көйләү";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Схемагызны карау өчен вебсайтка тоташыгыз.";

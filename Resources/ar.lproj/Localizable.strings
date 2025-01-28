@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "الإشارات المرجعية";
 
-/* CircuitViewController */
-"Bridge Configuration" = "إعدادات الجسر";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "برونز";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "إغلاق التبويبة ";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "ضبط الجسور";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "اتصل بموقع على شبكة الإنترنت لرؤية دائرتك.";

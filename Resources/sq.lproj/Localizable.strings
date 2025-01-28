@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Fletëshënues";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Formësim Ure";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "E bronxtë";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Mbylle Skedën";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Formësoni Ura";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Që të shihni qarkun tuaj, lidhuni me një sajt.";

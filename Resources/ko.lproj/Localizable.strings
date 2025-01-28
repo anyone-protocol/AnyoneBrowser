@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "북마크";
 
-/* CircuitViewController */
-"Bridge Configuration" = "브리지 구성";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "브론즈";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "탭 닫기";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "브릿지 구성";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "웹사이트에 연결하여 우회로를 확인합니다.";

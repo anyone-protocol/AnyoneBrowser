@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Marcadors";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Configuració dels ponts";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronze";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Tanca la pestanya";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Configura els ponts";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Connecteu a un lloc web per a veure el vostre circuit.";

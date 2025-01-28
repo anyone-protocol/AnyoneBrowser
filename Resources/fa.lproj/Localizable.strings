@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "بوکمارک‌ها";
 
-/* CircuitViewController */
-"Bridge Configuration" = "پیکربندی پل";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "برنزی";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "بستن تب";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "پیکربندی پل ها";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "اتصال به یک سایت برای دیدن چرخه خود.";

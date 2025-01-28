@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "বুকমার্কসমূহ";
 
-/* CircuitViewController */
-"Bridge Configuration" = "ব্রিজ কনফিগারেশন";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronze";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "ট্যাব বন্ধ করুন";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "ব্রিজগুলি কনফিগার করুন";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Connect to a website to see your circuit.";

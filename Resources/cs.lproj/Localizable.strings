@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Záložky";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Konfigurace mostu";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronz";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Zavřít panel";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Nastavit bridge";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Ke zobrazení vašeho Tor okruhu se připojte k nějaké webové stránce.";

@@ -10,7 +10,6 @@
 
 import UIKit
 import AVFoundation
-import IPtProxyUI
 
 @UIApplicationMain
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -66,8 +65,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		adjustMuteSwitchBehavior()
 
 		DownloadHelper.purge()
-
-		Settings.stateLocation = FileManager.default.ptDir!
 
 		return true
 	}

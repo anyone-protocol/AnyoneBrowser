@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "ទីចំណាំ";
 
-/* CircuitViewController */
-"Bridge Configuration" = "ការកំណត់ Bridge";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "សំរឹទ្ធ";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "បិទផ្ទាំង";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "កំណត់ Bridges";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "តភ្ជាប់​ទៅកាន់​វែបសាយ​ដើម្បី​មើល​ច្រក​របស់​អ្នក។";

@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Yer imleri";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Köprü yapılandırması";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronz";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Sekmeyi kapat";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Köprü yapılandırması";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Devrenizi görebilmek için bir web sitesine bağlanın.";

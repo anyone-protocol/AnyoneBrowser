@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "ที่คั่นหน้า";
 
-/* CircuitViewController */
-"Bridge Configuration" = "การปรับแต่งสะพาน";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "ทองแดง";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "ปิดแถบ";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Configure Bridges";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Connect to a website to see your circuit.";

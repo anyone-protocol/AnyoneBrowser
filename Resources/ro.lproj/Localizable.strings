@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Semne de carte";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Configurație Pod";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Bronz";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Închide Fereastra";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Configurare Poduri";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Conectează-te la un site web pentru a-ți vedea circuitul.";

@@ -10,10 +10,9 @@
 
 import UIKit
 import Tor
-import IPtProxyUI
 
 class CircuitViewController: UIViewController, UIPopoverPresentationControllerDelegate,
-							 UITableViewDataSource, UITableViewDelegate, BridgesConfDelegate 
+							 UITableViewDataSource, UITableViewDelegate
 {
 
 	struct Node {
@@ -61,13 +60,6 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 		didSet {
 			newCircuitsBt.setTitle(NSLocalizedString(
                 "New Circuit for this Site", comment: ""))
-		}
-	}
-
-	@IBOutlet weak var bridgeConfigBt: UIButton! {
-		didSet {
-			bridgeConfigBt.setTitle(NSLocalizedString(
-                "Bridge Configuration", comment: ""))
 		}
 	}
 
@@ -133,31 +125,6 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 	}
 
 
-	// MARK: BridgesConfDelegate
-
-	var transport: IPtProxyUI.Transport {
-		get {
-			Settings.transport
-		}
-		set {
-			Settings.transport = newValue
-		}
-	}
-
-	var customBridges: [String]? {
-		get {
-			Settings.customBridges
-		}
-		set {
-			Settings.customBridges = newValue
-		}
-	}
-
-	func save() {
-		TorManager.shared.updateConfig(Settings.transport)
-	}
-
-
 	// MARK: Actions
 
 	@IBAction func newCircuits() {
@@ -168,13 +135,6 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 		}
 
 		TorManager.shared.close(usedCircuits.compactMap({ $0.circuitId }), completion)
-	}
-
-	@IBAction func showBridgeSelection(_ sender: UIView) {
-		let vc = BridgesConfViewController()
-		vc.delegate = self
-
-		present(UINavigationController(rootViewController: vc))
 	}
 
 	private func reloadCircuits() {

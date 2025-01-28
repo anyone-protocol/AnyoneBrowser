@@ -67,9 +67,6 @@
 /* BookmarksViewController */
 "Bookmarks" = "Penanda";
 
-/* CircuitViewController */
-"Bridge Configuration" = "Konfigurasi Jembatan";
-
 /* SecurityPresetsRow; a security level */
 "Bronze" = "Perunggu";
 
@@ -93,9 +90,6 @@
 
 /* AppDelegate */
 "Close Tab" = "Tutup Tab";
-
-/* No comment provided by engineer. */
-"Configure Bridges" = "Konfigurasikan Jembatan";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Hubungkan ke situs web untuk melihat sirkuit Anda.";
