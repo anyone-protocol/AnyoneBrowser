@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Tillat vedvarende informasjonskapsler";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Identitetsbekreftelse kreves";
 
@@ -389,13 +392,10 @@
 "Silver" = "Silver";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Stopp automatisk fullføring etter første prikk";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Abonner på Tor-nyhetsbrevet";
 
 /* SettingsViewController */
 "Support" = "Brukerstøtte";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLS-protokollfeil";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor-krets";
 
 /* SyncViewController */
 "Try Again" = "Try Again";

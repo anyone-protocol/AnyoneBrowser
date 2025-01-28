@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "永続的クッキーを許可";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "認証が必要です";
 
@@ -389,13 +392,10 @@
 "Silver" = "シルバー";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Torを開始…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "最初のドットでオートコンプリートを停止する";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Torニュースレターを購読";
 
 /* SettingsViewController */
 "Support" = "サポート";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLSプロトコールのエラー";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor経路";
 
 /* SyncViewController */
 "Try Again" = "再試行する";

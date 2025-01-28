@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Povolit trvalé cookies";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Vyžadována autentizace";
 
@@ -389,13 +392,10 @@
 "Silver" = "Stříbro";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Zastavit našeptávač po první tečce";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Přihlásit se k odběru Tor novinek";
 
 /* SettingsViewController */
 "Support" = "Podpora";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Chyba protokolu TLS";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor okruh";
 
 /* SyncViewController */
 "Try Again" = "Zkusit znovu";

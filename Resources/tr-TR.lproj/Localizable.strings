@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Kalıcı çerezler kullanılabilsin";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Kimlik doğrulaması gerekli";
 
@@ -389,13 +392,10 @@
 "Silver" = "Gümüş";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Tor başlatılıyor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Otomatik tamamlama ilk nokta konulduğunda durdurulsun";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Tor bültenine abone olun";
 
 /* SettingsViewController */
 "Support" = "Destek";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLS iletişim kuralı sorunu";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor devresi";
 
 /* SyncViewController */
 "Try Again" = "Yeniden dene";

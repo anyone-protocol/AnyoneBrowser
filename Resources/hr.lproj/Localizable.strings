@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Dozvoli trajne kolačiće";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Potrebna je autentifikacija";
 
@@ -389,13 +392,10 @@
 "Silver" = "Srebro";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Prekini automatsko dovršavanje pri prvoj točci";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Pretplati se na bilten";
 
 /* SettingsViewController */
 "Support" = "Podrška";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Greška TLS protokola";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Sklop Tora";
 
 /* SyncViewController */
 "Try Again" = "Pokušaj ponovo";

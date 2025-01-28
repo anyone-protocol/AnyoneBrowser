@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Lejo Cookies të Qëndrueshme";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Nevojitet autorizim";
 
@@ -389,13 +392,10 @@
 "Silver" = "E argjendtë";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Po niset Tor-i ";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Ndale Vetëplotësimin në Pikën e Parë";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Pajtohuni te Buletini Tor";
 
 /* SettingsViewController */
 "Support" = "Asistencë";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Gabim protokolli TLS";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Qark Tor";
 
 /* SyncViewController */
 "Try Again" = "Riprovoni";

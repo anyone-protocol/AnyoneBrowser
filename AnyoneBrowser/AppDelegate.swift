@@ -96,7 +96,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 		DownloadHelper.purge()
 
-		TorManager.shared.stop()
+		AnonManager.shared.stop()
 
 		application.ignoreSnapshotOnNextApplicationLaunch()
 	}
@@ -202,7 +202,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 	func maybeStopTor() {
 		Thread.performOnMain {
 			if self.sceneDelegates.isEmpty {
-				TorManager.shared.stop()
+				AnonManager.shared.stop()
 			}
 		}
 	}

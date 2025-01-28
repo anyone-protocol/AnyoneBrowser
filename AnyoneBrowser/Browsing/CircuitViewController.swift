@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import Tor
+import AnyoneKit
 
 class CircuitViewController: UIViewController, UIPopoverPresentationControllerDelegate,
 							 UITableViewDataSource, UITableViewDelegate
@@ -26,7 +26,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 			self.note = note
 		}
 
-		init(_ torNode: TorNode) {
+		init(_ torNode: AnonNode) {
 			self.title = torNode.localizedCountryName ?? torNode.countryCode ?? torNode.nickName ?? ""
 			self.ip = torNode.ipv4Address?.isEmpty ?? true ? torNode.ipv6Address : torNode.ipv4Address
 		}
@@ -36,7 +36,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 
 	@IBOutlet weak var headerLb: UILabel! {
 		didSet {
-			headerLb.text = NSLocalizedString("Tor Circuit", comment: "")
+			headerLb.text = NSLocalizedString("Anyone Circuit", comment: "")
 		}
 	}
 
@@ -74,7 +74,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 	}
 
 	private var nodes = [Node]()
-	private var usedCircuits = [TorCircuit]()
+	private var usedCircuits = [AnonCircuit]()
 
 	private static let onionAddressRegex = try? NSRegularExpression(pattern: "^(.*\\.)?(.*?)\\.(onion|exit)$", options: .caseInsensitive)
 
@@ -134,12 +134,11 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 			self?.dismiss(animated: true)
 		}
 
-		TorManager.shared.close(usedCircuits.compactMap({ $0.circuitId }), completion)
+		AnonManager.shared.close(usedCircuits.compactMap({ $0.circuitId }), completion)
 	}
 
 	private func reloadCircuits() {
-		// TODO: A lot of this needs to move to Tor.framework for better reuse!
-		let completion = { (circuits: [TorCircuit]) in
+		let completion = { (circuits: [AnonCircuit]) in
 			// Store in-use circuits (identified by having a SOCKS username,
 			// so the user can close them and get fresh ones on #newCircuits.
 			self.usedCircuits = circuits
@@ -166,8 +165,8 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 		DispatchQueue.global(qos: .userInitiated).async {
 			let host = self.currentUrl?.host
 
-			TorManager.shared.getCircuits { circuits in
-				var candidates = TorCircuit.filter(circuits)
+			AnonManager.shared.getCircuits { circuits in
+				var candidates = AnonCircuit.filter(circuits)
 
 				if let host = host {
 					var query: String?
@@ -190,13 +189,13 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 					// rendQuery, which is equal to the "domain".
 					if let query = query {
 						candidates = candidates.filter { circuit in
-							circuit.purpose == TorCircuit.purposeHsClientRend
+							circuit.purpose == AnonCircuit.purposeHsClientRend
 							&& circuit.rendQuery == query
 						}
 					}
 					else {
 						candidates = candidates.filter { circuit in
-							circuit.purpose == TorCircuit.purposeGeneral || circuit.purpose == TorCircuit.purposeConfluxLinked
+							circuit.purpose == AnonCircuit.purposeGeneral || circuit.purpose == AnonCircuit.purposeConfluxLinked
 						}
 					}
 				}

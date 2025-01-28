@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "允許持久性 cookies";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "要求驗證";
 
@@ -389,13 +392,10 @@
 "Silver" = "銀牌";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "正在啟動 Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "在第一個句點上停止自動完成";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "訂閱 Tor 電子報";
 
 /* SettingsViewController */
 "Support" = "支援我們";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLS 協定錯誤";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor 線路";
 
 /* SyncViewController */
 "Try Again" = "請重試";

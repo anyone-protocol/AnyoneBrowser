@@ -8,9 +8,9 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 
-import Tor
+import AnyoneKit
 
-extension TorCircuit: @retroactive Encodable {
+extension AnonCircuit: @retroactive Encodable {
 
 	enum CodingKeys: CodingKey {
 		case raw
@@ -31,7 +31,7 @@ extension TorCircuit: @retroactive Encodable {
 	private static let beginningOfTime = Date(timeIntervalSince1970: 0)
 
 
-	class func filter(_ circuits: [TorCircuit]) -> [TorCircuit] {
+	class func filter(_ circuits: [AnonCircuit]) -> [AnonCircuit] {
 		circuits.filter({ circuit in
 			!(circuit.nodes?.isEmpty ?? true)
 			&& (
@@ -74,7 +74,7 @@ extension TorCircuit: @retroactive Encodable {
 	}
 }
 
-extension TorNode: @retroactive Encodable {
+extension AnonNode: @retroactive Encodable {
 
 	enum CodingKeys: CodingKey {
 		case fingerprint

@@ -241,7 +241,7 @@ extension BrowsingViewController: UITextFieldDelegate {
 	 Will try to create a URL from the given text. If the resulting URL has a `.onion`  host,
 	 it will use the `http` scheme, otherwise, it will use the `https`  scheme.
 
-	 Onion-servers often don't use an additional TLS encryption for their traffic, as Tor already adds
+	 Onion-servers often don't use an additional TLS encryption for their traffic, as Anyone already adds
 	 6 layers of TLS encryption to it and the last layer is only decrypted at the Onion-server itself, anyway.
 	 Hence, technically there's no need for an additional encryption layer.
 

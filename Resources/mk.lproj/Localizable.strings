@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Дозволи трајни колачиња";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Потребна е автентичност";
 
@@ -389,13 +392,10 @@
 "Silver" = "Сребрено";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Стопирај го автоматското-завршување на првата точка";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Претплатете се да добивате Tor новости";
 
 /* SettingsViewController */
 "Support" = "Поддршка";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Грешка на TLS протоколот";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor Круг";
 
 /* SyncViewController */
 "Try Again" = "Обиди се повторно";

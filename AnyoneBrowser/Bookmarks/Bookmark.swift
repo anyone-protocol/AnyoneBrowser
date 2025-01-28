@@ -159,8 +159,6 @@ open class Bookmark: NSObject {
 								  with: Bundle.main.displayName)
 			.replacingOccurrences(of: "{{ Learn more about Anyone Browser }}",
 								  with: String(format: NSLocalizedString("Learn more about %@", comment: ""), Bundle.main.displayName))
-			.replacingOccurrences(of: "{{ Subscribe to Tor Newsletter }}",
-								  with: NSLocalizedString("Subscribe to Tor Newsletter", comment: ""))
 
 		try? template.write(to: URL.start, atomically: true, encoding: .utf8)
 

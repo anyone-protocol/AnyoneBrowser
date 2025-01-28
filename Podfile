@@ -16,9 +16,9 @@ target 'AnyoneBrowser' do
   pod 'Eureka', '~> 5.3'
   pod 'ImageRow', '~> 4.1'
 
-  pod 'Tor/GeoIP',
-    '~> 408.13'
-#    :path => '../Tor.framework'
+  pod 'AnyoneKit',
+    '~> 409'
+#    :path => '../AnyoneKit'
 end
 
 target 'AnyoneBrowser Tests' do

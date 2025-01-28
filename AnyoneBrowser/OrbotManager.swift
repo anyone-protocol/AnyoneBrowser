@@ -27,17 +27,17 @@ class OrbotManager : NSObject {
 			return WelcomeViewController()
 		}
 
-		if TorManager.shared.status == .started {
-			// No Orbot running, but built-in Tor. Also ok.
+		if AnonManager.shared.status == .started {
+			// Built-in Anyone running. Ok.
 			return nil
 		}
 
-		// No Orbot running, no built-in Tor. Let the user start it!
+		// No built-in Anyone running. Let the user start it!
 		return StartTorViewController()
 	}
 
 	func allowRequests() -> Bool {
-		return TorManager.shared.status == .started
+		return AnonManager.shared.status == .started
 	}
 
 

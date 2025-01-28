@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Ceadaigh fianáin sheasmhacha";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Fíordheimhniú de dhíth";
 
@@ -389,13 +392,10 @@
 "Silver" = "Airgead";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Stop uathlíonadh ag an chéad phonc";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Liostáil le Nuachtlitir Tor";
 
 /* SettingsViewController */
 "Support" = "Tacaíocht";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Earráid leis an bprótacal TLS";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Ciorcad Tor";
 
 /* SyncViewController */
 "Try Again" = "Bain triail eile as";

@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Salli pysyvät evästeet";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Todennus vaaditaan";
 
@@ -389,13 +392,10 @@
 "Silver" = "Hopea";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Käynnistetään Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Lopeta automaattitäyttö ensimmäisestä pisteestä";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Tilaa Tor-uutiskirje";
 
 /* SettingsViewController */
 "Support" = "Tuki";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLS-protokollavirhe";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor-ketju";
 
 /* SyncViewController */
 "Try Again" = "Yritä uudelleen";

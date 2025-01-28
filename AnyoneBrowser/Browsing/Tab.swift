@@ -466,12 +466,12 @@ class Tab: UIView {
 	// MARK: Private Methods
 
 	private func setup() {
-		if let proxy = TorManager.shared.torSocks5 {
+		if let proxy = AnonManager.shared.anonSocks5 {
 			conf.websiteDataStore.proxyConfigurations.removeAll()
 			conf.websiteDataStore.proxyConfigurations.append(ProxyConfiguration(socksv5Proxy: proxy))
 		}
 		else {
-			// Delay setup until we have Tor available and somebody tells us.
+			// Delay setup until we have Anyone available and somebody tells us.
 			return
 		}
 

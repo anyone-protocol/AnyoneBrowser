@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Consenti cookies persistenti ";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Autenticazione richiesta";
 
@@ -389,13 +392,10 @@
 "Silver" = "Argento";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Stop auto-completamento al primo sito";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Iscriviti alla Tor Newsletter";
 
 /* SettingsViewController */
 "Support" = "Supporto";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Errore protocollo TLS";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Circuito Tor";
 
 /* SyncViewController */
 "Try Again" = "Riprova";

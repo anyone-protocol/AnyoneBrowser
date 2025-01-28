@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "퍼시스턴트 쿠키 허용";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "인증 필요";
 
@@ -389,13 +392,10 @@
 "Silver" = "실버";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "첫 번째 도트에서 자동 완성 중지";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Tor 뉴스레터 구독하기";
 
 /* SettingsViewController */
 "Support" = "지원";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLS 프로토콜 오류";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor 우회로";
 
 /* SyncViewController */
 "Try Again" = "다시 시도";

@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Даими кукиларны рөхсәт итү";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Аутентификация таләп ителә";
 
@@ -389,13 +392,10 @@
 "Silver" = "Көмешсу";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Tor-ны башла...";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Беренче нокта куелгач, автотәмамлауны туктату";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Tor гәҗитенә язылу";
 
 /* SettingsViewController */
 "Support" = "Техник ярдәм";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLS протоколының хатасы";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor чылбыры";
 
 /* SyncViewController */
 "Try Again" = "Янәдән тырышып карау";

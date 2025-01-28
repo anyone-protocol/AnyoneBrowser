@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Να επιτρέπονται τα μόνιμα cookies";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Απαιτείται πιστοποίηση";
 
@@ -389,13 +392,10 @@
 "Silver" = "Ασημένιο";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Τερματισμός αυτόματης συμπλήρωσης στη πρώτη τελεία.";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Γραφτείτε στο Newsletter του Tor";
 
 /* SettingsViewController */
 "Support" = "Υποστήριξη";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Σφάλμα πρωτοκόλλου TLS";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Κύκλωμα Tor";
 
 /* SyncViewController */
 "Try Again" = "Προσπαθήστε ξανά";

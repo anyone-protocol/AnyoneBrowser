@@ -14,7 +14,7 @@ class StartTorViewController: UIViewController {
 
 	@IBOutlet weak var titleLb: UILabel! {
 		didSet {
-			titleLb.text = NSLocalizedString("Starting Tor…", comment: "")
+			titleLb.text = NSLocalizedString("Starting Anyone…", comment: "")
 		}
 	}
 
@@ -47,7 +47,7 @@ class StartTorViewController: UIViewController {
 		progressView.progress = 0
 		errorLb.isHidden = true
 
-		TorManager.shared.start() { [weak self] progress in
+		AnonManager.shared.start() { [weak self] progress in
 			guard let progress = progress else {
 				return
 			}
@@ -60,7 +60,7 @@ class StartTorViewController: UIViewController {
 				DispatchQueue.main.async {
 					self?.activityIndicator.isHidden = true
 					self?.retryBt.isHidden = false
-					self?.errorLb.text = (error ?? TorManager.Errors.noSocksAddr).localizedDescription
+					self?.errorLb.text = (error ?? AnonManager.Errors.noSocksAddr).localizedDescription
 					self?.errorLb.isHidden = false
 				}
 

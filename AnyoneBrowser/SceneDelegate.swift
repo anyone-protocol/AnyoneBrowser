@@ -107,7 +107,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		show(vc)
 
-		// Seems, we're running via Tor. Set up bookmarks, if not done, yet.
+		// Seems, we're running via Anyone. Set up bookmarks, if not done, yet.
 		if vc == nil {
 			Bookmark.firstRunSetup()
 		}
@@ -143,7 +143,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	}
 
 	func sceneDidDisconnect(_ scene: UIScene) {
-		// Stop Tor, if no other scenes around anymore.
+		// Stop Anyone, if no other scenes around anymore.
 		AppDelegate.shared?.maybeStopTor()
 	}
 

@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "স্থায়ী কুকির অনুমতি দিন";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "অনুমোদন প্রয়োজন";
 
@@ -389,13 +392,10 @@
 "Silver" = "Silver";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "প্রথম ডটে অটোকমপ্লিট বন্ধ হয়ে যাবে";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "টরের নিউজলেটার পেতে সাবস্ক্রাইব করুন";
 
 /* SettingsViewController */
 "Support" = "সহায়তা";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "টিএলএস প্রোটোকলে ত্রুটি";
-
-/* CircuitsViewController */
-"Tor Circuit" = "টর সার্কিট";
 
 /* SyncViewController */
 "Try Again" = "Try Again";

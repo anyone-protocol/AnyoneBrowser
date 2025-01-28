@@ -1,5 +1,5 @@
 //
-//  TorManager.swift
+//  AnonManager.swift
 //  Orbot
 //
 //  Created by Benjamin Erhart on 17.05.21.
@@ -7,11 +7,11 @@
 //
 
 import NetworkExtension
-import Tor
+import AnyoneKit
 import Network
 
 
-class TorManager {
+class AnonManager {
 
 	enum Status: String, Codable {
 		case stopped = "stopped"
@@ -28,7 +28,7 @@ class TorManager {
 			switch self {
 
 			case .cookieUnreadable:
-				return "Tor cookie unreadable"
+				return "Anon cookie unreadable"
 
 			case .noSocksAddr:
 				return "No SOCKS port"
@@ -39,48 +39,48 @@ class TorManager {
 		}
 	}
 
-	static let shared = TorManager()
+	static let shared = AnonManager()
 
 	static let localhost = "127.0.0.1"
 
 	var status = Status.stopped
 
-	var torSocks5: Network.NWEndpoint? = nil
+	var anonSocks5: Network.NWEndpoint? = nil
 
-	private var torThread: Thread?
+	private var anonThread: AnonThread?
 
-	private var torController: TorController?
+	private var anonController: AnonController?
 
-	private var torConf: TorConfiguration?
+	private var anonConf: AnonConfiguration?
 
-	private var _torRunning = false
-	private var torRunning: Bool {
-		 ((torThread?.isExecuting ?? false) && (torConf?.isLocked ?? false)) || _torRunning
+	private var _anonRunning = false
+	private var anonRunning: Bool {
+		 ((anonThread?.isExecuting ?? false) && (anonConf?.isLocked ?? false)) || _anonRunning
 	}
 
 	private lazy var controllerQueue = DispatchQueue.global(qos: .userInitiated)
 
-//	private var ipStatus = IpSupport.Status.unavailable
+	private var ipStatus = IpSupport.Status.unavailable
 
 	private var progressObs: Any?
 	private var establishedObs: Any?
 
 
 	private init() {
-//		IpSupport.shared.start({ [weak self] status in
-//			self?.ipStatus = status
-//
-//			if (self?.torRunning ?? false) && (self?.torController?.isConnected ?? false) {
-//				self?.torController?.setConfs(status.torConf(self?.transport ?? .none, Transport.asConf))
-//				{ success, error in
-//					if let error = error {
-//						self?.log("error: \(error)")
-//					}
-//
-//					self?.torController?.resetConnection()
-//				}
-//			}
-//		})
+		IpSupport.shared.start({ [weak self] status in
+			self?.ipStatus = status
+
+			if (self?.anonRunning ?? false) && (self?.anonController?.isConnected ?? false) {
+				self?.anonController?.setConfs(status.anonConf(IpSupport.Status.asConf))
+				{ success, error in
+					if let error = error {
+						self?.log("error: \(error)")
+					}
+
+					self?.anonController?.resetConnection()
+				}
+			}
+		})
 	}
 
 	func start(_ progressCallback: @escaping (_ progress: Int?) -> Void,
@@ -88,26 +88,26 @@ class TorManager {
 	{
 		status = .starting
 
-		if !torRunning {
-			torConf = getTorConf()
+		if !anonRunning {
+			anonConf = getAnonConf()
 
-//			if let debug = torConf?.compile().joined(separator: ", ") {
+//			if let debug = anonConf?.compile().joined(separator: ", ") {
 //				print(debug)
 //			}
 
-			torThread = TorThread(configuration: torConf)
+			anonThread = AnonThread(configuration: anonConf)
 
-			torThread?.start()
+			anonThread?.start()
 		}
 
 		controllerQueue.asyncAfter(deadline: .now() + 0.65) {
-			if self.torController == nil, let url = self.torConf?.controlPortFile {
-				self.torController = TorController(controlPortFile: url)
+			if self.anonController == nil, let url = self.anonConf?.controlPortFile {
+				self.anonController = AnonController(controlPortFile: url)
 			}
 
-			if !(self.torController?.isConnected ?? false) {
+			if !(self.anonController?.isConnected ?? false) {
 				do {
-					try self.torController?.connect()
+					try self.anonController?.connect()
 				}
 				catch let error {
 					self.log("#startTunnel error=\(error)")
@@ -118,7 +118,7 @@ class TorManager {
 				}
 			}
 
-			guard let cookie = self.torConf?.cookie else {
+			guard let cookie = self.anonConf?.cookie else {
 				self.log("#startTunnel cookie unreadable")
 
 				self.stop()
@@ -126,7 +126,7 @@ class TorManager {
 				return completion(Errors.cookieUnreadable)
 			}
 
-			self.torController?.authenticate(with: cookie) { success, error in
+			self.anonController?.authenticate(with: cookie) { success, error in
 				if let error = error {
 					self.log("#startTunnel error=\(error)")
 
@@ -135,7 +135,7 @@ class TorManager {
 					return completion(error)
 				}
 
-				self.progressObs = self.torController?.addObserver(forStatusEvents: {
+				self.progressObs = self.anonController?.addObserver(forStatusEvents: {
 					[weak self] (type, severity, action, arguments) -> Bool in
 
 					if type == "STATUS_CLIENT" && action == "BOOTSTRAP" {
@@ -153,7 +153,7 @@ class TorManager {
 						progressCallback(progress)
 
 						if progress ?? 0 >= 100 {
-							self?.torController?.removeObserver(self?.progressObs)
+							self?.anonController?.removeObserver(self?.progressObs)
 						}
 
 						return true
@@ -162,15 +162,15 @@ class TorManager {
 					return false
 				})
 
-				self.establishedObs = self.torController?.addObserver(forCircuitEstablished: { [weak self] established in
+				self.establishedObs = self.anonController?.addObserver(forCircuitEstablished: { [weak self] established in
 					guard established else {
 						return
 					}
 
-					self?.torController?.removeObserver(self?.establishedObs)
-					self?.torController?.removeObserver(self?.progressObs)
+					self?.anonController?.removeObserver(self?.establishedObs)
+					self?.anonController?.removeObserver(self?.progressObs)
 
-					self?.torController?.getInfoForKeys(["net/listeners/socks"]) { response in
+					self?.anonController?.getInfoForKeys(["net/listeners/socks"]) { response in
 						guard let parts = response.first?.split(separator: ":"),
 							  let host = parts.first,
 							  let host = IPv4Address(String(host)),
@@ -182,7 +182,7 @@ class TorManager {
 							return completion(Errors.noSocksAddr)
 						}
 
-						self?.torSocks5 = .hostPort(host: NWEndpoint.Host.ipv4(host), port: port)
+						self?.anonSocks5 = .hostPort(host: NWEndpoint.Host.ipv4(host), port: port)
 
 						self?.status = .started
 
@@ -196,30 +196,30 @@ class TorManager {
 	func stop() {
 		status = .stopped
 
-		torController?.removeObserver(self.establishedObs)
-		torController?.removeObserver(self.progressObs)
+		anonController?.removeObserver(self.establishedObs)
+		anonController?.removeObserver(self.progressObs)
 
-		torController?.disconnect()
-		torController = nil
+		anonController?.disconnect()
+		anonController = nil
 
-		torThread?.cancel()
-		torThread = nil
+		anonThread?.cancel()
+		anonThread = nil
 
-		torConf = nil
+		anonConf = nil
 	}
 
-	func getCircuits(_ completion: @escaping ([TorCircuit]) -> Void) {
-		if let torController = torController {
-			torController.getCircuits(completion)
+	func getCircuits(_ completion: @escaping ([AnonCircuit]) -> Void) {
+		if let anonController = anonController {
+			anonController.getCircuits(completion)
 		}
 		else {
 			completion([])
 		}
 	}
 
-	func close(_ circuits: [TorCircuit], _ completion: ((Bool) -> Void)?) {
-		if let torController = torController {
-			torController.close(circuits, completion: completion)
+	func close(_ circuits: [AnonCircuit], _ completion: ((Bool) -> Void)?) {
+		if let anonController = anonController {
+			anonController.close(circuits, completion: completion)
 		}
 		else {
 			completion?(false)
@@ -227,8 +227,8 @@ class TorManager {
 	}
 
 	func close(_ ids: [String], _ completion: ((Bool) -> Void)?) {
-		if let torController = torController {
-			torController.closeCircuits(byIds: ids, completion: completion)
+		if let anonController = anonController {
+			anonController.closeCircuits(byIds: ids, completion: completion)
 		}
 		else {
 			completion?(false)
@@ -242,10 +242,10 @@ class TorManager {
 		print("[\(String(describing: type(of: self)))] \(message)")
 	}
 
-	private func getTorConf() -> TorConfiguration {
-		let conf = TorConfiguration()
+	private func getAnonConf() -> AnonConfiguration {
+		let conf = AnonConfiguration()
 
-		conf.ignoreMissingTorrc = true
+		conf.ignoreMissingAnonrc = true
 		conf.cookieAuthentication = true
 		conf.autoControlPort = true
 		conf.clientOnly = true
@@ -258,7 +258,7 @@ class TorManager {
 		conf.geoip6File = Bundle.geoIp?.geoip6File
 
 		var arguments = [String]()
-//		arguments.append(contentsOf: ipStatus.torConf(transport, Transport.asArguments).joined())
+		arguments.append(contentsOf: ipStatus.anonConf(IpSupport.Status.asArguments).joined())
 
 		// Urgh. Transports and IP settings where ignored on first start.
 		// Careful: `arguments as? NSMutableCopy == nil`

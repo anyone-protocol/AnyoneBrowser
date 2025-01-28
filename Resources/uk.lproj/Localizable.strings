@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Дозволити постійні файли cookie";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Необхідна Аутентифікація";
 
@@ -389,13 +392,10 @@
 "Silver" = "Срібло";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Запускання Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Зупинити автоматичне завершення на першій точці";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Підпишіться на розсилку новин Tor";
 
 /* SettingsViewController */
 "Support" = "Підтримка";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "Помилка протоколу TLS";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Ланцюжок Tor";
 
 /* SyncViewController */
 "Try Again" = "Спробуйте ще";

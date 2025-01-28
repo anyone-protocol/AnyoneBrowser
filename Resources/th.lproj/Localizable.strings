@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "อนุญาตคุกกี้แบบถาวร";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Authentication Required";
 
@@ -389,13 +392,10 @@
 "Silver" = "เงิน";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "หยุดการเติมเต็มอัตโนมัติเมื่อพิมพ์จุดแรก";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "บอกรับจดหมายข่าว Tor";
 
 /* SettingsViewController */
 "Support" = "สนับสนุน";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "เกิดข้อผิดพลาดที่โพรโทคอล TLS";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor Circuit";
 
 /* SyncViewController */
 "Try Again" = "ลองอีกครั้ง";

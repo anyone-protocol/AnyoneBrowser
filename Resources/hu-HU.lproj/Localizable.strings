@@ -49,6 +49,9 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Állandó cookie-k engedélyezése";
 
+/* No comment provided by engineer. */
+"Anyone Circuit" = "Anyone Circuit";
+
 /* AppDelegate */
 "Authentication Required" = "Hitelesítés szükséges";
 
@@ -389,13 +392,10 @@
 "Silver" = "Ezüst";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Az automatikus kiegészítés megállítása az első pontnál";
-
-/* Bookmark */
-"Subscribe to Tor Newsletter" = "Feliratkozás a hírlevélre";
 
 /* SettingsViewController */
 "Support" = "Támogatás";
@@ -444,9 +444,6 @@
 
 /* Tab+UIWebViewDelegate */
 "TLS protocol error" = "TLS protokoll hiba";
-
-/* CircuitsViewController */
-"Tor Circuit" = "Tor áramkör";
 
 /* SyncViewController */
 "Try Again" = "Próbálja újra";
