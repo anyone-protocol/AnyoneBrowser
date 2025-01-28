@@ -186,15 +186,6 @@ class Settings: IPtProxyUI.Settings {
 		}
 	}
 
-	class var bookmarksMigratedToOnionV3: Bool {
-		get {
-			UserDefaults.standard.bool(forKey: "bookmarks_migrated_to_onion_v3")
-		}
-		set {
-			UserDefaults.standard.set(newValue, forKey: "bookmarks_migrated_to_onion_v3")
-		}
-	}
-
 	class var searchEngine: SearchEngine {
 		get {
 			let type = SearchEngine.EngineType(rawValue: UserDefaults.standard.integer(forKey: "search_engine_type")) ?? .builtIn
@@ -382,42 +373,4 @@ class Settings: IPtProxyUI.Settings {
 			UserDefaults.standard.set(newValue, forKey: "nextcloud_password")
 		}
 	}
-
-	class var orbotApiToken: String? {
-		get {
-			UserDefaults.standard.string(forKey: "orbot_api_token")
-		}
-		set {
-			UserDefaults.standard.set(newValue, forKey: "orbot_api_token")
-		}
-	}
-
-	class var orbotWasAlreadyInstalled: Bool {
-		get {
-			// Defaults to true!
-			if UserDefaults.standard.object(forKey: "orbot_was_already_installed") == nil {
-				return true
-			}
-
-			return UserDefaults.standard.bool(forKey: "orbot_was_already_installed")
-		}
-		set {
-			UserDefaults.standard.set(newValue, forKey: "orbot_was_already_installed")
-		}
-	}
-
-	class var useBuiltInTor: Bool? {
-		get {
-			if UserDefaults.standard.object(forKey: "use_builtin_tor") == nil {
-				return nil
-			}
-
-			return UserDefaults.standard.bool(forKey: "use_builtin_tor")
-		}
-		set {
-			UserDefaults.standard.setValue(newValue, forKey: "use_builtin_tor")
-		}
-	}
-
-	static let orbotAccessDenied = "***DENIED***"
 }

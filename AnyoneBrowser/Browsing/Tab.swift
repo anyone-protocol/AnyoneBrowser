@@ -466,15 +466,13 @@ class Tab: UIView {
 	// MARK: Private Methods
 
 	private func setup() {
-		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
-			if let proxy = TorManager.shared.torSocks5 {
-				conf.websiteDataStore.proxyConfigurations.removeAll()
-				conf.websiteDataStore.proxyConfigurations.append(ProxyConfiguration(socksv5Proxy: proxy))
-			}
-			else {
-				// Delay setup until we have Tor available and somebody tells us.
-				return
-			}
+		if let proxy = TorManager.shared.torSocks5 {
+			conf.websiteDataStore.proxyConfigurations.removeAll()
+			conf.websiteDataStore.proxyConfigurations.append(ProxyConfiguration(socksv5Proxy: proxy))
+		}
+		else {
+			// Delay setup until we have Tor available and somebody tells us.
+			return
 		}
 
 		webView = WKWebView(frame: .zero, configuration: conf)

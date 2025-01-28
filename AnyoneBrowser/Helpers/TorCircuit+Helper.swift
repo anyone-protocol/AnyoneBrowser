@@ -9,7 +9,6 @@
 //
 
 import Tor
-import OrbotKit
 
 extension TorCircuit: @retroactive Encodable {
 
@@ -72,14 +71,6 @@ extension TorCircuit: @retroactive Encodable {
 		try container.encode(remoteReason, forKey: .remoteReason)
 		try container.encode(socksUsername, forKey: .socksUsername)
 		try container.encode(socksPassword, forKey: .socksPassword)
-	}
-
-	public func toOrbotKitType() -> OrbotKit.TorCircuit? {
-		guard let data = try? JSONEncoder().encode(self) else {
-			return nil
-		}
-
-		return try? JSONDecoder().decode(OrbotKit.TorCircuit.self, from: data)
 	}
 }
 

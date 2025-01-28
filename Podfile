@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '15.0'
+platform :ios, '17.0'
 
 #source 'https://cdn.cocoapods.org/'
 #source 'https://cocoapods-cdn.netlify.app/'
@@ -24,8 +24,6 @@ target 'AnyoneBrowser' do
     '~> 4.7'
 #    :git => 'https://github.com/tladesignz/IPtProxyUI-ios'
 #    :path => '../IPtProxyUI'
-
-  pod 'OrbotKit', '~> 1.1'
 end
 
 target 'AnyoneBrowser Tests' do

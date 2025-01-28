@@ -110,7 +110,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// Seems, we're running via Tor. Set up bookmarks, if not done, yet.
 		if vc == nil {
 			Bookmark.firstRunSetup()
-			Bookmark.migrateToV3()
 		}
 	}
 
@@ -123,22 +122,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
 		for context in URLContexts {
-			if let urlc = URLComponents(url: context.url, resolvingAgainstBaseURL: true),
-			   urlc.scheme == "onionbrowser"
-			{
-				if urlc.path == "token-callback" {
-					let token = urlc.queryItems?.first(where: { $0.name == "token" })?.value
-
-					Settings.orbotApiToken = token?.isEmpty ?? true ? Settings.orbotAccessDenied : token
-				}
-				else if urlc.path == "main" {
-					// Ignore. We just returned from Orbot.
-					// Do nothing more than already done: show the app.
-				}
-			}
-			else {
-				browsingUi.addNewTab(context.url.withFixedScheme)
-			}
+			browsingUi.addNewTab(context.url.withFixedScheme)
 		}
 	}
 

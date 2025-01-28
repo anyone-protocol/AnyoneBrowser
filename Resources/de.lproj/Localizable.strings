@@ -1,77 +1,11 @@
 /* RuleEditorController */
 "%1$@ (Disabled: %2$@)" = "%1$@ (Deaktiviert: %2$@)";
 
-/* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ kann entweder %2$@ für eine sichere Verbindung zum Tor-Netzwerk benutzen oder ein eingebautes Tor verwenden. Das eingebaute Tor hat Sicherheitsprobleme.";
-
-/* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ If you have connectivity issues with %2$@" = "%1$@ Wenn Du Verbindungsprobleme mit %2$@ hast";
-
-/* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
-"%1$@ if you want to use %2$@ over another VPN" = "%1$@ wenn Du %2$@ über ein weiteres VPN benutzen willst";
-
-/* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@ benötigt jetzt %2$@ für eine sichere Verbindung zum Tor-Netzwerk.";
-
-/* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ benötigt %2$@ für eine sichere Verbindung zum Tor-Netzwerk. Installiere die %2$@-App um weiter zu machen.";
-
-/* Placeholder 1 is 'Orbot', placeholder 2 is 'Onion Browser' */
-"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@ läuft im \"Nur-Onion-Modus\". Das ist gefährlich und wird von %2$@ nicht unterstützt. Schalte ihn ab, um %2$@ zu benutzen!";
-
-/* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ %2$@ benutzen, um sich mit dem Tor-Netzwerk zu verbinden.";
-
-/* Placeholder is bullet point */
-"%@ a little more speed" = "%@ eine etwas höhere Geschwindigkeit";
-
-/* Placeholder is 'Orbot' */
-"%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@ alleine leitet allen Datenverkehr durch das Tor-Netzwerk. Es versteckt Apps vor Netzwerküberwachung und ermöglicht ihnen Zugriff, auch sie in Deinem Netzwerk blockiert werden.";
-
-/* Placeholder is bullet point */
-"%@ Get updates on the status of the connection." = "%@ Benachrichtigungen erhalten, wenn sich der Status des Verbindung ändert.";
-
-/* Placeholder is 'Orbot' */
-"%@ installed! One more step." = "%@ installiert! Nur noch ein Schritt.";
-
-/* Placeholder is bullet point */
-"%@ more protection from IP leaks" = "%@ verbesserter Schutz vor dem versehentlichen Aufdecken Deiner IP-Adresse";
-
-/* Placeholder is bullet point */
-"%@ new standards" = "%@ Unterstützung neuerer Web-Standards";
-
-/* Placeholder is 'Orbot' */
-"%@ or built-in Tor" = "%@ oder eingebautes Tor";
-
-/* Placeholder is bullet point */
-"%@ video and audio streaming" = "%@ Video- und Audiostreaming";
-
-/* Placeholder is bullet point */
-"%@ video and audio streams don't go through Tor and might get blocked" = "%@ Video- und Audiostreams gehen nicht durch Tor und könnten blockiert sein";
-
-/* Placeholder is bullet point */
-"%@ Websites can uncover your real IP address using JavaScript" = "%@ Websites können Deine richtige IP-Adresse mittels JavaScript ermitteln";
-
 /* No comment provided by engineer. */
 "(not recommended)" = "(nicht empfohlen)";
 
-/* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH1__" = "Onion Browser ist eine kostenlose und freie App, aber es benötigt Zeit und Resourcen um sie zu entwickeln und zu betreuen.";
-
-/* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH2__" = "Du kannst die App unterstützen, indem Du durch einen In-App-Kauf spenden. Das ist eine einmalige, sich nicht wiederholende Transaktion, aber Du kannst jederzeit wiederkommen und eine weitere Spende schicken. Es wird keinerlei Information über Deinen In-App-Kauf von den Onion-Browser-Entwicklern gesammelt oder gespeichert.";
-
-/* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH3__" = "Du kannst dich über andere Wege (z.B. Patreon, PayPal, Bitcoin oder Zcash) um Onion Browser zu unterstützen im Bereich 'Über' in 'Allg. Einstellungen' informieren.";
-
-/* DonationViewController */
-"__DONATE_THANKS__" = "Danke sehr! Jeder Beitrag hilft! Deine Zahlung über %@ hilft, die Entwicklung von Onion Browser und weiteren Tools, die es leichter machen, Tor in andere Apps zu integrieren weiterzuführen.";
-
 /* SettingsViewController */
 "About" = "Über";
-
-/* Placeholder is 'Orbot' */
-"Access to %@ was Denied" = "Zugriff auf %@ wurde abgelehnt";
 
 /* SearchEnginesViewController, AddSearchEngineViewController */
 "Add" = "Hinzufügen";
@@ -88,11 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Seite hinzufügen";
 
-/* Placeholder is 'Orbot' */
-"Add to %@" = "Zu %@ hinzufügen";
-
-/* SyncViewController */
-"Additionally, all bookmarks not existing on the server but in Onion Browser will be created there." = "Zusätzlich werden alle Lesezeichen, die am Server nicht existieren, aber in Onion Browser, dort erstellt.";
+/* Placeholder is 'Anyone Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
 
 /* BookmarkViewController */
 "Address" = "Adresse";
@@ -118,15 +49,6 @@
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Dauerhafte Cookies erlauben";
 
-/* DonationViewController */
-"Are you sure you want to send a %@ tip?" = "Bist Du sicher, dass Du %@ spenden willst?";
-
-/* Placeholder is 'Orbot' */
-"Ask %@ for permission to access it." = "Frag %@ nach der Erlaubnis es zu benutzen.";
-
-/* No comment provided by engineer. */
-"Ask again to continue." = "Frag nochmal, um weiter zu machen.";
-
 /* AppDelegate */
 "Authentication Required" = "Authentifizierung nötig";
 
@@ -144,9 +66,6 @@
 
 /* BookmarksViewController */
 "Bookmarks" = "Lesezeichen";
-
-/* No comment provided by engineer. */
-"Both are free to use. Free of tracking. Code is open source." = "Beide sind kostenlos nutzbar und frei von Tracking. Der Quellcode ist öffentlich verfügbar.";
 
 /* CircuitViewController */
 "Bridge Configuration" = "Brückenkonfiguration";
@@ -177,12 +96,6 @@
 
 /* No comment provided by engineer. */
 "Configure Bridges" = "Konfiguriere Brücken";
-
-/* DonationViewController */
-"Confirm %@" = "%@ bestätigen";
-
-/* DonationViewController */
-"Confirm Purchase" = "Kauf bestätigen";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Website aufrufen, um den Kanal zu sehen.";
@@ -238,20 +151,11 @@
 /* No comment provided by engineer. */
 "Disk Cache" = "Disk-Cache";
 
-/* DonationViewController */
-"Donate" = "Spenden";
-
-/* Bookmark, placeholder is app name "Onion Browser" */
-"Donate to %@" = "An %@ spenden";
-
 /* BrowsingViewController */
 "Done" = "Fertig";
 
 /* No comment provided by engineer. */
 "Download" = "Herunterladen";
-
-/* No comment provided by engineer. */
-"Drawbacks:" = "Nachteile:";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "Ganz easy. Aber könnte gefährlich sein.";
@@ -295,20 +199,11 @@
 /* SettingsViewController */
 "Forget in Background" = "Im Hintergrund vergessen";
 
-/* SettingsViewController */
-"Fund Development" = "Spenden";
-
-/* Placeholder is 'Orbot' */
-"Get %@" = "%@ installieren";
-
 /* AppDelegate */
 "Go Back" = "Zurück";
 
 /* AppDelegate */
 "Go Forward" = "Weiter";
-
-/* Placeholder is 'Orbot' */
-"Go to %@" = "Zu %@";
 
 /* SecurityPresetsRow; a security level */
 "Gold" = "Gold";
@@ -328,8 +223,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Host";
 
-/* SyncViewController */
-"If you sync, all bookmarks will be read from the server and added/updated in Onion Browser." = "Wenn Du synchronisierst, werden alle Lesezeichen vom Server gelesen und in Onion Browser hinzugefügt/aktualisiert.";
+/* Placeholder is 'Anyone Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Für diesen Host ignorieren";
@@ -339,9 +234,6 @@
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB Datenbanken";
-
-/* Placeholder is 'Orbot' */
-"Install %@" = "Installiere %@";
 
 /* CertificateViewController */
 "Issued By" = "Ausgestellt von";
@@ -354,9 +246,6 @@
 
 /* Bookmark, placeholder is app name "Onion Browser" */
 "Learn more about %@" = "Mehr über %@ herausfinden";
-
-/* DonationViewController */
-"Loading in-app purchase data…" = "In-App-Käufe Daten laden…";
 
 /* Storage2ViewController */
 "Local Storage" = "Website-Daten";
@@ -421,9 +310,6 @@
 /* AppDelegate, SyncViewController */
 "Password" = "Passwort";
 
-/* DonationViewController */
-"Payment Sent" = "Bezahlt";
-
 /* CertificateViewController */
 "Period of Validity" = "Gültigkeitszeitraum";
 
@@ -442,14 +328,8 @@
 /* Tab */
 "Pull to Refresh Page" = "Ziehen um Seite neu zu laden";
 
-/* DonationViewController */
-"Purchase Failure" = "Fehler beim Bezahlen";
-
 /* SettingsViewController */
 "Rate on App Store" = "Im App Store bewerten";
-
-/* No comment provided by engineer. */
-"Reasons to use the built-in Tor (iOS 17 only)" = "Gründe, um das eingebaute Tor zu verwenden (ab iOS 17)";
 
 /* AppDelegate */
 "Reload Tab" = "Reiter neu laden";
@@ -464,9 +344,6 @@
 "Report a Bug" = "Fehler melden";
 
 /* No comment provided by engineer. */
-"Request Access" = "Fordere Zugriff an";
-
-/* No comment provided by engineer. */
 "Request could not be formed. Please check host and username/password!" = "Anfrage konnte nicht erstellt werden. Bitte Host und Benutzername/Passwort prüfen!";
 
 /* No comment provided by engineer. */
@@ -474,9 +351,6 @@
 
 /* No comment provided by engineer. */
 "Retry" = "Erneut versuchen";
-
-/* Placeholder is 'Orbot' */
-"Retry after you added the authentication key to %@." = "Versuchs nochmal, nachdem Du den Authentifizierungsschlüssel zu %@ hinzugefügt hast.";
 
 /* RuleEditorController */
 "Rules in use on current page" = "Auf dieser Seite benutzte Regeln";
@@ -520,21 +394,6 @@
 /* SecurityPresetsRow; a security level */
 "Silver" = "Silber";
 
-/* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:" = "Damit Du mehr mit Tor auf iOS machen kannst! %2$@ verbessert das Surferlebnis mit %1$@ auf folgende Weise:";
-
-/* DonationViewController */
-"Sorry, in-app purchase is disabled on your device!" = "Es tut uns Leid, In-App-Käufe sind auf Deinem Gerät deaktiviert!";
-
-/* Placeholder is 'Orbot' */
-"Start %@" = "Starte %@";
-
-/* No comment provided by engineer. */
-"Start built-in Tor" = "Starte eingebautes Tor";
-
-/* Placeholder is 'Orbot' */
-"Start Tor in %@." = "Starte Tor in %@.";
-
 /* No comment provided by engineer. */
 "Starting Tor…" = "Starte Tor…";
 
@@ -546,12 +405,6 @@
 
 /* SettingsViewController */
 "Support" = "Unterstützung";
-
-/* DonationViewController */
-"Support Onion Browser Development" = "Unterstütze die Entwicklung von Onion Browser";
-
-/* Placeholder is 'Orbot' */
-"Switch back to %@" = "Wechsle zurück zu %@";
 
 /* AppDelegate */
 "Switch to Tab %d" = "Zu Reiter %d wechseln";
@@ -574,9 +427,6 @@
 /* No comment provided by engineer. */
 "The encryption method for this server is outdated." = "Die Verschlüsselungsmethode für diesen Server ist veraltet.";
 
-/* No comment provided by engineer. */
-"Then come back for private browsing." = "Dann komm zurück um privat zu Surfen.";
-
 /* SecurityViewController */
 "These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers." = "Diese könnten das Verhalten des Servers verändern, wie z.B. Captchas anzeigen oder ausblenden oder mit Seiten antworten, die für Desktop Browser gedacht sind.";
 
@@ -588,12 +438,6 @@
 
 /* Placeholder is 'Orbot' */
 "This site may need authentication. If you received an authentication key for this site, add it to %@!" = "Diese Seite könnte vielleicht eine Authentifizierung benötigen. Wenn Du einen Authentifizierungsschlüssel für diese Seite erhalten hast, füge ihn zu %@ hinzu!";
-
-/* Placeholder is 'Onion Browser' */
-"This will allow %@ to:" = "Das erlaubt %@ folgendes:";
-
-/* DonationViewController */
-"Tip: %@" = "Spende: %@";
 
 /* BookmarkViewController */
 "Title" = "Titel";
@@ -621,12 +465,6 @@
 
 /* SettingsViewController */
 "URL Blocker" = "URL Blocker";
-
-/* Placeholder is 'Orbot' */
-"Use %@" = "Benutze %@";
-
-/* No comment provided by engineer. */
-"Use built-in Tor" = "Benutze eingebautes Tor";
 
 /* SecurityViewController */
 "User Agent" = "Browserkennung";
@@ -658,20 +496,11 @@
 /* SettingsViewController */
 "When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "Falls deaktiviert, wird der gesamte eingegebene Text in der Suchleiste zur Suchmaschine gesendet, außer er beginnt mit \"http\".";
 
-/* No comment provided by engineer. */
-"Why" = "Warum";
-
-/* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"Why %1$@ needs %2$@" = "Warum %1$@ %2$@ benötigt";
-
 /* SecurityPresetsRow */
 "Works pretty well. Your identity is mostly protected." = "Funktioniert sehr gut. Deine Identität ist größtenteils geschützt.";
 
 /* Placeholder is server domain */
 "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "Du könntest dich zu einem Server verbinden, der vorgibt \"%@\" zu sein, und damit deine vertraulichen Informationen in Gefahr bringen.";
-
-/* DonationViewController */
-"You most recently donated %1$@ on %2$@." = "Du hast als letztes %1$@ am %2$@ gespendet.";
 
 /* No comment provided by engineer. */
 "You're one step closer to private browsing." = "Du bist einen Schritt näher am privaten Surfen.";

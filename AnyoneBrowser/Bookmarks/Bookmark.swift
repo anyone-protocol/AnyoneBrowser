@@ -33,29 +33,12 @@ open class Bookmark: NSObject {
 	private static let defaultBookmarks: [Bookmark] = {
 		var defaults = [Bookmark]()
 
-		defaults.append(Bookmark(name: "DuckDuckGo", url: "https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"))
-		defaults.append(Bookmark(name: "New York Times", url: "https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"))
-		defaults.append(Bookmark(name: "BBC", url: "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/"))
-		defaults.append(Bookmark(name: "ProPublica", url: "https://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/"))
-		defaults.append(Bookmark(name: "Freedom of the Press Foundation", url: "http://fpfjxcrmw437h6z2xl3w4czl55kvkmxpapg37bbopsafdu7q454byxid.onion/"))
-		defaults.append(Bookmark(name: "Deutsche Welle", url: "https://www.dwnewsgngmhlplxy6o2twtfgjnrnjxbegbwqx6wnotdhkzt562tszfid.onion/"))
+		defaults.append(.init(name: "Anyone official site", url: "https://www.anyone.io"))
+		defaults.append(.init(name: "Anyone Test Page", url: "https://check.en.anyone.tech/"))
 
-		defaults.append(Bookmark(name: "Facebook", url: "https://m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion/"))
-
-		defaults.append(Bookmark(name: "Onion Browser official site", url: "https://onionbrowser.com"))
-		defaults.append(Bookmark(name: "The Tor Project", url: "http://2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion/"))
 
 		return defaults
 	}()
-
-	private static let v2ToV3 = [
-		"https://3g2upl4pq6kufc4m.onion/": "https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/",
-		"https://mobile.nytimes3xbfgragh.onion/": "https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/",
-		"https://bbcnewsv2vjtpsuy.onion/": "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/",
-		"https://m.facebookcorewwwi.onion/": "https://m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion/",
-		"https://www.propub3r6espa33w.onion/": "https://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/",
-		"https://freedom.press/": "http://fpfjxcrmw437h6z2xl3w4czl55kvkmxpapg37bbopsafdu7q454byxid.onion/",
-		"http://expyuzz4wqqyqhjn.onion/": "http://2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion/"]
 
 	private static var startPageNeedsUpdate = true
 
@@ -106,34 +89,6 @@ open class Bookmark: NSObject {
 		}
 	}
 
-	class func migrateToV3() {
-		guard !Settings.bookmarksMigratedToOnionV3 else {
-			return
-		}
-
-		for bookmark in all {
-			if let v2 = bookmark.url?.absoluteString,
-			   let v3 = v2ToV3[v2]
-			{
-				bookmark.url = URL(string: v3)
-			}
-		}
-
-		store()
-
-		Settings.bookmarksMigratedToOnionV3 = true
-
-		DispatchQueue.global(qos: .background).async {
-			for bookmark in all {
-				bookmark.acquireIcon() { updated in
-					if updated {
-						store()
-					}
-				}
-			}
-		}
-	}
-
 	class func updateStartPage(force: Bool = false) {
 		guard let source = Bundle.main.url(forResource: "start", withExtension: "html") else {
 			return
@@ -165,7 +120,7 @@ open class Bookmark: NSObject {
 
 			// Render bookmarks.
 			for i in 0 ... 5 {
-				let url: URL
+				let url: URL?
 				let name: String
 				let icon: UIImage
 
@@ -174,18 +129,25 @@ open class Bookmark: NSObject {
 
 					url = tempUrl
 
-					name = all[i].name ?? url.host!
+					name = all[i].name ?? url?.host ?? ""
 					icon = all[i].icon ?? Bookmark.defaultIcon
 				}
 				else {
-					// Make sure that the first 6 default bookmarks are available!
-					url = defaultBookmarks[i].url!
-					name = defaultBookmarks[i].name ?? url.host!
-					icon = defaultBookmarks[i].icon ?? Bookmark.defaultIcon
+					if i < defaultBookmarks.count {
+						// Make sure that the first 6 default bookmarks are available!
+						url = defaultBookmarks[i].url
+						name = defaultBookmarks[i].name ?? url?.host ?? ""
+						icon = defaultBookmarks[i].icon ?? Bookmark.defaultIcon
+					}
+					else {
+						url = nil
+						name = ""
+						icon = Bookmark.defaultIcon
+					}
 				}
 
 				template = template
-					.replacingOccurrences(of: "{{ bookmark_url_\(i) }}", with: url.absoluteString)
+					.replacingOccurrences(of: "{{ bookmark_url_\(i) }}", with: url?.absoluteString ?? "")
 					.replacingOccurrences(of: "{{ bookmark_name_\(i) }}", with: name)
 					.replacingOccurrences(of: "{{ bookmark_icon_\(i) }}",
 						with: "data:image/png;base64,\(icon.pngData()?.base64EncodedString() ?? "")")
@@ -193,12 +155,10 @@ open class Bookmark: NSObject {
 		}
 
 		template = template
-			.replacingOccurrences(of: "{{ Onion Browser }}",
+			.replacingOccurrences(of: "{{ Anyone Browser }}",
 								  with: Bundle.main.displayName)
-			.replacingOccurrences(of: "{{ Learn more about Onion Browser }}",
+			.replacingOccurrences(of: "{{ Learn more about Anyone Browser }}",
 								  with: String(format: NSLocalizedString("Learn more about %@", comment: ""), Bundle.main.displayName))
-			.replacingOccurrences(of: "{{ Donate to Onion Browser }}",
-								  with: String(format: NSLocalizedString("Donate to %@", comment: ""), Bundle.main.displayName))
 			.replacingOccurrences(of: "{{ Subscribe to Tor Newsletter }}",
 								  with: NSLocalizedString("Subscribe to Tor Newsletter", comment: ""))
 

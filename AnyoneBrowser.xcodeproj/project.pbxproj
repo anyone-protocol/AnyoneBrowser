@@ -45,24 +45,15 @@
 		A0172C72288827E1008D42CD /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C71288827E1008D42CD /* ApiError.swift */; };
 		A0172C74288828D8008D42CD /* URLSession+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C73288828D8008D42CD /* URLSession+Helpers.swift */; };
 		A01D3BA323900D2800E536F2 /* RuleEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CBCD491E934249009D5352 /* RuleEditorController.m */; };
-		A02414372A0260B1009AEE25 /* WhyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02414352A0260B1009AEE25 /* WhyViewController.xib */; };
-		A02414382A0260B1009AEE25 /* WhyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02414362A0260B1009AEE25 /* WhyViewController.swift */; };
 		A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028857F2893FA23007D5AE8 /* WebsiteStorage.swift */; };
 		A028858228940B93007D5AE8 /* Storage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028858128940B93007D5AE8 /* Storage2ViewController.swift */; };
 		A02A09082AD6B92800A9334C /* TorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD6B42AC5914B00441B48 /* TorManager.swift */; };
-		A02A090F2AD6BA9600A9334C /* OrbotOrBuiltInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A090D2AD6BA9600A9334C /* OrbotOrBuiltInViewController.swift */; };
 		A02A09122AD6CAF000A9334C /* StartTorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A09112AD6CAF000A9334C /* StartTorViewController.swift */; };
-		A02A09132AD6D17B00A9334C /* OrbotOrBuiltInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02A090E2AD6BA9600A9334C /* OrbotOrBuiltInViewController.xib */; };
 		A02A09142AD6E8C000A9334C /* StartTorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02A09102AD6CAF000A9334C /* StartTorViewController.xib */; };
 		A02CB2B523D0B0B300880720 /* AddBookmarkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02CB2B423D0B0B300880720 /* AddBookmarkActivity.swift */; };
 		A036C3B22937A06C0035AA4F /* AddSearchEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */; };
 		A03CFA042892B05500F01DB5 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CFA032892B05500F01DB5 /* DownloadHelper.swift */; };
-		A043B9522A02897A008025A7 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A043B9502A02897A008025A7 /* PermissionViewController.xib */; };
-		A043B9532A02897A008025A7 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A043B9512A02897A008025A7 /* PermissionViewController.swift */; };
-		A043B9562A029FC3008025A7 /* StartOrbotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A043B9542A029FC3008025A7 /* StartOrbotViewController.xib */; };
-		A043B9572A029FC3008025A7 /* StartOrbotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A043B9552A029FC3008025A7 /* StartOrbotViewController.swift */; };
 		A0550649271094A900922E18 /* ua-strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0550648271094A900922E18 /* ua-strings.plist */; };
-		A068DD99240D348300BF46E3 /* AltSvcHeader_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A068DD98240D348300BF46E3 /* AltSvcHeader_Tests.swift */; };
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
 		A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */; };
 		A068DD9E240D394900BF46E3 /* URLBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8793A1A4108DD00A63654 /* URLBlocker.m */; };
@@ -126,7 +117,6 @@
 		A0BF527123AFC3580096624A /* SecurityShield.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522C23AFC3580096624A /* SecurityShield.swift */; };
 		A0BF527223AFC3580096624A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522D23AFC3580096624A /* SettingsViewController.swift */; };
 		A0BF527323AFC3580096624A /* AddSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522E23AFC3580096624A /* AddSiteViewController.swift */; };
-		A0BF527423AFC3580096624A /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522F23AFC3580096624A /* DonationViewController.swift */; };
 		A0BF527623AFC3580096624A /* OrbotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF523323AFC3580096624A /* OrbotManager.swift */; };
 		A0BF527723AFC3580096624A /* BlurredSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF523623AFC3580096624A /* BlurredSnapshot.swift */; };
 		A0BF527823AFC3580096624A /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF523823AFC3580096624A /* UIViewController+Helpers.swift */; };
@@ -142,14 +132,10 @@
 		A0C582582AE9136200A81084 /* Thread+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C582572AE9136200A81084 /* Thread+Helpers.swift */; };
 		A0CD36982890194900628DA6 /* Tab+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */; };
 		A0D070FD275A513700922D70 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
-		A0D9008B24095F5C0046C9B3 /* AltSvcHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */; };
 		A0E8E8B12938CDFB00DC2A2F /* SearchEnginesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */; };
 		A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
-		A0F8BE8627C50586002D2999 /* AltSvcHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */; };
 		A0FA965D2A015EBB005EDC3F /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */; };
 		A0FA965E2A015EBB005EDC3F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */; };
-		A0FA96612A0161DA005EDC3F /* InstallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FA965F2A0161DA005EDC3F /* InstallViewController.xib */; };
-		A0FA96622A0161DA005EDC3F /* InstallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA96602A0161DA005EDC3F /* InstallViewController.swift */; };
 		CC3F3537E5B2F8693B50D4AE /* Pods_AnyoneBrowser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC0980C6DE06659DED8CC42 /* Pods_AnyoneBrowser_Tests.framework */; };
 		DB0E243D0DF8FBC859044A20 /* Pods_AnyoneBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE3497B3A299C09EC1F587B /* Pods_AnyoneBrowser.framework */; };
 /* End PBXBuildFile section */
@@ -233,13 +219,9 @@
 		A0172C6F288824BD008D42CD /* FixedFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedFormViewController.swift; sourceTree = "<group>"; };
 		A0172C71288827E1008D42CD /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		A0172C73288828D8008D42CD /* URLSession+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Helpers.swift"; sourceTree = "<group>"; };
-		A02414352A0260B1009AEE25 /* WhyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhyViewController.xib; sourceTree = "<group>"; };
-		A02414362A0260B1009AEE25 /* WhyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyViewController.swift; sourceTree = "<group>"; };
 		A025F27421F62C100034B947 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		A028857F2893FA23007D5AE8 /* WebsiteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteStorage.swift; sourceTree = "<group>"; };
 		A028858128940B93007D5AE8 /* Storage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage2ViewController.swift; sourceTree = "<group>"; };
-		A02A090D2AD6BA9600A9334C /* OrbotOrBuiltInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbotOrBuiltInViewController.swift; sourceTree = "<group>"; };
-		A02A090E2AD6BA9600A9334C /* OrbotOrBuiltInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrbotOrBuiltInViewController.xib; sourceTree = "<group>"; };
 		A02A09102AD6CAF000A9334C /* StartTorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartTorViewController.xib; sourceTree = "<group>"; };
 		A02A09112AD6CAF000A9334C /* StartTorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTorViewController.swift; sourceTree = "<group>"; };
 		A02AB5C12AA5F34000CC6779 /* tt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tt; path = tt.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -250,14 +232,9 @@
 		A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSearchEngineViewController.swift; sourceTree = "<group>"; };
 		A03A5C05EE3C1632DC4828FF /* Pods-OnionBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A03CFA032892B05500F01DB5 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
-		A043B9502A02897A008025A7 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
-		A043B9512A02897A008025A7 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
-		A043B9542A029FC3008025A7 /* StartOrbotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartOrbotViewController.xib; sourceTree = "<group>"; };
-		A043B9552A029FC3008025A7 /* StartOrbotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOrbotViewController.swift; sourceTree = "<group>"; };
 		A0550648271094A900922E18 /* ua-strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ua-strings.plist"; sourceTree = "<group>"; };
 		A06881D02A66ADF60084D26D /* release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = release.entitlements; sourceTree = "<group>"; };
 		A06881D12A66B0070084D26D /* debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = debug.entitlements; sourceTree = "<group>"; };
-		A068DD98240D348300BF46E3 /* AltSvcHeader_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltSvcHeader_Tests.swift; sourceTree = "<group>"; };
 		A0696EAC2406C7D000512695 /* SyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewController.swift; sourceTree = "<group>"; };
 		A0696EAE2406D94200512695 /* Nextcloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nextcloud.swift; sourceTree = "<group>"; };
 		A06DF455241A60E700A07796 /* SecureEnclave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclave.swift; sourceTree = "<group>"; };
@@ -467,7 +444,6 @@
 		A0BF522C23AFC3580096624A /* SecurityShield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityShield.swift; sourceTree = "<group>"; };
 		A0BF522D23AFC3580096624A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A0BF522E23AFC3580096624A /* AddSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSiteViewController.swift; sourceTree = "<group>"; };
-		A0BF522F23AFC3580096624A /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		A0BF523023AFC3580096624A /* AnyoneBrowser-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AnyoneBrowser-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0BF523323AFC3580096624A /* OrbotManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbotManager.swift; sourceTree = "<group>"; };
 		A0BF523623AFC3580096624A /* BlurredSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurredSnapshot.swift; sourceTree = "<group>"; };
@@ -486,13 +462,10 @@
 		A0C582572AE9136200A81084 /* Thread+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Helpers.swift"; sourceTree = "<group>"; };
 		A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
 		A0D070FC275A513700922D70 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
-		A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltSvcHeader.swift; sourceTree = "<group>"; };
 		A0DB59522747D36200B20436 /* Tor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnginesViewController.swift; sourceTree = "<group>"; };
 		A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		A0FA965F2A0161DA005EDC3F /* InstallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstallViewController.xib; sourceTree = "<group>"; };
-		A0FA96602A0161DA005EDC3F /* InstallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallViewController.swift; sourceTree = "<group>"; };
 		E171B1A11D583512AF52F41D /* Pods-AnyoneBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -570,7 +543,6 @@
 		018333D81A35727C00670CD1 /* AnyoneBrowser Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A068DD98240D348300BF46E3 /* AltSvcHeader_Tests.swift */,
 				A08737DF2213235F005A68CC /* HostSettings_Tests.m */,
 				01F2AE411B827BC200D5651A /* SSLCertificate_Tests.m */,
 				01F879401A4112E500A63654 /* URLBlocker_Tests.m */,
@@ -656,18 +628,8 @@
 			children = (
 				A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */,
 				A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */,
-				A02A090E2AD6BA9600A9334C /* OrbotOrBuiltInViewController.xib */,
-				A02A090D2AD6BA9600A9334C /* OrbotOrBuiltInViewController.swift */,
-				A0FA965F2A0161DA005EDC3F /* InstallViewController.xib */,
-				A0FA96602A0161DA005EDC3F /* InstallViewController.swift */,
-				A02414352A0260B1009AEE25 /* WhyViewController.xib */,
-				A02414362A0260B1009AEE25 /* WhyViewController.swift */,
-				A043B9502A02897A008025A7 /* PermissionViewController.xib */,
-				A043B9512A02897A008025A7 /* PermissionViewController.swift */,
 				A02A09102AD6CAF000A9334C /* StartTorViewController.xib */,
 				A02A09112AD6CAF000A9334C /* StartTorViewController.swift */,
-				A043B9542A029FC3008025A7 /* StartOrbotViewController.xib */,
-				A043B9552A029FC3008025A7 /* StartOrbotViewController.swift */,
 			);
 			path = Startup;
 			sourceTree = "<group>";
@@ -781,7 +743,6 @@
 				A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */,
 				A0BF522723AFC3580096624A /* CustomSitesViewController.swift */,
 				A0BF522E23AFC3580096624A /* AddSiteViewController.swift */,
-				A0BF522F23AFC3580096624A /* DonationViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -791,7 +752,6 @@
 			children = (
 				A0172C6D2888247C008D42CD /* AlertHelper.swift */,
 				A0172C71288827E1008D42CD /* ApiError.swift */,
-				A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */,
 				A0BF523623AFC3580096624A /* BlurredSnapshot.swift */,
 				A0BF523923AFC3580096624A /* Bundle+Helpers.swift */,
 				54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */,
@@ -957,10 +917,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0FA96612A0161DA005EDC3F /* InstallViewController.xib in Resources */,
 				A0BF524E23AFC3580096624A /* SecurityLevelCell.xib in Resources */,
 				A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */,
-				A043B9562A029FC3008025A7 /* StartOrbotViewController.xib in Resources */,
 				A08563852A05419000A3A7FF /* Launch Screen.storyboard in Resources */,
 				A0A1A35A2A03DAB800DE4991 /* security-levels.html in Resources */,
 				A0BF51F423AFBF250096624A /* credits.html in Resources */,
@@ -970,7 +928,6 @@
 				A0BF526523AFC3580096624A /* FavIconCell.xib in Resources */,
 				A0BF525823AFC3580096624A /* TabCell.xib in Resources */,
 				A0BF51E523AFBF250096624A /* urlblocker.json in Resources */,
-				A02414372A0260B1009AEE25 /* WhyViewController.xib in Resources */,
 				A0BF51EF23AFBF250096624A /* SearchEngines.plist in Resources */,
 				A0BF524C23AFC3580096624A /* CircuitViewController.xib in Resources */,
 				A08563142A04E9D900A3A7FF /* Localizable.strings in Resources */,
@@ -978,11 +935,9 @@
 				A085633A2A04EA1E00A3A7FF /* Localizable.stringsdict in Resources */,
 				A0BF525A23AFC3580096624A /* BrowsingViewController-iPad.xib in Resources */,
 				A0FA965D2A015EBB005EDC3F /* WelcomeViewController.xib in Resources */,
-				A02A09132AD6D17B00A9334C /* OrbotOrBuiltInViewController.xib in Resources */,
 				A0BF525423AFC3580096624A /* BrowsingViewController.xib in Resources */,
 				A0BF524A23AFC3580096624A /* SecurityPopUpViewController.xib in Resources */,
 				A0BF524923AFC3580096624A /* CircuitNodeCell.xib in Resources */,
-				A043B9522A02897A008025A7 /* PermissionViewController.xib in Resources */,
 				A02A09142AD6E8C000A9334C /* StartTorViewController.xib in Resources */,
 				A0BF526323AFC3580096624A /* BookmarksViewController.xib in Resources */,
 				A0BF51ED23AFBF250096624A /* start.html in Resources */,
@@ -1152,7 +1107,6 @@
 				A0BF526B23AFC3580096624A /* Settings.swift in Sources */,
 				A0BF525323AFC3580096624A /* Tab.swift in Sources */,
 				A0BF525D23AFC3580096624A /* LiveSearchViewController.swift in Sources */,
-				A02414382A0260B1009AEE25 /* WhyViewController.swift in Sources */,
 				A0BF526C23AFC3580096624A /* CustomSitesViewController.swift in Sources */,
 				A0BF527C23AFC3580096624A /* UIView+Helpers.swift in Sources */,
 				A036C3B22937A06C0035AA4F /* AddSearchEngineViewController.swift in Sources */,
@@ -1166,7 +1120,6 @@
 				01F2AE391B7FEF5E00D5651A /* SSLCertificate.m in Sources */,
 				A02A09122AD6CAF000A9334C /* StartTorViewController.swift in Sources */,
 				A0BF527623AFC3580096624A /* OrbotManager.swift in Sources */,
-				A0D9008B24095F5C0046C9B3 /* AltSvcHeader.swift in Sources */,
 				A0BF527223AFC3580096624A /* SettingsViewController.swift in Sources */,
 				A0BF527723AFC3580096624A /* BlurredSnapshot.swift in Sources */,
 				A013DEDA2434E69A0087D12B /* UIImage+Helpers.swift in Sources */,
@@ -1196,10 +1149,7 @@
 				A0BF525623AFC3580096624A /* SecurityLevelCell.swift in Sources */,
 				A0BF527023AFC3580096624A /* HostSettings.swift in Sources */,
 				A0BF527D23AFC3580096624A /* SearchableTableViewController.swift in Sources */,
-				A043B9532A02897A008025A7 /* PermissionViewController.swift in Sources */,
-				A043B9572A029FC3008025A7 /* StartOrbotViewController.swift in Sources */,
 				A0BF527323AFC3580096624A /* AddSiteViewController.swift in Sources */,
-				A0BF527423AFC3580096624A /* DonationViewController.swift in Sources */,
 				A0BF526223AFC3580096624A /* FavIconRow.swift in Sources */,
 				A0172C6E2888247C008D42CD /* AlertHelper.swift in Sources */,
 				A0C582582AE9136200A81084 /* Thread+Helpers.swift in Sources */,
@@ -1218,8 +1168,6 @@
 				69CBCD471E934228009D5352 /* URLBlockerRuleController.m in Sources */,
 				01F7CB4E1A52FC4E00F42B73 /* NSString+IPAddress.m in Sources */,
 				A0BF525B23AFC3580096624A /* Tab+Gestures.swift in Sources */,
-				A0FA96622A0161DA005EDC3F /* InstallViewController.swift in Sources */,
-				A02A090F2AD6BA9600A9334C /* OrbotOrBuiltInViewController.swift in Sources */,
 				A0BF527B23AFC3580096624A /* Formatter.swift in Sources */,
 				A0BF524B23AFC3580096624A /* CircuitNodeCell.swift in Sources */,
 				A003A1932A0D1628008D8845 /* SceneDelegate.swift in Sources */,
@@ -1237,10 +1185,8 @@
 				A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */,
 				A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */,
 				A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */,
-				A068DD99240D348300BF46E3 /* AltSvcHeader_Tests.swift in Sources */,
 				A08737E1221324B5005A68CC /* HostSettings_Tests.m in Sources */,
 				A068DD9E240D394900BF46E3 /* URLBlocker.m in Sources */,
-				A0F8BE8627C50586002D2999 /* AltSvcHeader.swift in Sources */,
 				01F2AE421B827BC200D5651A /* SSLCertificate_Tests.m in Sources */,
 				A068DDA0240D425200BF46E3 /* NSString+IPAddress.m in Sources */,
 			);
@@ -1564,7 +1510,7 @@
 				CODE_SIGN_STYLE = Manual;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1591,7 +1537,7 @@
 				CODE_SIGN_STYLE = Manual;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

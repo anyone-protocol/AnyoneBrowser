@@ -9,7 +9,6 @@
 //
 
 @preconcurrency import WebKit
-import OrbotKit
 
 extension Tab: WKNavigationDelegate {
 
@@ -28,10 +27,8 @@ extension Tab: WKNavigationDelegate {
 			return decisionHandler(.cancel, preferences)
 		}
 
-		if Settings.useBuiltInTor ?? false, #available(iOS 17.0, *) {
-			guard !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty else {
-				return decisionHandler(.cancel, preferences)
-			}
+		guard !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty else {
+			return decisionHandler(.cancel, preferences)
 		}
 
 		if let blocker = URLBlocker.blockingTarget(for: url, fromMainDocumentURL: self.url) {
@@ -412,33 +409,18 @@ extension Tab: WKNavigationDelegate {
 			msg += "\n\n"
 			msg += String(format: NSLocalizedString(
 				"This site may need authentication. If you received an authentication key for this site, add it to %@!",
-				comment: "Placeholder is 'Orbot'"),
-						  OrbotKit.orbotName)
+				comment: "Placeholder is 'Anyone Browser'"),
+						  Bundle.main.displayName)
 
 			alert = AlertHelper.build(message: msg, actions: [
 				AlertHelper.cancelAction(),
-				AlertHelper.defaultAction(String(
-					format: NSLocalizedString("Add to %@", comment: "Placeholder is 'Orbot'"),
-					OrbotKit.orbotName)
+				AlertHelper.defaultAction(NSLocalizedString("Add", comment: "")
 				) { [weak self] _ in
-					OrbotKit.shared.open(.addAuth(url: host, key: ""))
+					// TODO: Add authentication key support.
 
-					let alert2 = AlertHelper.build(
-						message: String(
-							format: NSLocalizedString(
-								"Retry after you added the authentication key to %@.",
-								comment: "Placeholder is 'Orbot'"),
-							OrbotKit.orbotName),
-						actions: [
-							AlertHelper.cancelAction(),
-							AlertHelper.defaultAction(NSLocalizedString("Retry", comment: ""), handler: { _ in
-								DispatchQueue.main.async {
-									self?.load(url)
-								}
-							})
-						])
-
-					self?.tabDelegate?.present(alert2, nil)
+					DispatchQueue.main.async {
+						self?.load(url)
+					}
 				}
 			])
 		}

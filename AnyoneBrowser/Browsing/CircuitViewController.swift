@@ -9,7 +9,6 @@
 //
 
 import UIKit
-import OrbotKit
 import Tor
 import IPtProxyUI
 
@@ -28,7 +27,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 			self.note = note
 		}
 
-		init(_ torNode: OrbotKit.TorNode) {
+		init(_ torNode: TorNode) {
 			self.title = torNode.localizedCountryName ?? torNode.countryCode ?? torNode.nickName ?? ""
 			self.ip = torNode.ipv4Address?.isEmpty ?? true ? torNode.ipv6Address : torNode.ipv4Address
 		}
@@ -83,7 +82,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 	}
 
 	private var nodes = [Node]()
-	private var usedCircuits = [OrbotKit.TorCircuit]()
+	private var usedCircuits = [TorCircuit]()
 
 	private static let onionAddressRegex = try? NSRegularExpression(pattern: "^(.*\\.)?(.*?)\\.(onion|exit)$", options: .caseInsensitive)
 
@@ -168,29 +167,19 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 			self?.dismiss(animated: true)
 		}
 
-		if Settings.useBuiltInTor == true {
-			TorManager.shared.close(usedCircuits.compactMap({ $0.circuitId }), completion)
-		}
-		else {
-			OrbotManager.shared.closeCircuits(usedCircuits, completion)
-		}
+		TorManager.shared.close(usedCircuits.compactMap({ $0.circuitId }), completion)
 	}
 
 	@IBAction func showBridgeSelection(_ sender: UIView) {
-		if Settings.useBuiltInTor == true {
-			let vc = BridgesConfViewController()
-			vc.delegate = self
+		let vc = BridgesConfViewController()
+		vc.delegate = self
 
-			present(UINavigationController(rootViewController: vc))
-		}
-		else {
-			OrbotKit.shared.open(.bridges)
-		}
+		present(UINavigationController(rootViewController: vc))
 	}
 
 	private func reloadCircuits() {
 		// TODO: A lot of this needs to move to Tor.framework for better reuse!
-		let completion = { (circuits: [OrbotKit.TorCircuit]) in
+		let completion = { (circuits: [TorCircuit]) in
 			// Store in-use circuits (identified by having a SOCKS username,
 			// so the user can close them and get fresh ones on #newCircuits.
 			self.usedCircuits = circuits
@@ -217,47 +206,42 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 		DispatchQueue.global(qos: .userInitiated).async {
 			let host = self.currentUrl?.host
 
-			if Settings.useBuiltInTor == true {
-				TorManager.shared.getCircuits { circuits in
-					var candidates = TorCircuit.filter(circuits)
+			TorManager.shared.getCircuits { circuits in
+				var candidates = TorCircuit.filter(circuits)
 
-					if let host = host {
-						var query: String?
+				if let host = host {
+					var query: String?
 
-						let matches = Self.onionAddressRegex?.matches(
-							in: host, options: [],
-							range: NSRange(host.startIndex ..< host.endIndex, in: host))
+					let matches = Self.onionAddressRegex?.matches(
+						in: host, options: [],
+						range: NSRange(host.startIndex ..< host.endIndex, in: host))
 
-						if let match = matches?.first,
-						   match.numberOfRanges > 1
-						{
-						   let nsRange = match.range(at: match.numberOfRanges - 2)
+					if let match = matches?.first,
+					   match.numberOfRanges > 1
+					{
+					   let nsRange = match.range(at: match.numberOfRanges - 2)
 
-							if let range = Range(nsRange, in: host) {
-								query = String(host[range])
-							}
-						}
-
-						// Circuits used for .onion addresses can be identified by their
-						// rendQuery, which is equal to the "domain".
-						if let query = query {
-							candidates = candidates.filter { circuit in
-								circuit.purpose == TorCircuit.purposeHsClientRend
-								&& circuit.rendQuery == query
-							}
-						}
-						else {
-							candidates = candidates.filter { circuit in
-								circuit.purpose == TorCircuit.purposeGeneral || circuit.purpose == TorCircuit.purposeConfluxLinked
-							}
+						if let range = Range(nsRange, in: host) {
+							query = String(host[range])
 						}
 					}
 
-					completion(candidates.compactMap({ $0.toOrbotKitType() }))
+					// Circuits used for .onion addresses can be identified by their
+					// rendQuery, which is equal to the "domain".
+					if let query = query {
+						candidates = candidates.filter { circuit in
+							circuit.purpose == TorCircuit.purposeHsClientRend
+							&& circuit.rendQuery == query
+						}
+					}
+					else {
+						candidates = candidates.filter { circuit in
+							circuit.purpose == TorCircuit.purposeGeneral || circuit.purpose == TorCircuit.purposeConfluxLinked
+						}
+					}
 				}
-			}
-			else {
-				OrbotManager.shared.getCircuits(host: host, completion)
+
+				completion(candidates)
 			}
 		}
 	}
