@@ -1,18 +1,18 @@
-# Build Onion Browser 3.X
+# Build Anyone Browser
 ## Build Dependencies
 
-Onion Browser uses [CocoaPods](https://cocoapods.org/) as its dependency manager.
+Anyone Browser uses [CocoaPods](https://cocoapods.org/) as its dependency manager.
 
 
-## Steps to build Onion Browser 3.X
+## Steps to build Anyone Browser
 
 ```bash
-git clone git@github.com:OnionBrowser/OnionBrowser.git
-cd OnionBrowser
-git checkout 3.X
+git clone git@github.com:anyone-protocol/AnyoneBrowser.git
+cd AnyoneBrowser
+git checkout main
 pod repo update
 pod install
-open OnionBrowser.xcworkspace
+open AnyoneBrowser.xcworkspace
 ```
 
 ## Edit Config.xcconfig
@@ -25,6 +25,3 @@ You will at least need to edit the `PRODUCT_BUNDLE_IDENTIFIER[config=Debug]` lin
 the app in a simulator. 
 
 Make sure, you didn't accidentally remove the references to that in `project.pbxproj`!
-
-To disable the dependency on Orbot iOS for debugging in the simulator, you can set
-`OrbotManager-simulatorIgnoreOrbot` to `true`.

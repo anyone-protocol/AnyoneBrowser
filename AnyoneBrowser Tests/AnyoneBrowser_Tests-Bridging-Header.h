@@ -8,9 +8,9 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 
-#ifndef OnionBrowser2_Tests_Bridging_Header_h
-#define OnionBrowser2_Tests_Bridging_Header_h
+#ifndef AnyoneBrowser_Tests_Bridging_Header_h
+#define AnyoneBrowser_Tests_Bridging_Header_h
 
 #import "NSString+IPAddress.h"
 
-#endif /* OnionBrowser2_Tests_Bridging_Header_h */
+#endif /* AnyoneBrowser_Tests_Bridging_Header_h */

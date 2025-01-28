@@ -1,5 +1,5 @@
 #import <XCTest/XCTest.h>
-#import "OnionBrowser-Swift.h"
+#import "AnyoneBrowser-Swift.h"
 
 @interface HostSettings_Tests : XCTestCase
 @end

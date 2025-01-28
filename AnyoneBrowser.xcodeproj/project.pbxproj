@@ -420,7 +420,7 @@
 		A0A1A37D2A03DB5A00DE4991 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = vi; path = "vi.lproj/security-levels.html"; sourceTree = "<group>"; };
 		A0A83AC128A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKScriptMessageHandler.swift"; sourceTree = "<group>"; };
 		A0AF2C052A123E65000BCC85 /* BrowsingViewController+UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowsingViewController+UIResponder.swift"; sourceTree = "<group>"; };
-		A0B2240E23A92B2700EA2C47 /* OnionBrowser2_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionBrowser2_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A0B2240E23A92B2700EA2C47 /* AnyoneBrowser_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnyoneBrowser_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0B9A2D9BB388E64788975B8 /* Pods-AnyoneBrowser Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser Tests.release.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A0BF51AE23AFBF250096624A /* urlblocker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = urlblocker.json; sourceTree = "<group>"; };
 		A0BF51C523AFBF250096624A /* credits.html.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.html.in; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
@@ -528,7 +528,7 @@
 				01801E941A32CA2A002B4718 /* Endless */,
 				A0BF51F523AFC3580096624A /* AnyoneBrowser */,
 				A0BF519D23AFBF250096624A /* Resources */,
-				018333D81A35727C00670CD1 /* Endless Tests */,
+				018333D81A35727C00670CD1 /* AnyoneBrowser Tests */,
 				01801E931A32CA2A002B4718 /* Products */,
 				6CC21620E2AE7B4037C6401B /* Frameworks */,
 				1D12FDC84D38C4B31A5E3DFB /* Pods */,
@@ -567,7 +567,7 @@
 			path = Endless;
 			sourceTree = "<group>";
 		};
-		018333D81A35727C00670CD1 /* Endless Tests */ = {
+		018333D81A35727C00670CD1 /* AnyoneBrowser Tests */ = {
 			isa = PBXGroup;
 			children = (
 				A068DD98240D348300BF46E3 /* AltSvcHeader_Tests.swift */,
@@ -575,9 +575,9 @@
 				01F2AE411B827BC200D5651A /* SSLCertificate_Tests.m */,
 				01F879401A4112E500A63654 /* URLBlocker_Tests.m */,
 				018333D91A35727C00670CD1 /* Supporting Files */,
-				A0B2240E23A92B2700EA2C47 /* OnionBrowser2_Tests-Bridging-Header.h */,
+				A0B2240E23A92B2700EA2C47 /* AnyoneBrowser_Tests-Bridging-Header.h */,
 			);
-			path = "Endless Tests";
+			path = "AnyoneBrowser Tests";
 			sourceTree = "<group>";
 		};
 		018333D91A35727C00670CD1 /* Supporting Files */ = {
@@ -1637,8 +1637,8 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Endless Tests/OnionBrowser2_Tests-Bridging-Header.h";
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "OnionBrowser-Swift.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnyoneBrowser Tests/AnyoneBrowser_Tests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "AnyoneBrowser-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1673,8 +1673,8 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Endless Tests/OnionBrowser2_Tests-Bridging-Header.h";
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "OnionBrowser-Swift.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnyoneBrowser Tests/AnyoneBrowser_Tests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "AnyoneBrowser-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
