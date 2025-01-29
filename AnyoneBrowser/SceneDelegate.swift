@@ -41,6 +41,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window = UIWindow(frame: scene.coordinateSpace.bounds)
 		window?.windowScene = scene
 
+		window?.tintColor = .accent
+
 		if Settings.tabSecurity == .alwaysRemember
 			|| (
 				Settings.tabSecurity == .forgetOnShutdown
