@@ -40,7 +40,7 @@ public extension FileManager {
 			return nil
 		}
 
-		// Create onion v3 auth directory if it does not yet exist.
+		// Create anon v3 auth directory if it does not yet exist.
 		try? createSecureDirIfNotExists(at: url)
 
 		return url

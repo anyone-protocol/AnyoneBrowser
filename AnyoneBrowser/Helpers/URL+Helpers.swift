@@ -14,7 +14,7 @@ extension URL {
 
 	static let blank = URL(string: "about:blank")!
 
-	static let aboutOnionBrowser = URL(string: "about:onion-browser")!
+	static let aboutAnyoneBrowser = URL(string: "about:anyone-browser")!
 	static let credits = Bundle.main.url(forResource: "credits", withExtension: "html")!
 
 	static let aboutSecurityLevels = URL(string: "about:security-levels")!
@@ -43,7 +43,7 @@ extension URL {
 
 	var real: URL {
 		switch self {
-		case URL.aboutOnionBrowser:
+		case URL.aboutAnyoneBrowser:
 			return URL.credits
 
 		case URL.aboutSecurityLevels:
@@ -57,7 +57,7 @@ extension URL {
 	var clean: URL? {
 		switch self {
 		case URL.credits:
-			return URL.aboutOnionBrowser
+			return URL.aboutAnyoneBrowser
 
 		case URL.securityLevels:
 			return URL.aboutSecurityLevels
@@ -80,7 +80,7 @@ extension URL {
 		}
 
 		switch self {
-		case URL.blank, URL.aboutOnionBrowser, URL.credits, URL.aboutSecurityLevels, URL.securityLevels, URL.start:
+		case URL.blank, URL.aboutAnyoneBrowser, URL.credits, URL.aboutSecurityLevels, URL.securityLevels, URL.start:
 			return true
 
 		default:

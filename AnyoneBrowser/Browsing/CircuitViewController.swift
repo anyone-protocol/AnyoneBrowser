@@ -76,7 +76,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 	private var nodes = [Node]()
 	private var usedCircuits = [AnonCircuit]()
 
-	private static let onionAddressRegex = try? NSRegularExpression(pattern: "^(.*\\.)?(.*?)\\.(onion|exit)$", options: .caseInsensitive)
+	private static let onionAddressRegex = try? NSRegularExpression(pattern: "^(.*\\.)?(.*?)\\.(anon|exit)$", options: .caseInsensitive)
 
 	private static let beginningOfTime = Date(timeIntervalSince1970: 0)
 
@@ -185,7 +185,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 						}
 					}
 
-					// Circuits used for .onion addresses can be identified by their
+					// Circuits used for .anon addresses can be identified by their
 					// rendQuery, which is equal to the "domain".
 					if let query = query {
 						candidates = candidates.filter { circuit in

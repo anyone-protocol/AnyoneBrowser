@@ -304,7 +304,7 @@ class SettingsViewController: FixedFormViewController {
 		}
 		.onCellSelection { [weak self] _, _ in
 			self?.view.sceneDelegate?.browsingUi.addNewTab(
-				URL.aboutOnionBrowser, transition: .notAnimated)
+				URL.aboutAnyoneBrowser, transition: .notAnimated)
 
 			self?.dismsiss_()
 		}

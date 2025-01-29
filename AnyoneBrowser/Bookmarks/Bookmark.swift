@@ -33,7 +33,7 @@ open class Bookmark: NSObject {
 	private static let defaultBookmarks: [Bookmark] = {
 		var defaults = [Bookmark]()
 
-		defaults.append(.init(name: "Anyone official site", url: "https://www.anyone.io"))
+		defaults.append(.init(name: "Anyone official site", url: "https://www.anyone.io/"))
 		defaults.append(.init(name: "Anyone Test Page", url: "https://check.en.anyone.tech/"))
 
 

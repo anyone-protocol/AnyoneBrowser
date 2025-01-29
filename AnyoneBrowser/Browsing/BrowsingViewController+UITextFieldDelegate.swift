@@ -191,8 +191,8 @@ extension BrowsingViewController: UITextFieldDelegate {
 			}
 
 			// If credits page, return that.
-			if search.caseInsensitiveCompare(URL.aboutOnionBrowser.absoluteString) == .orderedSame {
-				return URL.aboutOnionBrowser
+			if search.caseInsensitiveCompare(URL.aboutAnyoneBrowser.absoluteString) == .orderedSame {
+				return URL.aboutAnyoneBrowser
 			}
 
 			if search.caseInsensitiveCompare(URL.aboutSecurityLevels.absoluteString) == .orderedSame {
@@ -238,11 +238,11 @@ extension BrowsingViewController: UITextFieldDelegate {
 	}
 
 	/**
-	 Will try to create a URL from the given text. If the resulting URL has a `.onion`  host,
+	 Will try to create a URL from the given text. If the resulting URL has a `.anon`  host,
 	 it will use the `http` scheme, otherwise, it will use the `https`  scheme.
 
-	 Onion-servers often don't use an additional TLS encryption for their traffic, as Anyone already adds
-	 6 layers of TLS encryption to it and the last layer is only decrypted at the Onion-server itself, anyway.
+	 Anon-servers often don't use an additional TLS encryption for their traffic, as Anyone already adds
+	 6 layers of TLS encryption to it and the last layer is only decrypted at the Anon-server itself, anyway.
 	 Hence, technically there's no need for an additional encryption layer.
 
 	 For servers on the clearnet, however, where most of them moved to TLS encryption, we finally want to secure
@@ -254,7 +254,7 @@ extension BrowsingViewController: UITextFieldDelegate {
 	private func setHttpsScheme(_ search: String) -> URL? {
 		let url = URL(string: "https://\(search)")
 
-		if url?.host?.lowercased().hasSuffix(".onion") ?? false {
+		if url?.host?.lowercased().hasSuffix(".anon") ?? false {
 			return URL(string: "http://\(search)")
 		}
 
