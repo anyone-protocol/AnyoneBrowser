@@ -208,7 +208,7 @@ class SettingsViewController: FixedFormViewController {
 			$0.cell.selectionStyle = .default
 		}
 		.onCellSelection { [weak self] _, _ in
-			self?.navigationController?.pushViewController(URLBlockerRuleController(), animated: true)
+			self?.navigationController?.pushViewController(RulesViewController(), animated: true)
 		}
 
 		<<< SwitchRow() {

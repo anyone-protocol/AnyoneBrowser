@@ -34,8 +34,6 @@
 		01F879481A41141800A63654 /* urlblocker_mock_rules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F879461A41141800A63654 /* urlblocker_mock_rules.plist */; };
 		01F879491A41141800A63654 /* urlblocker_mock_targets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F879471A41141800A63654 /* urlblocker_mock_targets.plist */; };
 		54F7DBC8281C189700CBEFDB /* CALayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */; };
-		69CBCD471E934228009D5352 /* URLBlockerRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CBCD461E934228009D5352 /* URLBlockerRuleController.m */; };
-		69CBCD4D1E934249009D5352 /* RuleEditorRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CBCD4B1E934249009D5352 /* RuleEditorRow.m */; };
 		69CBCD521E9347B8009D5352 /* UIResponder+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CBCD511E9347B8009D5352 /* UIResponder+FirstResponder.m */; };
 		A003A1932A0D1628008D8845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003A1922A0D1628008D8845 /* SceneDelegate.swift */; };
 		A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DF455241A60E700A07796 /* SecureEnclave.swift */; };
@@ -44,7 +42,6 @@
 		A0172C70288824BD008D42CD /* FixedFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C6F288824BD008D42CD /* FixedFormViewController.swift */; };
 		A0172C72288827E1008D42CD /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C71288827E1008D42CD /* ApiError.swift */; };
 		A0172C74288828D8008D42CD /* URLSession+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C73288828D8008D42CD /* URLSession+Helpers.swift */; };
-		A01D3BA323900D2800E536F2 /* RuleEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CBCD491E934249009D5352 /* RuleEditorController.m */; };
 		A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028857F2893FA23007D5AE8 /* WebsiteStorage.swift */; };
 		A028858228940B93007D5AE8 /* Storage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028858128940B93007D5AE8 /* Storage2ViewController.swift */; };
 		A02A09082AD6B92800A9334C /* AnonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD6B42AC5914B00441B48 /* AnonManager.swift */; };
@@ -53,6 +50,7 @@
 		A02CB2B523D0B0B300880720 /* AddBookmarkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02CB2B423D0B0B300880720 /* AddBookmarkActivity.swift */; };
 		A036C3B22937A06C0035AA4F /* AddSearchEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */; };
 		A03CFA042892B05500F01DB5 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CFA032892B05500F01DB5 /* DownloadHelper.swift */; };
+		A0444F2B2D4A8A370020FC70 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F2A2D4A8A370020FC70 /* RulesViewController.swift */; };
 		A0550649271094A900922E18 /* ua-strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0550648271094A900922E18 /* ua-strings.plist */; };
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
 		A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */; };
@@ -201,12 +199,6 @@
 		54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Helpers.swift"; sourceTree = "<group>"; };
 		5FE3172A8893F37ED0730F03 /* Pods-OnionBrowser Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser Tests.release.xcconfig"; path = "Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests.release.xcconfig"; sourceTree = "<group>"; };
 		693145FD1D3EEAE400D08A6A /* Tor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tor.framework; path = Carthage/Build/iOS/Tor.framework; sourceTree = "<group>"; };
-		69CBCD451E934228009D5352 /* URLBlockerRuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLBlockerRuleController.h; sourceTree = "<group>"; };
-		69CBCD461E934228009D5352 /* URLBlockerRuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLBlockerRuleController.m; sourceTree = "<group>"; };
-		69CBCD481E934249009D5352 /* RuleEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleEditorController.h; sourceTree = "<group>"; };
-		69CBCD491E934249009D5352 /* RuleEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleEditorController.m; sourceTree = "<group>"; };
-		69CBCD4A1E934249009D5352 /* RuleEditorRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleEditorRow.h; sourceTree = "<group>"; };
-		69CBCD4B1E934249009D5352 /* RuleEditorRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleEditorRow.m; sourceTree = "<group>"; };
 		69CBCD501E9347B8009D5352 /* UIResponder+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+FirstResponder.h"; sourceTree = "<group>"; };
 		69CBCD511E9347B8009D5352 /* UIResponder+FirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+FirstResponder.m"; sourceTree = "<group>"; };
 		6EE3497B3A299C09EC1F587B /* Pods_AnyoneBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyoneBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +225,7 @@
 		A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSearchEngineViewController.swift; sourceTree = "<group>"; };
 		A03A5C05EE3C1632DC4828FF /* Pods-OnionBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A03CFA032892B05500F01DB5 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
+		A0444F2A2D4A8A370020FC70 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		A0550648271094A900922E18 /* ua-strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ua-strings.plist"; sourceTree = "<group>"; };
 		A06881D02A66ADF60084D26D /* release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = release.entitlements; sourceTree = "<group>"; };
 		A06881D12A66B0070084D26D /* debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = debug.entitlements; sourceTree = "<group>"; };
@@ -525,18 +518,12 @@
 			children = (
 				01F7CB4C1A52FC4E00F42B73 /* NSString+IPAddress.h */,
 				01F7CB4D1A52FC4E00F42B73 /* NSString+IPAddress.m */,
-				69CBCD481E934249009D5352 /* RuleEditorController.h */,
-				69CBCD491E934249009D5352 /* RuleEditorController.m */,
-				69CBCD4A1E934249009D5352 /* RuleEditorRow.h */,
-				69CBCD4B1E934249009D5352 /* RuleEditorRow.m */,
 				01F2AE371B7FEF5E00D5651A /* SSLCertificate.h */,
 				01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */,
 				69CBCD501E9347B8009D5352 /* UIResponder+FirstResponder.h */,
 				69CBCD511E9347B8009D5352 /* UIResponder+FirstResponder.m */,
 				01F879391A4108DD00A63654 /* URLBlocker.h */,
 				01F8793A1A4108DD00A63654 /* URLBlocker.m */,
-				69CBCD451E934228009D5352 /* URLBlockerRuleController.h */,
-				69CBCD461E934228009D5352 /* URLBlockerRuleController.m */,
 				018333CF1A351B3B00670CD1 /* Endless-Prefix.pch */,
 			);
 			path = Endless;
@@ -613,6 +600,14 @@
 			name = Build;
 			sourceTree = "<group>";
 		};
+		A0444F272D4A88C20020FC70 /* Blocking */ = {
+			isa = PBXGroup;
+			children = (
+				A0444F2A2D4A8A370020FC70 /* RulesViewController.swift */,
+			);
+			path = Blocking;
+			sourceTree = "<group>";
+		};
 		A07D65572208A2540002D775 /* build-util */ = {
 			isa = PBXGroup;
 			children = (
@@ -664,6 +659,7 @@
 			children = (
 				A0A8E5F523C88FFB007E5FAD /* Startup */,
 				A0BF520123AFC3580096624A /* Browsing */,
+				A0444F272D4A88C20020FC70 /* Blocking */,
 				A0BF521A23AFC3580096624A /* Bookmarks */,
 				A0BF522423AFC3580096624A /* Settings */,
 				A07037C523C7571B00D670EC /* AppDelegate.swift */,
@@ -833,7 +829,7 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1620;
-				ORGANIZATIONNAME = "Tigas Ventures, LLC (Mike Tigas)";
+				ORGANIZATIONNAME = Anyone;
 				TargetAttributes = {
 					01801E911A32CA2A002B4718 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1111,10 +1107,8 @@
 				A013DEDA2434E69A0087D12B /* UIImage+Helpers.swift in Sources */,
 				A0D070FD275A513700922D70 /* FileManager+Helpers.swift in Sources */,
 				A0BF527123AFC3580096624A /* SecurityShield.swift in Sources */,
-				69CBCD4D1E934249009D5352 /* RuleEditorRow.m in Sources */,
 				A0BF526D23AFC3580096624A /* SecurityViewController.swift in Sources */,
 				A0BF525123AFC3580096624A /* HistoryViewController.swift in Sources */,
-				A01D3BA323900D2800E536F2 /* RuleEditorController.m in Sources */,
 				A0BF524F23AFC3580096624A /* CircuitViewController.swift in Sources */,
 				A0BF527E23AFC3580096624A /* UIButton+Helpers.swift in Sources */,
 				A0BF526423AFC3580096624A /* Bookmark.swift in Sources */,
@@ -1131,6 +1125,7 @@
 				A0FA965E2A015EBB005EDC3F /* WelcomeViewController.swift in Sources */,
 				A0BF525C23AFC3580096624A /* Tab+Downloads.swift in Sources */,
 				A0BF525923AFC3580096624A /* TabCell.swift in Sources */,
+				A0444F2B2D4A8A370020FC70 /* RulesViewController.swift in Sources */,
 				A0BF527823AFC3580096624A /* UIViewController+Helpers.swift in Sources */,
 				A0BF525623AFC3580096624A /* SecurityLevelCell.swift in Sources */,
 				A0BF527023AFC3580096624A /* HostSettings.swift in Sources */,
@@ -1151,7 +1146,6 @@
 				A0AF2C062A123E65000BCC85 /* BrowsingViewController+UIResponder.swift in Sources */,
 				A0BF526A23AFC3580096624A /* SecurityPresetsRow.swift in Sources */,
 				A0BF526E23AFC3580096624A /* Storage1ViewController.swift in Sources */,
-				69CBCD471E934228009D5352 /* URLBlockerRuleController.m in Sources */,
 				01F7CB4E1A52FC4E00F42B73 /* NSString+IPAddress.m in Sources */,
 				A0BF525B23AFC3580096624A /* Tab+Gestures.swift in Sources */,
 				A0BF527B23AFC3580096624A /* Formatter.swift in Sources */,
