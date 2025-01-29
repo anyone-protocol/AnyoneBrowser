@@ -29,12 +29,10 @@
 		01F2AE461B827D3E00D5651A /* wildcard.pushover.net.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE441B827D3E00D5651A /* wildcard.pushover.net.crt */; };
 		01F2AE481B82822600D5651A /* paypal.com.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE471B82822600D5651A /* paypal.com.crt */; };
 		01F2AE4A1B82835A00D5651A /* expired.superblock.net.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE491B82835A00D5651A /* expired.superblock.net.crt */; };
-		01F7CB4E1A52FC4E00F42B73 /* NSString+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F7CB4D1A52FC4E00F42B73 /* NSString+IPAddress.m */; };
 		01F8793B1A4108DD00A63654 /* URLBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8793A1A4108DD00A63654 /* URLBlocker.m */; };
 		01F879481A41141800A63654 /* urlblocker_mock_rules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F879461A41141800A63654 /* urlblocker_mock_rules.plist */; };
 		01F879491A41141800A63654 /* urlblocker_mock_targets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F879471A41141800A63654 /* urlblocker_mock_targets.plist */; };
 		54F7DBC8281C189700CBEFDB /* CALayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */; };
-		69CBCD521E9347B8009D5352 /* UIResponder+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CBCD511E9347B8009D5352 /* UIResponder+FirstResponder.m */; };
 		A003A1932A0D1628008D8845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003A1922A0D1628008D8845 /* SceneDelegate.swift */; };
 		A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DF455241A60E700A07796 /* SecureEnclave.swift */; };
 		A013DEDA2434E69A0087D12B /* UIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013DED92434E69A0087D12B /* UIImage+Helpers.swift */; };
@@ -55,7 +53,6 @@
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
 		A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */; };
 		A068DD9E240D394900BF46E3 /* URLBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8793A1A4108DD00A63654 /* URLBlocker.m */; };
-		A068DDA0240D425200BF46E3 /* NSString+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F7CB4D1A52FC4E00F42B73 /* NSString+IPAddress.m */; };
 		A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAC2406C7D000512695 /* SyncViewController.swift */; };
 		A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAE2406D94200512695 /* Nextcloud.swift */; };
 		A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */; };
@@ -172,7 +169,6 @@
 		016B2FCC1A5648AE002D2730 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		01801E921A32CA2A002B4718 /* AnyoneBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyoneBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01801E961A32CA2A002B4718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		018333CF1A351B3B00670CD1 /* Endless-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Endless-Prefix.pch"; sourceTree = "<group>"; };
 		018333D71A35727C00670CD1 /* AnyoneBrowser Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnyoneBrowser Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		018333DA1A35727C00670CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		018333EB1A357D8B00670CD1 /* libPods-OCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OCMock.a"; path = "Pods/build/Debug-iphoneos/libPods-OCMock.a"; sourceTree = "<group>"; };
@@ -184,8 +180,6 @@
 		01F2AE441B827D3E00D5651A /* wildcard.pushover.net.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = wildcard.pushover.net.crt; path = SSLCertificates/wildcard.pushover.net.crt; sourceTree = "<group>"; };
 		01F2AE471B82822600D5651A /* paypal.com.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = paypal.com.crt; path = SSLCertificates/paypal.com.crt; sourceTree = "<group>"; };
 		01F2AE491B82835A00D5651A /* expired.superblock.net.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = expired.superblock.net.crt; path = SSLCertificates/expired.superblock.net.crt; sourceTree = "<group>"; };
-		01F7CB4C1A52FC4E00F42B73 /* NSString+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IPAddress.h"; sourceTree = "<group>"; };
-		01F7CB4D1A52FC4E00F42B73 /* NSString+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IPAddress.m"; sourceTree = "<group>"; };
 		01F879391A4108DD00A63654 /* URLBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLBlocker.h; sourceTree = "<group>"; };
 		01F8793A1A4108DD00A63654 /* URLBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLBlocker.m; sourceTree = "<group>"; };
 		01F879401A4112E500A63654 /* URLBlocker_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLBlocker_Tests.m; sourceTree = "<group>"; };
@@ -199,8 +193,6 @@
 		54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Helpers.swift"; sourceTree = "<group>"; };
 		5FE3172A8893F37ED0730F03 /* Pods-OnionBrowser Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser Tests.release.xcconfig"; path = "Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests.release.xcconfig"; sourceTree = "<group>"; };
 		693145FD1D3EEAE400D08A6A /* Tor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tor.framework; path = Carthage/Build/iOS/Tor.framework; sourceTree = "<group>"; };
-		69CBCD501E9347B8009D5352 /* UIResponder+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+FirstResponder.h"; sourceTree = "<group>"; };
-		69CBCD511E9347B8009D5352 /* UIResponder+FirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+FirstResponder.m"; sourceTree = "<group>"; };
 		6EE3497B3A299C09EC1F587B /* Pods_AnyoneBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyoneBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A003A1922A0D1628008D8845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A004360B1E81856F0067652D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -516,15 +508,10 @@
 		01801E941A32CA2A002B4718 /* Endless */ = {
 			isa = PBXGroup;
 			children = (
-				01F7CB4C1A52FC4E00F42B73 /* NSString+IPAddress.h */,
-				01F7CB4D1A52FC4E00F42B73 /* NSString+IPAddress.m */,
 				01F2AE371B7FEF5E00D5651A /* SSLCertificate.h */,
 				01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */,
-				69CBCD501E9347B8009D5352 /* UIResponder+FirstResponder.h */,
-				69CBCD511E9347B8009D5352 /* UIResponder+FirstResponder.m */,
 				01F879391A4108DD00A63654 /* URLBlocker.h */,
 				01F8793A1A4108DD00A63654 /* URLBlocker.m */,
-				018333CF1A351B3B00670CD1 /* Endless-Prefix.pch */,
 			);
 			path = Endless;
 			sourceTree = "<group>";
@@ -1096,7 +1083,6 @@
 				54F7DBC8281C189700CBEFDB /* CALayer+Helpers.swift in Sources */,
 				A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */,
 				A0BF525F23AFC3580096624A /* BrowsingViewController+UITextFieldDelegate.swift in Sources */,
-				69CBCD521E9347B8009D5352 /* UIResponder+FirstResponder.m in Sources */,
 				A09F7ADD2AD80A1A00F7072F /* TorCircuit+Helper.swift in Sources */,
 				A0BF526023AFC3580096624A /* BrowsingViewController+Toolbar.swift in Sources */,
 				A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */,
@@ -1146,7 +1132,6 @@
 				A0AF2C062A123E65000BCC85 /* BrowsingViewController+UIResponder.swift in Sources */,
 				A0BF526A23AFC3580096624A /* SecurityPresetsRow.swift in Sources */,
 				A0BF526E23AFC3580096624A /* Storage1ViewController.swift in Sources */,
-				01F7CB4E1A52FC4E00F42B73 /* NSString+IPAddress.m in Sources */,
 				A0BF525B23AFC3580096624A /* Tab+Gestures.swift in Sources */,
 				A0BF527B23AFC3580096624A /* Formatter.swift in Sources */,
 				A0BF524B23AFC3580096624A /* CircuitNodeCell.swift in Sources */,
@@ -1168,7 +1153,6 @@
 				A08737E1221324B5005A68CC /* HostSettings_Tests.m in Sources */,
 				A068DD9E240D394900BF46E3 /* URLBlocker.m in Sources */,
 				01F2AE421B827BC200D5651A /* SSLCertificate_Tests.m in Sources */,
-				A068DDA0240D425200BF46E3 /* NSString+IPAddress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1402,7 +1386,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREFIX_HEADER = "Endless/Endless-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1460,7 +1443,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Endless/Endless-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
