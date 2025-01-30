@@ -31,7 +31,7 @@ class HostSettings: NSObject {
 	private static let ignoreTlsErrorsKey = "ignore_tls_errors"
 	private static let whitelistCookiesKey = "whitelist_cookies"
 	private static let universalLinkProtectionKey = "universal_link_protection"
-	private static let followOnionLocationHeaderKey = "follow_onion_location_header"
+	private static let followAnonLocationHeaderKey = "follow_anon_location_header"
 	private static let userAgentKey = "user_agent"
 	private static let javaScriptKey = "javascript"
 	private static let lockdownModeKey = "lockdown_mode"
@@ -189,12 +189,12 @@ class HostSettings: NSObject {
 		}
 	}
 
-	var followOnionLocationHeader: Bool {
+	var followAnonLocationHeader: Bool {
 		get {
-			get(Self.followOnionLocationHeaderKey) == Self.true
+			get(Self.followAnonLocationHeaderKey) == Self.true
 		}
 		set {
-			raw[Self.followOnionLocationHeaderKey] = newValue ? Self.true : Self.false
+			raw[Self.followAnonLocationHeaderKey] = newValue ? Self.true : Self.false
 		}
 	}
 
@@ -290,7 +290,7 @@ class HostSettings: NSObject {
 				Self.ignoreTlsErrorsKey: Self.false,
 				Self.whitelistCookiesKey: Self.false,
 				Self.universalLinkProtectionKey: Self.true,
-				Self.followOnionLocationHeaderKey: Self.false,
+				Self.followAnonLocationHeaderKey: Self.false,
 				Self.userAgentKey: "",
 				Self.javaScriptKey: Self.true,
 				Self.lockdownModeKey: Self.false,

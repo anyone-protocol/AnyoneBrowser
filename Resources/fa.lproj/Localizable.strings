@@ -187,8 +187,8 @@
 /* AppDelegate */
 "Focus URL Field" = "توجه به فیلد آدرس صفحه";
 
-/* SecurityViewController */
-"Follow Onion-Location Header Automatically" = "سربرگ مکانی Onion را به صورت خودکار دنبال کن";
+/* No comment provided by engineer. */
+"Follow Anon-Location Header Automatically" = "Follow Anon-Location Header Automatically";
 
 /* SettingsViewController */
 "Forget at Shutdown" = "فراموشی پس از بستن";

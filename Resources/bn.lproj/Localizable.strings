@@ -187,8 +187,8 @@
 /* AppDelegate */
 "Focus URL Field" = "URL ফিল্ডে ফোকাস করুন";
 
-/* SecurityViewController */
-"Follow Onion-Location Header Automatically" = "Follow Onion-Location Header Automatically";
+/* No comment provided by engineer. */
+"Follow Anon-Location Header Automatically" = "Follow Anon-Location Header Automatically";
 
 /* SettingsViewController */
 "Forget at Shutdown" = "শাটডাউন করা হলে ভুলে যান";

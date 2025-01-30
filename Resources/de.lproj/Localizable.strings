@@ -187,8 +187,8 @@
 /* AppDelegate */
 "Focus URL Field" = "URL Feld fokusieren";
 
-/* SecurityViewController */
-"Follow Onion-Location Header Automatically" = "Onion-Location Header automatisch folgen";
+/* No comment provided by engineer. */
+"Follow Anon-Location Header Automatically" = "Follow Anon-Location Header Automatically";
 
 /* SettingsViewController */
 "Forget at Shutdown" = "Beim Beenden vergessen";

@@ -104,7 +104,7 @@ extension Tab: WKNavigationDelegate {
 	{
 		let url = webView.url
 
-		// Redirect to provided Onion-Location, if any available, and
+		// Redirect to provided Anon-Location, if any available, and
 		// - was not already served over an anon site,
 		// - was served over HTTPS,
 		// - isn't switched off by the user,
@@ -113,19 +113,19 @@ extension Tab: WKNavigationDelegate {
 		// https://community.torproject.org/onion-services/advanced/onion-location/
 		if !(url?.host?.lowercased().hasSuffix(".anon") ?? false)
 			&& url?.scheme?.lowercased() == "https"
-			&& HostSettings.for(url?.host).followOnionLocationHeader,
+			&& HostSettings.for(url?.host).followAnonLocationHeader,
 		   let headers = (navigationResponse.response as? HTTPURLResponse)?.allHeaderFields,
-		   let olHeader = headers.first(where: { ($0.key as? String)?.lowercased() == "onion-location" })?.value as? String,
-		   let onionLocation = URL(string: olHeader),
-		   ["http", "https"].contains(onionLocation.scheme?.lowercased())
-			&& onionLocation.host?.lowercased().hasSuffix(".anon") ?? false
+		   let olHeader = headers.first(where: { ($0.key as? String)?.lowercased() == "anon-location" })?.value as? String,
+		   let anonLocation = URL(string: olHeader),
+		   ["http", "https"].contains(anonLocation.scheme?.lowercased())
+			&& anonLocation.host?.lowercased().hasSuffix(".anon") ?? false
 		{
-			print("[\(String(describing: type(of: self)))] Redirect to Onion-Location=\(onionLocation.absoluteString)")
+			print("[\(String(describing: type(of: self)))] Redirect to Anon-Location=\(anonLocation.absoluteString)")
 
 			decisionHandler(.cancel)
 
 			DispatchQueue.main.async { [weak self] in
-				self?.load(onionLocation)
+				self?.load(anonLocation)
 			}
 
 			return

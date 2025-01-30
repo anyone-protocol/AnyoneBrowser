@@ -206,13 +206,13 @@ class SecurityViewController: FixedFormViewController {
 
 		section
 		<<< SwitchRow() {
-			$0.title = NSLocalizedString("Follow Onion-Location Header Automatically", comment: "")
-			$0.value = hostSettings.followOnionLocationHeader
+			$0.title = NSLocalizedString("Follow Anon-Location Header Automatically", comment: "")
+			$0.value = hostSettings.followAnonLocationHeader
 			$0.cell.switchControl.onTintColor = .accent
 			$0.cell.textLabel?.numberOfLines = 0
 		}
 		.onChange { [weak self] row in
-			self?.hostSettings.followOnionLocationHeader = row.value ?? false
+			self?.hostSettings.followAnonLocationHeader = row.value ?? false
 		}
 
 		let uaRow = TextRow() {
