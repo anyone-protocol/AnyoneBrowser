@@ -31,9 +31,8 @@ extension Tab: WKNavigationDelegate {
 			return decisionHandler(.cancel, preferences)
 		}
 
-		if let blocker = URLBlocker.blockingTarget(for: url, fromMainDocumentURL: self.url) {
-
-			self.applicableUrlBlockerTargets[blocker] = true
+		if let rule = UrlBlocker.shared.blockRule(for: url, withMain: self.url) {
+			applicableUrlBlockerRules.insert(rule)
 
 			return decisionHandler(.cancel, preferences)
 		}

@@ -102,8 +102,7 @@ class Tab: UIView {
 
 	var needsRefresh = false
 
-	@objc(applicableURLBlockerTargets)
-	var applicableUrlBlockerTargets = NSMutableDictionary()
+	var applicableUrlBlockerRules = Set<String>()
 
 	var tlsCertificate: SSLCertificate? {
 		didSet {
@@ -348,7 +347,7 @@ class Tab: UIView {
 	}
 
 	func reset(_ url: URL? = nil) {
-		applicableUrlBlockerTargets.removeAllObjects()
+		applicableUrlBlockerRules.removeAll()
 		tlsCertificate = nil
 		self.url = url ?? URL.start
 	}

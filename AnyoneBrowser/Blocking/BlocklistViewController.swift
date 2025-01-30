@@ -1,5 +1,5 @@
 //
-//  RulesViewController.swift
+//  BlocklistViewController.swift
 //  AnyoneBrowser
 //
 //  Created by Benjamin Erhart on 29.01.25.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RulesViewController: UITableViewController, UISearchResultsUpdating {
+class BlocklistViewController: UITableViewController, UISearchResultsUpdating {
 
-	private var rulesInUse = [String]()
-	private var rulesAll = [String]()
-	private var rulesFiltered = [String]()
+	private var hostsInUse = [String]()
+	private var hostsAll = [String]()
+	private var hostsFiltered = [String]()
 
 	private var filtered: Bool {
 		navigationItem.searchController?.isActive ?? false && !(navigationItem.searchController?.searchBar.text?.isEmpty ?? true)
@@ -36,11 +36,11 @@ class RulesViewController: UITableViewController, UISearchResultsUpdating {
 		definesPresentationContext = true
 		navigationItem.searchController = sc
 
-		rulesInUse = AppDelegate.shared?.browsingUis
+		hostsInUse = AppDelegate.shared?.browsingUis
 			.compactMap({ $0.currentTab })
-			.flatMap({ $0.applicableUrlBlockerTargets.allKeys as! [String] }) ?? []
+			.flatMap({ $0.applicableUrlBlockerRules }) ?? []
 
-		rulesAll = (URLBlocker.targets() as? [String: String])?.keys.sorted(using: .localizedStandard) ?? []
+		hostsAll = UrlBlocker.shared.hosts
 
 		navigationItem.title = NSLocalizedString("Blocked 3rd-Party Hosts", comment: "")
 	}
@@ -53,7 +53,7 @@ class RulesViewController: UITableViewController, UISearchResultsUpdating {
 	}
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		rules(for: section).count
+		hosts(for: section).count
 	}
 
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -68,12 +68,12 @@ class RulesViewController: UITableViewController, UISearchResultsUpdating {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "rule") ?? .init(style: .subtitle, reuseIdentifier: "rule")
 		cell.selectionStyle = .none
 
-		let rule = rules(for: indexPath.section)[indexPath.row]
+		let host = hosts(for: indexPath.section)[indexPath.row]
 
-		cell.textLabel?.text = rule
+		cell.textLabel?.text = host
 
-		let reason = disabled(rule)
-		let detail = (URLBlocker.targets() as? [String: String])?[rule]
+		let reason = UrlBlocker.shared.isDisabled(host: host)
+		let detail = UrlBlocker.shared.description(for: host)
 
 		if let reason = reason {
 			cell.textLabel?.textColor = .systemRed
@@ -102,13 +102,13 @@ class RulesViewController: UITableViewController, UISearchResultsUpdating {
 
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			toggle(rules(for: indexPath.section)[indexPath.row])
+			toggle(hosts(for: indexPath.section)[indexPath.row])
 			tableView.reloadRows(at: [indexPath], with: .automatic)
 		}
 	}
 
 	override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
-		if disabled(rules(for: indexPath.section)[indexPath.row]) != nil {
+		if UrlBlocker.shared.isDisabled(host: hosts(for: indexPath.section)[indexPath.row]) != nil {
 			return NSLocalizedString("Enable", comment: "")
 		}
 
@@ -120,10 +120,10 @@ class RulesViewController: UITableViewController, UISearchResultsUpdating {
 
 	func updateSearchResults(for searchController: UISearchController) {
 		if let search = searchController.searchBar.text, !search.isEmpty {
-			rulesFiltered = rulesAll.filter({ $0.localizedCaseInsensitiveContains(search) })
+			hostsFiltered = hostsAll.filter({ $0.localizedCaseInsensitiveContains(search) })
 		}
 		else {
-			rulesFiltered.removeAll()
+			hostsFiltered.removeAll()
 		}
 
 		tableView.reloadSections([1], with: .automatic)
@@ -132,28 +132,24 @@ class RulesViewController: UITableViewController, UISearchResultsUpdating {
 
 	// MARK: Private Methods
 
-	private func rules(for section: Int) -> [String] {
+	private func hosts(for section: Int) -> [String] {
 		if section == 0 {
-			return rulesInUse
+			return hostsInUse
 		}
 
 		if filtered {
-			return rulesFiltered
+			return hostsFiltered
 		}
 
-		return rulesAll
+		return hostsAll
 	}
 
-	private func disabled(_ rule: String) -> String? {
-		(URLBlocker.disabledTargets() as? [String: String])?[rule]
-	}
-
-	private func toggle(_ rule: String) {
-		if disabled(rule) != nil {
-			URLBlocker.enableTarget(byHost: rule)
+	private func toggle(_ host: String) {
+		if UrlBlocker.shared.isDisabled(host: host) != nil {
+			UrlBlocker.shared.enable(host: host)
 		}
 		else {
-			URLBlocker.disableTarget(byHost: rule, withReason: NSLocalizedString("User disabled", comment: ""))
+			UrlBlocker.shared.disable(host: host, with: NSLocalizedString("User disabled", comment: ""))
 		}
 	}
 }

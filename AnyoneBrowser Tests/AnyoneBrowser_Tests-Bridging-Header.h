@@ -11,6 +11,4 @@
 #ifndef AnyoneBrowser_Tests_Bridging_Header_h
 #define AnyoneBrowser_Tests_Bridging_Header_h
 
-#import "NSString+IPAddress.h"
-
 #endif /* AnyoneBrowser_Tests_Bridging_Header_h */

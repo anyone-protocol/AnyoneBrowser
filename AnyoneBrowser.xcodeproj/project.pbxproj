@@ -29,9 +29,6 @@
 		01F2AE461B827D3E00D5651A /* wildcard.pushover.net.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE441B827D3E00D5651A /* wildcard.pushover.net.crt */; };
 		01F2AE481B82822600D5651A /* paypal.com.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE471B82822600D5651A /* paypal.com.crt */; };
 		01F2AE4A1B82835A00D5651A /* expired.superblock.net.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE491B82835A00D5651A /* expired.superblock.net.crt */; };
-		01F8793B1A4108DD00A63654 /* URLBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8793A1A4108DD00A63654 /* URLBlocker.m */; };
-		01F879481A41141800A63654 /* urlblocker_mock_rules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F879461A41141800A63654 /* urlblocker_mock_rules.plist */; };
-		01F879491A41141800A63654 /* urlblocker_mock_targets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F879471A41141800A63654 /* urlblocker_mock_targets.plist */; };
 		54F7DBC8281C189700CBEFDB /* CALayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */; };
 		A003A1932A0D1628008D8845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003A1922A0D1628008D8845 /* SceneDelegate.swift */; };
 		A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DF455241A60E700A07796 /* SecureEnclave.swift */; };
@@ -48,11 +45,10 @@
 		A02CB2B523D0B0B300880720 /* AddBookmarkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02CB2B423D0B0B300880720 /* AddBookmarkActivity.swift */; };
 		A036C3B22937A06C0035AA4F /* AddSearchEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */; };
 		A03CFA042892B05500F01DB5 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CFA032892B05500F01DB5 /* DownloadHelper.swift */; };
-		A0444F2B2D4A8A370020FC70 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F2A2D4A8A370020FC70 /* RulesViewController.swift */; };
+		A0444F2B2D4A8A370020FC70 /* BlocklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F2A2D4A8A370020FC70 /* BlocklistViewController.swift */; };
 		A0550649271094A900922E18 /* ua-strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0550648271094A900922E18 /* ua-strings.plist */; };
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
 		A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */; };
-		A068DD9E240D394900BF46E3 /* URLBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8793A1A4108DD00A63654 /* URLBlocker.m */; };
 		A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAC2406C7D000512695 /* SyncViewController.swift */; };
 		A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAE2406D94200512695 /* Nextcloud.swift */; };
 		A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */; };
@@ -132,6 +128,10 @@
 		A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
 		A0FA965D2A015EBB005EDC3F /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */; };
 		A0FA965E2A015EBB005EDC3F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */; };
+		A0FDC60F2D4B8EC6006F1EA2 /* UrlBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDC60E2D4B8EC6006F1EA2 /* UrlBlocker.swift */; };
+		A0FDC6102D4BAFA4006F1EA2 /* URLBlocker_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F879401A4112E500A63654 /* URLBlocker_Tests.m */; };
+		A0FDC6112D4BB0D7006F1EA2 /* UrlBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDC60E2D4B8EC6006F1EA2 /* UrlBlocker.swift */; };
+		A0FDC6122D4BB0F7006F1EA2 /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF524023AFC3580096624A /* URL+Helpers.swift */; };
 		CC3F3537E5B2F8693B50D4AE /* Pods_AnyoneBrowser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC0980C6DE06659DED8CC42 /* Pods_AnyoneBrowser_Tests.framework */; };
 		DB0E243D0DF8FBC859044A20 /* Pods_AnyoneBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE3497B3A299C09EC1F587B /* Pods_AnyoneBrowser.framework */; };
 /* End PBXBuildFile section */
@@ -180,11 +180,7 @@
 		01F2AE441B827D3E00D5651A /* wildcard.pushover.net.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = wildcard.pushover.net.crt; path = SSLCertificates/wildcard.pushover.net.crt; sourceTree = "<group>"; };
 		01F2AE471B82822600D5651A /* paypal.com.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = paypal.com.crt; path = SSLCertificates/paypal.com.crt; sourceTree = "<group>"; };
 		01F2AE491B82835A00D5651A /* expired.superblock.net.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = expired.superblock.net.crt; path = SSLCertificates/expired.superblock.net.crt; sourceTree = "<group>"; };
-		01F879391A4108DD00A63654 /* URLBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLBlocker.h; sourceTree = "<group>"; };
-		01F8793A1A4108DD00A63654 /* URLBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLBlocker.m; sourceTree = "<group>"; };
 		01F879401A4112E500A63654 /* URLBlocker_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLBlocker_Tests.m; sourceTree = "<group>"; };
-		01F879461A41141800A63654 /* urlblocker_mock_rules.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = urlblocker_mock_rules.plist; sourceTree = "<group>"; };
-		01F879471A41141800A63654 /* urlblocker_mock_targets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = urlblocker_mock_targets.plist; sourceTree = "<group>"; };
 		0B6C8A679F0E1774945F3777 /* Pods-OnionBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser.release.xcconfig"; path = "Target Support Files/Pods-OnionBrowser/Pods-OnionBrowser.release.xcconfig"; sourceTree = "<group>"; };
 		0F209831E77CACB3F2BAE200 /* Pods-OnionBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser.debug.xcconfig"; path = "Target Support Files/Pods-OnionBrowser/Pods-OnionBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 		1D55AD9E1DC35120872696F6 /* Pods-AnyoneBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser.release.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,7 +213,7 @@
 		A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSearchEngineViewController.swift; sourceTree = "<group>"; };
 		A03A5C05EE3C1632DC4828FF /* Pods-OnionBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A03CFA032892B05500F01DB5 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
-		A0444F2A2D4A8A370020FC70 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		A0444F2A2D4A8A370020FC70 /* BlocklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistViewController.swift; sourceTree = "<group>"; };
 		A0550648271094A900922E18 /* ua-strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ua-strings.plist"; sourceTree = "<group>"; };
 		A06881D02A66ADF60084D26D /* release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = release.entitlements; sourceTree = "<group>"; };
 		A06881D12A66B0070084D26D /* debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = debug.entitlements; sourceTree = "<group>"; };
@@ -453,6 +449,7 @@
 		A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnginesViewController.swift; sourceTree = "<group>"; };
 		A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A0FDC60E2D4B8EC6006F1EA2 /* UrlBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBlocker.swift; sourceTree = "<group>"; };
 		E171B1A11D583512AF52F41D /* Pods-AnyoneBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -510,8 +507,6 @@
 			children = (
 				01F2AE371B7FEF5E00D5651A /* SSLCertificate.h */,
 				01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */,
-				01F879391A4108DD00A63654 /* URLBlocker.h */,
-				01F8793A1A4108DD00A63654 /* URLBlocker.m */,
 			);
 			path = Endless;
 			sourceTree = "<group>";
@@ -535,8 +530,6 @@
 				01F2AE431B827D3E00D5651A /* lobste.rs.crt */,
 				01F2AE471B82822600D5651A /* paypal.com.crt */,
 				01F2AE441B827D3E00D5651A /* wildcard.pushover.net.crt */,
-				01F879461A41141800A63654 /* urlblocker_mock_rules.plist */,
-				01F879471A41141800A63654 /* urlblocker_mock_targets.plist */,
 				018333DA1A35727C00670CD1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -590,7 +583,8 @@
 		A0444F272D4A88C20020FC70 /* Blocking */ = {
 			isa = PBXGroup;
 			children = (
-				A0444F2A2D4A8A370020FC70 /* RulesViewController.swift */,
+				A0444F2A2D4A8A370020FC70 /* BlocklistViewController.swift */,
+				A0FDC60E2D4B8EC6006F1EA2 /* UrlBlocker.swift */,
 			);
 			path = Blocking;
 			sourceTree = "<group>";
@@ -934,9 +928,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F2AE461B827D3E00D5651A /* wildcard.pushover.net.crt in Resources */,
-				01F879481A41141800A63654 /* urlblocker_mock_rules.plist in Resources */,
 				01F2AE481B82822600D5651A /* paypal.com.crt in Resources */,
-				01F879491A41141800A63654 /* urlblocker_mock_targets.plist in Resources */,
 				01F2AE451B827D3E00D5651A /* lobste.rs.crt in Resources */,
 				01F2AE4A1B82835A00D5651A /* expired.superblock.net.crt in Resources */,
 			);
@@ -1099,7 +1091,6 @@
 				A0BF527E23AFC3580096624A /* UIButton+Helpers.swift in Sources */,
 				A0BF526423AFC3580096624A /* Bookmark.swift in Sources */,
 				A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */,
-				01F8793B1A4108DD00A63654 /* URLBlocker.m in Sources */,
 				A0BF528223AFC3580096624A /* String+Helpers.swift in Sources */,
 				A0172C70288824BD008D42CD /* FixedFormViewController.swift in Sources */,
 				A0A83AC228A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift in Sources */,
@@ -1111,7 +1102,7 @@
 				A0FA965E2A015EBB005EDC3F /* WelcomeViewController.swift in Sources */,
 				A0BF525C23AFC3580096624A /* Tab+Downloads.swift in Sources */,
 				A0BF525923AFC3580096624A /* TabCell.swift in Sources */,
-				A0444F2B2D4A8A370020FC70 /* RulesViewController.swift in Sources */,
+				A0444F2B2D4A8A370020FC70 /* BlocklistViewController.swift in Sources */,
 				A0BF527823AFC3580096624A /* UIViewController+Helpers.swift in Sources */,
 				A0BF525623AFC3580096624A /* SecurityLevelCell.swift in Sources */,
 				A0BF527023AFC3580096624A /* HostSettings.swift in Sources */,
@@ -1127,6 +1118,7 @@
 				A0BFD3E9289D4F5200CB9F6D /* Tab+WKUIDelegate.swift in Sources */,
 				A09A39622A17BE61008CC06A /* DownloadActivity.swift in Sources */,
 				A07037C623C7571B00D670EC /* AppDelegate.swift in Sources */,
+				A0FDC60F2D4B8EC6006F1EA2 /* UrlBlocker.swift in Sources */,
 				A0BF526823AFC3580096624A /* BookmarkCell.swift in Sources */,
 				A0BF526123AFC3580096624A /* BookmarkViewController.swift in Sources */,
 				A0AF2C062A123E65000BCC85 /* BrowsingViewController+UIResponder.swift in Sources */,
@@ -1150,8 +1142,10 @@
 				A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */,
 				A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */,
 				A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */,
+				A0FDC6112D4BB0D7006F1EA2 /* UrlBlocker.swift in Sources */,
 				A08737E1221324B5005A68CC /* HostSettings_Tests.m in Sources */,
-				A068DD9E240D394900BF46E3 /* URLBlocker.m in Sources */,
+				A0FDC6122D4BB0F7006F1EA2 /* URL+Helpers.swift in Sources */,
+				A0FDC6102D4BAFA4006F1EA2 /* URLBlocker_Tests.m in Sources */,
 				01F2AE421B827BC200D5651A /* SSLCertificate_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1525,7 +1519,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Endless Tests/Info.plist";
+				INFOPLIST_FILE = "AnyoneBrowser Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1561,7 +1555,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Endless Tests/Info.plist";
+				INFOPLIST_FILE = "AnyoneBrowser Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
