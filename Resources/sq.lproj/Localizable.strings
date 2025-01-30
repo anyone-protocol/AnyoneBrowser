@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Zgjidhni për sa kohë mban mend skedat e hapura aplikacioni.";
 
-/* CertificateViewController */
-"Cipher" = "Shifër";
-
 /* AppDelegate */
 "Close Tab" = "Mbylle Skedën";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Që të shihni qarkun tuaj, lidhuni me një sajt.";
-
-/* CertificateViewController */
-"Connection Information" = "Të dhëna Lidhjeje";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Lidhja me Shërbyesin Nextcloud Dështoi";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Privatësi & Siguri";
-
-/* CertificateViewController */
-"Protocol" = "Protokoll";
 
 /* Tab */
 "Pull to Refresh Page" = "Tërhiq për të Rifreskuar Faqen";

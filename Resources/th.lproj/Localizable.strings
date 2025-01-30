@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "เลือกว่าจะให้แอปจำแท็บที่เปิดไว้นานแค่ไหน";
 
-/* CertificateViewController */
-"Cipher" = "ไซเฟอร์";
-
 /* AppDelegate */
 "Close Tab" = "ปิดแถบ";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Connect to a website to see your circuit.";
-
-/* CertificateViewController */
-"Connection Information" = "ข้อมูลการเชื่อมต่อ";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Connection to Nextcloud Server Failed";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "ความเป็นส่วนตัวและความปลอดภัย";
-
-/* CertificateViewController */
-"Protocol" = "โพรโทคอล";
 
 /* Tab */
 "Pull to Refresh Page" = "ดึงลงเพื่อเรียกหน้าใหม่";

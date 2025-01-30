@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Wie lange soll sich die App an offene Reiter erinnern?";
 
-/* CertificateViewController */
-"Cipher" = "Chiffre";
-
 /* AppDelegate */
 "Close Tab" = "Schließe Reiter";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Website aufrufen, um den Kanal zu sehen.";
-
-/* CertificateViewController */
-"Connection Information" = "Verbindungsinformation";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Verbindung zum Nextcloud Server fehlgeschlagen";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Privatsphäre & Sicherheit";
-
-/* CertificateViewController */
-"Protocol" = "Protokoll";
 
 /* Tab */
 "Pull to Refresh Page" = "Ziehen um Seite neu zu laden";

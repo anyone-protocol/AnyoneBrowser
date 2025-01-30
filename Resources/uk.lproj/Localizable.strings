@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Налаштування запам'ятовування відкритих вкладок.";
 
-/* CertificateViewController */
-"Cipher" = "Шифрування";
-
 /* AppDelegate */
 "Close Tab" = "Закрити вкладку";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Під'єднайтесь до вебсайту, щоб побачити свій ланцюг.";
-
-/* CertificateViewController */
-"Connection Information" = "Інформація про підключення";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Не вдалось під'єднатись до сервера Nextcloud";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Конфіденційність та безпека";
-
-/* CertificateViewController */
-"Protocol" = "Протокол";
 
 /* Tab */
 "Pull to Refresh Page" = "Потягніть, щоб оновити сторінку";

@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Cé chomh fada is a mheabhraíonn an aip cluaisíní oscailte.";
 
-/* CertificateViewController */
-"Cipher" = "Sifear";
-
 /* AppDelegate */
 "Close Tab" = "Dún an Cluaisín";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Ceangail le suíomh Gréasáin chun an ciorcad a fheiceáil.";
-
-/* CertificateViewController */
-"Connection Information" = "Eolas faoin Cheangal";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Theip ar cheangal le freastalaí Nextcloud";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Príobháideachas agus Slándáil";
-
-/* CertificateViewController */
-"Protocol" = "Prótacal";
 
 /* Tab */
 "Pull to Refresh Page" = "Tarraing chun an leathanach a athlódáil";

@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Trieu quant de temps recorda l'aplicació les pestanyes obertes.";
 
-/* CertificateViewController */
-"Cipher" = "Xifra";
-
 /* AppDelegate */
 "Close Tab" = "Tanca la pestanya";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Connecteu a un lloc web per a veure el vostre circuit.";
-
-/* CertificateViewController */
-"Connection Information" = "Informació de la connexió";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Ha fallat la connexió amb el servidor del Nextcloud";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Privadesa i seguretat";
-
-/* CertificateViewController */
-"Protocol" = "Protocol";
 
 /* Tab */
 "Pull to Refresh Page" = "Llisqueu per a actualitzar";

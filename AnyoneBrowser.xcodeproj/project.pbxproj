@@ -23,8 +23,7 @@
 /* Begin PBXBuildFile section */
 		016B2FCD1A5648AE002D2730 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016B2FCC1A5648AE002D2730 /* WebKit.framework */; };
 		019516D11B7D8B400078586A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 019516D01B7D8B400078586A /* libz.tbd */; };
-		01F2AE391B7FEF5E00D5651A /* SSLCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */; };
-		01F2AE421B827BC200D5651A /* SSLCertificate_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE411B827BC200D5651A /* SSLCertificate_Tests.m */; };
+		01F2AE421B827BC200D5651A /* TlsLCertificate_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE411B827BC200D5651A /* TlsLCertificate_Tests.m */; };
 		01F2AE451B827D3E00D5651A /* lobste.rs.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE431B827D3E00D5651A /* lobste.rs.crt */; };
 		01F2AE461B827D3E00D5651A /* wildcard.pushover.net.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE441B827D3E00D5651A /* wildcard.pushover.net.crt */; };
 		01F2AE481B82822600D5651A /* paypal.com.crt in Resources */ = {isa = PBXBuildFile; fileRef = 01F2AE471B82822600D5651A /* paypal.com.crt */; };
@@ -48,7 +47,6 @@
 		A0444F2B2D4A8A370020FC70 /* BlocklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F2A2D4A8A370020FC70 /* BlocklistViewController.swift */; };
 		A0550649271094A900922E18 /* ua-strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0550648271094A900922E18 /* ua-strings.plist */; };
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
-		A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */; };
 		A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAC2406C7D000512695 /* SyncViewController.swift */; };
 		A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAE2406D94200512695 /* Nextcloud.swift */; };
 		A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */; };
@@ -132,6 +130,8 @@
 		A0FDC6102D4BAFA4006F1EA2 /* URLBlocker_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F879401A4112E500A63654 /* URLBlocker_Tests.m */; };
 		A0FDC6112D4BB0D7006F1EA2 /* UrlBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDC60E2D4B8EC6006F1EA2 /* UrlBlocker.swift */; };
 		A0FDC6122D4BB0F7006F1EA2 /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF524023AFC3580096624A /* URL+Helpers.swift */; };
+		A0FDC6152D4BB92F006F1EA2 /* TlsCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDC6142D4BB92F006F1EA2 /* TlsCertificate.swift */; };
+		A0FDC6162D4BE241006F1EA2 /* TlsCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDC6142D4BB92F006F1EA2 /* TlsCertificate.swift */; };
 		CC3F3537E5B2F8693B50D4AE /* Pods_AnyoneBrowser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC0980C6DE06659DED8CC42 /* Pods_AnyoneBrowser_Tests.framework */; };
 		DB0E243D0DF8FBC859044A20 /* Pods_AnyoneBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE3497B3A299C09EC1F587B /* Pods_AnyoneBrowser.framework */; };
 /* End PBXBuildFile section */
@@ -173,9 +173,7 @@
 		018333DA1A35727C00670CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		018333EB1A357D8B00670CD1 /* libPods-OCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OCMock.a"; path = "Pods/build/Debug-iphoneos/libPods-OCMock.a"; sourceTree = "<group>"; };
 		019516D01B7D8B400078586A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		01F2AE371B7FEF5E00D5651A /* SSLCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLCertificate.h; sourceTree = "<group>"; };
-		01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLCertificate.m; sourceTree = "<group>"; };
-		01F2AE411B827BC200D5651A /* SSLCertificate_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLCertificate_Tests.m; sourceTree = "<group>"; };
+		01F2AE411B827BC200D5651A /* TlsLCertificate_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TlsLCertificate_Tests.m; sourceTree = "<group>"; };
 		01F2AE431B827D3E00D5651A /* lobste.rs.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lobste.rs.crt; path = SSLCertificates/lobste.rs.crt; sourceTree = "<group>"; };
 		01F2AE441B827D3E00D5651A /* wildcard.pushover.net.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = wildcard.pushover.net.crt; path = SSLCertificates/wildcard.pushover.net.crt; sourceTree = "<group>"; };
 		01F2AE471B82822600D5651A /* paypal.com.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = paypal.com.crt; path = SSLCertificates/paypal.com.crt; sourceTree = "<group>"; };
@@ -450,6 +448,7 @@
 		A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A0FDC60E2D4B8EC6006F1EA2 /* UrlBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBlocker.swift; sourceTree = "<group>"; };
+		A0FDC6142D4BB92F006F1EA2 /* TlsCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TlsCertificate.swift; sourceTree = "<group>"; };
 		E171B1A11D583512AF52F41D /* Pods-AnyoneBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -482,7 +481,6 @@
 				A010FA171E7986DE00E04222 /* README.md */,
 				A025F27421F62C100034B947 /* Config.xcconfig */,
 				A00436111E8185AA0067652D /* Build */,
-				01801E941A32CA2A002B4718 /* Endless */,
 				A0BF51F523AFC3580096624A /* AnyoneBrowser */,
 				A0BF519D23AFBF250096624A /* Resources */,
 				018333D81A35727C00670CD1 /* AnyoneBrowser Tests */,
@@ -502,20 +500,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		01801E941A32CA2A002B4718 /* Endless */ = {
-			isa = PBXGroup;
-			children = (
-				01F2AE371B7FEF5E00D5651A /* SSLCertificate.h */,
-				01F2AE381B7FEF5E00D5651A /* SSLCertificate.m */,
-			);
-			path = Endless;
-			sourceTree = "<group>";
-		};
 		018333D81A35727C00670CD1 /* AnyoneBrowser Tests */ = {
 			isa = PBXGroup;
 			children = (
 				A08737DF2213235F005A68CC /* HostSettings_Tests.m */,
-				01F2AE411B827BC200D5651A /* SSLCertificate_Tests.m */,
+				01F2AE411B827BC200D5651A /* TlsLCertificate_Tests.m */,
 				01F879401A4112E500A63654 /* URLBlocker_Tests.m */,
 				018333D91A35727C00670CD1 /* Supporting Files */,
 				A0B2240E23A92B2700EA2C47 /* AnyoneBrowser_Tests-Bridging-Header.h */,
@@ -686,6 +675,7 @@
 				A0BF520423AFC3580096624A /* CircuitNodeCell.swift */,
 				A0BF520A23AFC3580096624A /* HistoryViewController.swift */,
 				A09A39612A17BE61008CC06A /* DownloadActivity.swift */,
+				A0FDC6142D4BB92F006F1EA2 /* TlsCertificate.swift */,
 			);
 			path = Browsing;
 			sourceTree = "<group>";
@@ -1073,12 +1063,12 @@
 				A0BF527C23AFC3580096624A /* UIView+Helpers.swift in Sources */,
 				A036C3B22937A06C0035AA4F /* AddSearchEngineViewController.swift in Sources */,
 				54F7DBC8281C189700CBEFDB /* CALayer+Helpers.swift in Sources */,
+				A0FDC6152D4BB92F006F1EA2 /* TlsCertificate.swift in Sources */,
 				A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */,
 				A0BF525F23AFC3580096624A /* BrowsingViewController+UITextFieldDelegate.swift in Sources */,
 				A09F7ADD2AD80A1A00F7072F /* TorCircuit+Helper.swift in Sources */,
 				A0BF526023AFC3580096624A /* BrowsingViewController+Toolbar.swift in Sources */,
 				A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */,
-				01F2AE391B7FEF5E00D5651A /* SSLCertificate.m in Sources */,
 				A02A09122AD6CAF000A9334C /* StartTorViewController.swift in Sources */,
 				A0BF527223AFC3580096624A /* SettingsViewController.swift in Sources */,
 				A0BF527723AFC3580096624A /* BlurredSnapshot.swift in Sources */,
@@ -1140,13 +1130,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */,
-				A068DD9B240D391100BF46E3 /* SSLCertificate.m in Sources */,
 				A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */,
 				A0FDC6112D4BB0D7006F1EA2 /* UrlBlocker.swift in Sources */,
 				A08737E1221324B5005A68CC /* HostSettings_Tests.m in Sources */,
 				A0FDC6122D4BB0F7006F1EA2 /* URL+Helpers.swift in Sources */,
+				A0FDC6162D4BE241006F1EA2 /* TlsCertificate.swift in Sources */,
 				A0FDC6102D4BAFA4006F1EA2 /* URLBlocker_Tests.m in Sources */,
-				01F2AE421B827BC200D5651A /* SSLCertificate_Tests.m in Sources */,
+				01F2AE421B827BC200D5651A /* TlsLCertificate_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Veldu hve lengi forritið man opna flipa.";
 
-/* CertificateViewController */
-"Cipher" = "Dulritunaraðferð";
-
 /* AppDelegate */
 "Close Tab" = "Loka flipa";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Tengstu við vefsvæði til að sjá rásina þína.";
-
-/* CertificateViewController */
-"Connection Information" = "Upplýsingar um tengingar";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Tenging við Nextcloud-þjón gekk ekki";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Gagnaleynd og öryggi";
-
-/* CertificateViewController */
-"Protocol" = "Samskiptamáti";
 
 /* Tab */
 "Pull to Refresh Page" = "Toga til að endurhlaða síðu";

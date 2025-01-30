@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "タブの記憶期間を選択";
 
-/* CertificateViewController */
-"Cipher" = "暗号（Cipher）";
-
 /* AppDelegate */
 "Close Tab" = "タブを閉じる";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "ウェブサイトに接続して、経路を確認して下さい。";
-
-/* CertificateViewController */
-"Connection Information" = "接続情報";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "NextCloudサーバーへの接続に失敗しました。";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "プライバシー";
-
-/* CertificateViewController */
-"Protocol" = "プロトコール";
 
 /* Tab */
 "Pull to Refresh Page" = "引っ張ってページ更新";

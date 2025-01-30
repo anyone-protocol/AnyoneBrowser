@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Elige cuánto tiempo la aplicación recuerda las pestañas abiertas.";
 
-/* CertificateViewController */
-"Cipher" = "Cifrar";
-
 /* AppDelegate */
 "Close Tab" = "Cerrar pestaña";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Conectar a un sitio web para ver tu circuito.";
-
-/* CertificateViewController */
-"Connection Information" = "Información de Conexión";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "La conexión con el Servidor de Nextcloud Falló. ";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Privacidad & Seguridad";
-
-/* CertificateViewController */
-"Protocol" = "Protocolo";
 
 /* Tab */
 "Pull to Refresh Page" = "Desliza hacia abajo para Actualizar la Página";

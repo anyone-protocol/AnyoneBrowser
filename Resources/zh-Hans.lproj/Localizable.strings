@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "选择应用记住打开的标签页多久";
 
-/* CertificateViewController */
-"Cipher" = "加密";
-
 /* AppDelegate */
 "Close Tab" = "关闭标签页";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "连接到一个网页以查看您的链路。";
-
-/* CertificateViewController */
-"Connection Information" = "连接信息";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "与 Nextcloud 服务器连接失败";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "隐私与安全";
-
-/* CertificateViewController */
-"Protocol" = "协议";
 
 /* Tab */
 "Pull to Refresh Page" = "拉动以刷新页面";

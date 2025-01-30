@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "قم باختيار المدة التي يتذكر فيها التطبيق التبويبات المفتوحة.";
 
-/* CertificateViewController */
-"Cipher" = "الشيفرة";
-
 /* AppDelegate */
 "Close Tab" = "إغلاق التبويبة ";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "اتصل بموقع على شبكة الإنترنت لرؤية دائرتك.";
-
-/* CertificateViewController */
-"Connection Information" = "معلومات الإتصال";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "فشل الاتصال بخادم Nextcloud";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "الخصوصية والأمن";
-
-/* CertificateViewController */
-"Protocol" = "بروتوكول";
 
 /* Tab */
 "Pull to Refresh Page" = "اسحب/ي لتحديث الصفحة";

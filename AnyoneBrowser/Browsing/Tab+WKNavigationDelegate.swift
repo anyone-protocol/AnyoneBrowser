@@ -209,9 +209,11 @@ extension Tab: WKNavigationDelegate {
 				completionHandler(.performDefaultHandling, nil)
 			}
 
-			if let trust = challenge.protectionSpace.serverTrust {
-				DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-					self?.tlsCertificate = SSLCertificate(secTrustRef: trust)
+			if let trust = space.serverTrust {
+				if url.host == space.host {
+					DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+						self?.tlsCertificate = TlsCertificate.load(trust: trust)
+					}
 				}
 			}
 

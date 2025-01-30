@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Uygulamanın açık sekmeleri hatırlama süresini seçin.";
 
-/* CertificateViewController */
-"Cipher" = "Şifreleyici";
-
 /* AppDelegate */
 "Close Tab" = "Sekmeyi kapat";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Devrenizi görebilmek için bir web sitesine bağlanın.";
-
-/* CertificateViewController */
-"Connection Information" = "Bağlantı bilgileri";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Nextcloud sunucusu ile bağlantı kurulamadı";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Gizlilik ve güvenlik";
-
-/* CertificateViewController */
-"Protocol" = "İletişim kuralı";
 
 /* Tab */
 "Pull to Refresh Page" = "Sayfayı yenilemek için çekin";

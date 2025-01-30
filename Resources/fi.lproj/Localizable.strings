@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Valitse miten kauan sovellus muistaa avoimet välilehdet.";
 
-/* CertificateViewController */
-"Cipher" = "Salaus";
-
 /* AppDelegate */
 "Close Tab" = "Sulje välilehti";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Yhdistä sivustoon nähdäksesi ketjusi.";
-
-/* CertificateViewController */
-"Connection Information" = "Yhteystiedot";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Yhteyden muodostus Nextcloud-palvelimeen epäonnistui";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Tietosuoja ja -turva";
-
-/* CertificateViewController */
-"Protocol" = "Protokolla";
 
 /* Tab */
 "Pull to Refresh Page" = "Päivitä sivu vetämällä";

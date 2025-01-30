@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "בחר עד מתי היישום יזכור לשוניות פתוחות.";
 
-/* CertificateViewController */
-"Cipher" = "צופן";
-
 /* AppDelegate */
 "Close Tab" = "סגור לשונית";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "התחבר אל אתר כדי לראות את המעגל שלך.";
-
-/* CertificateViewController */
-"Connection Information" = "מידע חיבור";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "חיבור אל שרת Nextcloud נכשל";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "פרטיות ואבטחה";
-
-/* CertificateViewController */
-"Protocol" = "פרוטוקול";
 
 /* Tab */
 "Pull to Refresh Page" = "משוך כדי לרענן דף";

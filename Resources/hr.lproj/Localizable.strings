@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Odaberi kako dugo aplikacija pamti otvorene kartice.";
 
-/* CertificateViewController */
-"Cipher" = "Šifriranje";
-
 /* AppDelegate */
 "Close Tab" = "Zatvori karticu";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "Poveži se na jedno web mjesto za prikaz tvog sklopa.";
-
-/* CertificateViewController */
-"Connection Information" = "Podaci veze";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Neuspjelo povezivanje na Nextcloud poslužitelj";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "Privatnost i sigurnost";
-
-/* CertificateViewController */
-"Protocol" = "Protokol";
 
 /* Tab */
 "Pull to Refresh Page" = "Povuci za aktualiziranje stranice";

@@ -88,17 +88,11 @@
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "選擇程式要在多久時間內記得開啟的分頁。";
 
-/* CertificateViewController */
-"Cipher" = "密碼";
-
 /* AppDelegate */
 "Close Tab" = "關閉分頁";
 
 /* CircuitViewController */
 "Connect to a website to see your circuit." = "連到某個網站以查看您的迴路狀況。";
-
-/* CertificateViewController */
-"Connection Information" = "連線資訊";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "無法連線至 Nextcloud 伺服器";
@@ -318,9 +312,6 @@
 
 /* SettingsViewController */
 "Privacy & Security" = "隱私與安全性";
-
-/* CertificateViewController */
-"Protocol" = "協定";
 
 /* Tab */
 "Pull to Refresh Page" = "拉動以重新整理頁面";
