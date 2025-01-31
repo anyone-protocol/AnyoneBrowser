@@ -111,44 +111,44 @@ class TlsCertificate: NSObject {
 		super.init()
 
 		guard let t = DTASN1Serialization.object(with: data),
-			  let oidtree = t as? NSArray
+			  let oidtree = t as? [Any]
 		else {
 			log.error("OID tree fetching failed")
 			return nil
 		}
 
-		guard let cert = Self.get(oidtree, i: 0, type: NSArray.self) else {
+		guard let cert = Self.get(oidtree, i: 0, type: [Any].self) else {
 			return nil
 		}
 
-		var cData = Self.get(cert, i: 0, type: NSArray.self)
+		var cData = Self.get(cert, i: 0, type: [Any].self)
 
 		if cData == nil {
-			guard let cDic = Self.get(cert, i: 0, type: NSDictionary.self),
-				  let key = cDic.allKeys.first
+			guard let cDic = Self.get(cert, i: 0, type: [AnyHashable: Any].self),
+				  let key = cDic.keys.first
 			else {
 				return nil
 			}
 
-			cData = Self.get(cDic[key] as? NSArray, i: 0, type: NSArray.self)
+			cData = Self.get(cDic[key] as? [Any], i: 0, type: [Any].self)
 		}
 
 		guard let cData = cData,
-			  let tver = Self.get(cData, i: 0, type: NSNumber.self)
+			  let tver = Self.get(cData, i: 0, type: Int.self)
 		else {
 			return nil
 		}
 
 		// 0-based: https://tools.ietf.org/html/rfc2459#section-4.1
-		version = tver.intValue + 1
+		version = tver + 1
 
 
 		// Serial number
 
 		var tserial = [String]()
 
-		if let tt = Self.get(cert, i: 1, type: NSNumber.self) {
-			var ttn = tt.int64Value
+		if let tt = Self.get(cert, i: 1, type: Int64.self) {
+			var ttn = tt
 
 			while (ttn > 0) {
 				tserial.append(.init(format: "%02lx", (ttn & 0xff)))
@@ -157,7 +157,7 @@ class TlsCertificate: NSObject {
 
 			tserial.reverse()
 		}
-		else if let tt = Self.get(cert, i: 1, type: NSData.self) {
+		else if let tt = Self.get(cert, i: 1, type: Data.self) {
 			tserial = tt.map {
 				.init(format: "%02x", $0)
 			}
@@ -168,7 +168,7 @@ class TlsCertificate: NSObject {
 
 		// signature algorithm (string representation - https://tools.ietf.org/html/rfc7427#page-12)
 
-		guard let sigAlgTree = Self.get(cert, i: 2, type: NSArray.self),
+		guard let sigAlgTree = Self.get(cert, i: 2, type: [Any].self),
 			  let sigAlgOid = Self.get(sigAlgTree, i: 0, type: String.self)
 		else {
 			return nil
@@ -179,7 +179,7 @@ class TlsCertificate: NSObject {
 
 		// Cert issuer (hash of assorted keys like locale, org, etc.)
 
-		guard let issuer = Self.parseEntity(Self.get(cert, i: 3, type: NSArray.self)) else {
+		guard let issuer = Self.parseEntity(Self.get(cert, i: 3, type: [Any].self)) else {
 			return nil
 		}
 
@@ -188,7 +188,7 @@ class TlsCertificate: NSObject {
 
 		// Validity Period
 
-		guard let validityPeriod = Self.get(cert, i: 4, type: NSArray.self),
+		guard let validityPeriod = Self.get(cert, i: 4, type: [Any].self),
 			  let validityNotBefore = Self.get(validityPeriod, i: 0, type: Date.self),
 			  let validityNotAfter = Self.get(validityPeriod, i: 1, type: Date.self)
 		else {
@@ -201,7 +201,7 @@ class TlsCertificate: NSObject {
 
 		// Subject
 
-		guard let subject = Self.parseEntity(Self.get(cert, i: 5, type: NSArray.self)) else {
+		guard let subject = Self.parseEntity(Self.get(cert, i: 5, type: [Any].self)) else {
 			return nil
 		}
 
@@ -213,7 +213,7 @@ class TlsCertificate: NSObject {
 
 	// MARK: Private Methods
 
-	private class func get<T>(_ array: NSArray?, i: Int, type: T.Type) -> T? {
+	private class func get<T>(_ array: [Any]?, i: Int, type: T.Type) -> T? {
 		guard let array = array else {
 			return nil
 		}
@@ -222,7 +222,7 @@ class TlsCertificate: NSObject {
 			return nil
 		}
 
-		let val = array.object(at: i)
+		let val = array[i]
 
 		guard let x = val as? T else {
 			return nil
@@ -231,7 +231,7 @@ class TlsCertificate: NSObject {
 		return x
 	}
 
-	private class func parseEntity(_ data: NSArray?) -> Entity? {
+	private class func parseEntity(_ data: [Any]?) -> Entity? {
 		guard let data = data else {
 			return nil
 		}
@@ -239,12 +239,12 @@ class TlsCertificate: NSObject {
 		let entity = Entity()
 
 		for i in data {
-			guard let pairA = i as? NSArray else {
+			guard let pairA = i as? [Any] else {
 				continue
 			}
 
 			for j in pairA {
-				guard let oidPair = j as? NSArray else {
+				guard let oidPair = j as? [Any] else {
 					return nil
 				}
 
