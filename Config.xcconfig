@@ -15,6 +15,6 @@ PRODUCT_BUNDLE_IDENTIFIER[config=Debug] =
 DEVELOPMENT_TEAM[config=Debug] =
 PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
 
-PRODUCT_BUNDLE_IDENTIFIER[config=Release] =
-DEVELOPMENT_TEAM[config=Release] =
-PROVISIONING_PROFILE_SPECIFIER[config=Release] =
+PRODUCT_BUNDLE_IDENTIFIER[config=Release] = io.anyone.AnyoneBrowser
+DEVELOPMENT_TEAM[config=Release] = 8YWMPZA6F3
+PROVISIONING_PROFILE_SPECIFIER[config=Release] = Anyone Browser Dist
