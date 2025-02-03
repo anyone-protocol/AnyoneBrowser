@@ -117,24 +117,23 @@ class TlsCertificate: NSObject {
 			return nil
 		}
 
-		guard let cert = Self.get(oidtree, i: 0, type: [Any].self) else {
+		guard let cert = oidtree.first as? [Any] else {
 			return nil
 		}
 
-		var cData = Self.get(cert, i: 0, type: [Any].self)
+		var cData = cert.first as? [Any]
 
 		if cData == nil {
-			guard let cDic = Self.get(cert, i: 0, type: [AnyHashable: Any].self),
+			guard let cDic = cert.first as? [AnyHashable: Any],
 				  let key = cDic.keys.first
 			else {
 				return nil
 			}
 
-			cData = Self.get(cDic[key] as? [Any], i: 0, type: [Any].self)
+			cData = (cDic[key] as? [Any])?.first as? [Any]
 		}
 
-		guard let cData = cData,
-			  let tver = Self.get(cData, i: 0, type: Int.self)
+		guard let tver = cData?.first as? Int
 		else {
 			return nil
 		}
@@ -147,19 +146,19 @@ class TlsCertificate: NSObject {
 
 		var tserial = [String]()
 
-		if let tt = Self.get(cert, i: 1, type: Int64.self) {
-			var ttn = tt
+		if cert.count > 1 {
+			if var tt = cert[1] as? Int64 {
+				while (tt > 0) {
+					tserial.append(.init(format: "%02lx", (tt & 0xff)))
+					tt >>= 8;
+				}
 
-			while (ttn > 0) {
-				tserial.append(.init(format: "%02lx", (ttn & 0xff)))
-				ttn >>= 8;
+				tserial.reverse()
 			}
-
-			tserial.reverse()
-		}
-		else if let tt = Self.get(cert, i: 1, type: Data.self) {
-			tserial = tt.map {
-				.init(format: "%02x", $0)
+			else if let tt = cert[1] as? Data {
+				tserial = tt.map {
+					.init(format: "%02x", $0)
+				}
 			}
 		}
 
@@ -168,8 +167,7 @@ class TlsCertificate: NSObject {
 
 		// signature algorithm (string representation - https://tools.ietf.org/html/rfc7427#page-12)
 
-		guard let sigAlgTree = Self.get(cert, i: 2, type: [Any].self),
-			  let sigAlgOid = Self.get(sigAlgTree, i: 0, type: String.self)
+		guard cert.count > 2, let sigAlgOid = (cert[2] as? [Any])?.first as? String
 		else {
 			return nil
 		}
@@ -179,7 +177,7 @@ class TlsCertificate: NSObject {
 
 		// Cert issuer (hash of assorted keys like locale, org, etc.)
 
-		guard let issuer = Self.parseEntity(Self.get(cert, i: 3, type: [Any].self)) else {
+		guard cert.count > 3, let issuer = Self.parseEntity(cert[3] as? [Any]) else {
 			return nil
 		}
 
@@ -188,48 +186,29 @@ class TlsCertificate: NSObject {
 
 		// Validity Period
 
-		guard let validityPeriod = Self.get(cert, i: 4, type: [Any].self),
-			  let validityNotBefore = Self.get(validityPeriod, i: 0, type: Date.self),
-			  let validityNotAfter = Self.get(validityPeriod, i: 1, type: Date.self)
+		guard cert.count > 4, let validityPeriod = cert[4] as? [Date],
+			  validityPeriod.count > 1
 		else {
 			return nil
 		}
 
-		self.validityNotBefore = validityNotBefore
-		self.validityNotAfter = validityNotAfter
+		self.validityNotBefore = validityPeriod[0]
+		self.validityNotAfter = validityPeriod[1]
 
 
 		// Subject
 
-		guard let subject = Self.parseEntity(Self.get(cert, i: 5, type: [Any].self)) else {
+		guard cert.count > 5, let subject = Self.parseEntity(cert[5] as? [Any]) else {
 			return nil
 		}
 
 		self.subject = subject
 
-		log.trace("Parsed certificate for \(subject.commonName ?? ""): version=\(self.version), serial=\(self.serialNumber), sigalg=\(self.signatureAlgorithm), issuer=\(issuer.commonName ?? ""), valid=\(validityNotBefore) to \(validityNotAfter)")
+		log.trace("Parsed certificate for \(subject.commonName ?? ""): version=\(self.version), serial=\(self.serialNumber), sigalg=\(self.signatureAlgorithm), issuer=\(issuer.commonName ?? ""), valid=\(self.validityNotBefore) to \(self.validityNotAfter)")
 	}
 
 
 	// MARK: Private Methods
-
-	private class func get<T>(_ array: [Any]?, i: Int, type: T.Type) -> T? {
-		guard let array = array else {
-			return nil
-		}
-
-		if i >= array.count {
-			return nil
-		}
-
-		let val = array[i]
-
-		guard let x = val as? T else {
-			return nil
-		}
-
-		return x
-	}
 
 	private class func parseEntity(_ data: [Any]?) -> Entity? {
 		guard let data = data else {
@@ -248,8 +227,9 @@ class TlsCertificate: NSObject {
 					return nil
 				}
 
-				guard let oid = get(oidPair, i: 0, type: String.self),
-					  let val = get(oidPair, i: 1, type: String.self)
+				guard oidPair.count > 1,
+					  let oid = oidPair.first as? String,
+					  let val = oidPair[1] as? String
 				else {
 					continue
 				}
