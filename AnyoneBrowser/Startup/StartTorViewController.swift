@@ -18,8 +18,6 @@ class StartTorViewController: UIViewController {
 		}
 	}
 
-	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
 	@IBOutlet weak var retryBt: UIButton! {
 		didSet {
 			retryBt.setTitle(NSLocalizedString("Retry", comment: ""))
@@ -42,7 +40,6 @@ class StartTorViewController: UIViewController {
 
 	@IBAction
 	func retry() {
-		activityIndicator.isHidden = false
 		retryBt.isHidden = true
 		progressView.progress = 0
 		errorLb.isHidden = true
@@ -58,7 +55,6 @@ class StartTorViewController: UIViewController {
 		} _: { [weak self] error in
 			guard error == nil else {
 				DispatchQueue.main.async {
-					self?.activityIndicator.isHidden = true
 					self?.retryBt.isHidden = false
 					self?.errorLb.text = (error ?? AnonManager.Errors.noSocksAddr).localizedDescription
 					self?.errorLb.isHidden = false

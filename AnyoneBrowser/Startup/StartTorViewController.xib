@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartTorViewController" customModule="AnyoneBrowser" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="IBe-eF-CC3" id="Vii-kW-xIs"/>
                 <outlet property="errorLb" destination="NND-ut-fqm" id="ABM-zl-lcc"/>
                 <outlet property="progressView" destination="W12-Kd-f1x" id="4hU-m7-plB"/>
                 <outlet property="retryBt" destination="FTE-nZ-cuA" id="jrA-KQ-QrU"/>
@@ -48,9 +47,6 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="IBe-eF-CC3">
-                                    <rect key="frame" x="141.5" y="193" width="37" height="40"/>
-                                </activityIndicatorView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="FTE-nZ-cuA">
                                     <rect key="frame" x="96" y="193" width="128" height="40"/>
                                     <constraints>
@@ -88,7 +84,6 @@
                                 <constraint firstItem="3xa-ZU-uuf" firstAttribute="top" secondItem="SkE-MW-aJG" secondAttribute="bottom" constant="8" symbolic="YES" id="59N-rl-zCX"/>
                                 <constraint firstAttribute="trailing" secondItem="3xa-ZU-uuf" secondAttribute="trailing" constant="20" symbolic="YES" id="9Bh-eu-6dx"/>
                                 <constraint firstItem="NND-ut-fqm" firstAttribute="top" secondItem="W12-Kd-f1x" secondAttribute="bottom" constant="8" symbolic="YES" id="Bfx-rG-ch8"/>
-                                <constraint firstItem="W12-Kd-f1x" firstAttribute="top" secondItem="IBe-eF-CC3" secondAttribute="bottom" constant="16" id="C8h-LM-aWP"/>
                                 <constraint firstItem="W12-Kd-f1x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G2x-hQ-zT8" secondAttribute="leading" constant="20" symbolic="YES" id="D4M-ym-gHZ"/>
                                 <constraint firstItem="NND-ut-fqm" firstAttribute="leading" secondItem="G2x-hQ-zT8" secondAttribute="leading" constant="20" symbolic="YES" id="DfF-c4-Ffa"/>
                                 <constraint firstAttribute="bottom" secondItem="NND-ut-fqm" secondAttribute="bottom" constant="20" symbolic="YES" id="G0M-Vz-vLV"/>
@@ -98,10 +93,8 @@
                                 <constraint firstItem="W12-Kd-f1x" firstAttribute="top" secondItem="FTE-nZ-cuA" secondAttribute="bottom" constant="16" id="acy-8B-bcI"/>
                                 <constraint firstItem="3xa-ZU-uuf" firstAttribute="leading" secondItem="G2x-hQ-zT8" secondAttribute="leading" constant="20" symbolic="YES" id="cep-de-e16"/>
                                 <constraint firstItem="FTE-nZ-cuA" firstAttribute="top" secondItem="3xa-ZU-uuf" secondAttribute="bottom" constant="16" id="e17-2M-2Nf"/>
-                                <constraint firstItem="IBe-eF-CC3" firstAttribute="top" secondItem="3xa-ZU-uuf" secondAttribute="bottom" constant="16" id="esR-Oc-1qk"/>
                                 <constraint firstItem="SkE-MW-aJG" firstAttribute="centerX" secondItem="G2x-hQ-zT8" secondAttribute="centerX" id="ls7-ZW-YWw"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W12-Kd-f1x" secondAttribute="trailing" constant="20" symbolic="YES" id="mBS-iq-W4n"/>
-                                <constraint firstItem="IBe-eF-CC3" firstAttribute="centerX" secondItem="G2x-hQ-zT8" secondAttribute="centerX" id="oK9-s6-8VT"/>
                                 <constraint firstItem="FTE-nZ-cuA" firstAttribute="centerX" secondItem="G2x-hQ-zT8" secondAttribute="centerX" id="qww-Jy-2nR"/>
                             </constraints>
                         </view>
@@ -131,7 +124,7 @@
     <resources>
         <image name="icon-anyone" width="1024" height="1024"/>
         <namedColor name="Accent">
-            <color red="0.15294117647058825" green="0.84313725490196079" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15299999713897705" green="0.84299999475479126" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
