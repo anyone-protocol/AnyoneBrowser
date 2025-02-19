@@ -23,7 +23,7 @@ class AddBookmarkActivity: UIActivity {
 	}
 
 	override var activityImage: UIImage? {
-		return UIImage(named: "bookmarks")
+		return .init(systemName: "bookmark")
 	}
 
 	override func canPerform(withActivityItems activityItems: [Any]) -> Bool {

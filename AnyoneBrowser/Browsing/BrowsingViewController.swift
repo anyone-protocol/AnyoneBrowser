@@ -20,8 +20,8 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		case inBackground
 	}
 
-	private static let reloadImg = UIImage(named: "reload")
-	private static let stopImg = UIImage(named: "close")
+	private static let reloadImg = UIImage(systemName: "arrow.clockwise")
+	private static let stopImg = UIImage(systemName: "xmark")
 
 	@IBOutlet weak var searchBar: UIView?
 	@IBOutlet weak var searchBarHeightConstraint: NSLayoutConstraint? {
@@ -81,43 +81,12 @@ class BrowsingViewController: UIViewController, TabDelegate {
 	@IBOutlet weak var tabsTools: UIView?
 	@IBOutlet weak var backBt: UIButton?
 	@IBOutlet weak var frwrdBt: UIButton?
-
-	@IBOutlet weak var findBt: UIButton? {
-		didSet {
-			if #available(iOS 16.0, *) {
-				// No change.
-			}
-			else {
-				// We do not support find below iOS 16.
-				findBt?.isHidden = true
-
-				// Reduce used width and height to 0.
-				for constraint in findBt?.constraints ?? [] {
-					if constraint.firstAnchor is NSLayoutAnchor<NSLayoutDimension> {
-						constraint.constant = 0
-					}
-				}
-
-				// Reduce one margin constraint to 0.
-				for constraint in findBt?.superview?.constraints ?? [] {
-					if let item = constraint.firstItem as? UIButton,
-						item == findBt,
-						constraint.secondItem is UIButton
-					{
-						constraint.constant = 0
-					}
-				}
-			}
-		}
-	}
-
+	@IBOutlet weak var findBt: UIButton?
 	@IBOutlet weak var actionBt: UIButton?
 	@IBOutlet weak var bookmarksBt: UIButton?
 	@IBOutlet weak var newTabBt: UIButton?
 	@IBOutlet weak var tabsBt: UIButton? {
 		didSet {
-			tabsBt?.setTitleColor(tabsBt?.tintColor, for: .normal)
-
 			tabsBt?.addTarget(self, action: #selector(showOverview), for: .touchUpInside)
 		}
 	}
@@ -626,17 +595,18 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		tabsBt?.setTitle(Formatter.localize(tabs.count))
 
 		var offset: CGFloat = 0
+		let delta: CGFloat = 2.5
 
 		if let titleLabel = tabsBt?.titleLabel, let imageView = tabsBt?.imageView {
 			if UIView.userInterfaceLayoutDirection(for: tabsBt!.semanticContentAttribute) == .rightToLeft {
 				offset = imageView.intrinsicContentSize.width / 2 // Move right edge to center of image.
 					+ titleLabel.intrinsicContentSize.width / 2 // Move center of text to center of image.
-					+ 3 // Correct for double-frame icon.
+					- delta // Correct for double-frame icon.
 			}
 			else {
 				offset = -imageView.intrinsicContentSize.width / 2 // Move left edge to center of image.
 					- titleLabel.intrinsicContentSize.width / 2 // Move center of text to center of image.
-					- 3 // Correct for double-frame icon.
+					+ delta // Correct for double-frame icon.
 			}
 		}
 

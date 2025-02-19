@@ -12,8 +12,8 @@ import UIKit
 
 extension BrowsingViewController: UITextFieldDelegate {
 
-	private static let secureIcon = UIImage(named: "secure")
-	private static let insecureIcon = UIImage(named: "insecure")
+	private static let secureIcon = UIImage(systemName: "lock.fill")
+	private static let insecureIcon = UIImage(systemName: "lock.open.fill")
 
 
 	// MARK: UITextFieldDelegate
@@ -155,19 +155,24 @@ extension BrowsingViewController: UITextFieldDelegate {
 	*/
 	func updateEncryptionBt(_ mode: Tab.SecureMode) {
 		let encryptionIcon: UIImage?
+		let color: UIColor?
 
 		switch mode {
 		case .secure, .secureEv:
-			encryptionIcon = BrowsingViewController.secureIcon
+			encryptionIcon = Self.secureIcon
+			color = .ok
 
 		case .mixed:
-			encryptionIcon = BrowsingViewController.insecureIcon
+			encryptionIcon = Self.insecureIcon
+			color = .systemGray
 
 		default:
 			encryptionIcon = nil
+			color = nil
 		}
 
 		encryptionBt.setImage(encryptionIcon, for: .normal)
+		encryptionBt.tintColor = color
 		searchFl?.leftViewMode = searchFl?.isFirstResponder ?? false || encryptionIcon == nil ? .never : .always
 	}
 
