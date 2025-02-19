@@ -12,7 +12,7 @@ target 'AnyoneBrowser' do
 
   pod 'SDCAlertView', '~> 12'
   pod 'FavIcon', :git => 'https://github.com/tladesignz/FavIcon.git'
-  pod 'MBProgressHUD', '~> 1.2'
+  pod 'MBProgressHUD', :git => 'https://github.com/jdg/MBProgressHUD.git', :commit => '4a7c5f3e53cdea77c5dcb8578c2ee5acacdf6781'
   pod 'Eureka', '~> 5.3'
   pod 'ImageRow', '~> 4.1'
 
