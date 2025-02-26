@@ -13,8 +13,8 @@ target 'AnyoneBrowser' do
   pod 'SDCAlertView', '~> 12'
   pod 'FavIcon', :git => 'https://github.com/tladesignz/FavIcon.git'
   pod 'MBProgressHUD', :git => 'https://github.com/jdg/MBProgressHUD.git', :commit => '4a7c5f3e53cdea77c5dcb8578c2ee5acacdf6781'
-  pod 'Eureka', '~> 5.3'
-  pod 'ImageRow', '~> 4.1'
+  pod 'Eureka', '~> 5.5'
+  pod 'ImageRow', :git => 'https://github.com/erickyim/ImageRow.git', :commit => 'd38369b8894425a9225ccf1e267226833b1950f0'
 
   pod 'AnyoneKit',
     '~> 409'

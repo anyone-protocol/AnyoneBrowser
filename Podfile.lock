@@ -3,10 +3,10 @@ PODS:
   - DTFoundation/Core (1.7.19)
   - DTFoundation/DTASN1 (1.7.19):
     - DTFoundation/Core
-  - Eureka (5.3.6)
+  - Eureka (5.5.0)
   - FavIcon (3.1.0)
   - ImageRow (4.1.0):
-    - Eureka (~> 5.3.5)
+    - Eureka (~> 5.0)
   - MBProgressHUD (1.2.0)
   - OCMock (3.9.4)
   - SDCAlertView (12.0.5)
@@ -15,9 +15,9 @@ PODS:
 DEPENDENCIES:
   - AnyoneKit (~> 409)
   - DTFoundation/DTASN1
-  - Eureka (~> 5.3)
+  - Eureka (~> 5.5)
   - FavIcon (from `https://github.com/tladesignz/FavIcon.git`)
-  - ImageRow (~> 4.1)
+  - ImageRow (from `https://github.com/erickyim/ImageRow.git`, commit `d38369b8894425a9225ccf1e267226833b1950f0`)
   - MBProgressHUD (from `https://github.com/jdg/MBProgressHUD.git`, commit `4a7c5f3e53cdea77c5dcb8578c2ee5acacdf6781`)
   - OCMock
   - SDCAlertView (~> 12)
@@ -28,7 +28,6 @@ SPEC REPOS:
     - AnyoneKit
     - DTFoundation
     - Eureka
-    - ImageRow
     - OCMock
     - SDCAlertView
     - TUSafariActivity
@@ -36,6 +35,9 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   FavIcon:
     :git: https://github.com/tladesignz/FavIcon.git
+  ImageRow:
+    :commit: d38369b8894425a9225ccf1e267226833b1950f0
+    :git: https://github.com/erickyim/ImageRow.git
   MBProgressHUD:
     :commit: 4a7c5f3e53cdea77c5dcb8578c2ee5acacdf6781
     :git: https://github.com/jdg/MBProgressHUD.git
@@ -44,6 +46,9 @@ CHECKOUT OPTIONS:
   FavIcon:
     :commit: 9969d1aaffced321facc66d20c82e7eab2a8aa98
     :git: https://github.com/tladesignz/FavIcon.git
+  ImageRow:
+    :commit: d38369b8894425a9225ccf1e267226833b1950f0
+    :git: https://github.com/erickyim/ImageRow.git
   MBProgressHUD:
     :commit: 4a7c5f3e53cdea77c5dcb8578c2ee5acacdf6781
     :git: https://github.com/jdg/MBProgressHUD.git
@@ -51,14 +56,14 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AnyoneKit: ff0f1aadd96a747ae4995278f9d0958c51f2c39d
   DTFoundation: 76b624967cf5bcaae6bb057d622c536c36ef36d0
-  Eureka: 28ad9dec6286cd7cd601fdf8e8df39bb7356a8f4
+  Eureka: 1c18c7fcd8f772cc2ca42d6be36292dffa77eecb
   FavIcon: 21651b47d8f6b33517973859f85e2cb6f9fcfaee
-  ImageRow: 880c0f052c5a89c80521b485c86ccf723a124e99
+  ImageRow: b438fec4f4b68b367c5161bbb6bc372baaa49cc4
   MBProgressHUD: 1b0fb447e80a0fda94808180750e8b78a07b3cd2
   OCMock: 589f2c84dacb1f5aaf6e4cec1f292551fe748e74
   SDCAlertView: c9042ba201897da46d833193b8462a186f79c47c
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
 
-PODFILE CHECKSUM: d635e7c502f74a3b91ce2f90506bcef13c79eb70
+PODFILE CHECKSUM: aba31e3be28a12c21829cabbad457d3eabb00d3d
 
 COCOAPODS: 1.16.2
