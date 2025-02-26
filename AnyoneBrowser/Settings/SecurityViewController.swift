@@ -114,22 +114,19 @@ class SecurityViewController: FixedFormViewController {
 				hostSettings.mediaCapture)
 		}
 
-		if #available(iOS 16.0, *) {
-			form.last! <<< lockdownModeRow
-				.onChange { [weak self] row in
-					guard let hostSettings = self?.hostSettings else {
-						return
-					}
+		<<< lockdownModeRow
+		.onChange { [weak self] row in
+			guard let hostSettings = self?.hostSettings else {
+				return
+			}
 
-					self?.alertBeforeChange(
-						hostSettings.javaScript,
-						row.value ?? false,
-						hostSettings.orientationAndMotion,
-						hostSettings.mediaCapture)
-				}
+			self?.alertBeforeChange(
+				hostSettings.javaScript,
+				row.value ?? false,
+				hostSettings.orientationAndMotion,
+				hostSettings.mediaCapture)
 		}
 
-		form.last!
 		<<< orientationAndMotionRow
 		.onChange { [weak self] row in
 			guard let hostSettings = self?.hostSettings else {
