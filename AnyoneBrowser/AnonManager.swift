@@ -19,12 +19,16 @@ class AnonManager {
 	}
 
 	enum Errors: Error, LocalizedError {
+		case noAnonController
 		case cookieUnreadable
 		case noSocksAddr
 		case smartConnectFailed
 
 		var errorDescription: String? {
 			switch self {
+
+			case .noAnonController:
+				return "No Anon controller"
 
 			case .cookieUnreadable:
 				return "Anon cookie unreadable"
@@ -42,9 +46,19 @@ class AnonManager {
 
 	static let localhost = "127.0.0.1"
 
-	var status = Status.stopped
+	var status: Status {
+		if !anonRunning {
+			return .stopped
+		}
 
-	var anonSocks5: Network.NWEndpoint? = nil
+		if (anonController?.isConnected ?? false) && anonSocks5 != nil {
+			return .started
+		}
+
+		return .starting
+	}
+
+	private(set) var anonSocks5: Network.NWEndpoint? = nil
 
 	private var anonThread: AnonThread?
 
@@ -52,9 +66,8 @@ class AnonManager {
 
 	private var anonConf: AnonConfiguration?
 
-	private var _anonRunning = false
 	private var anonRunning: Bool {
-		 ((anonThread?.isExecuting ?? false) && (anonConf?.isLocked ?? false)) || _anonRunning
+		 ((anonThread?.isExecuting ?? false) && (anonConf?.isLocked ?? false))
 	}
 
 	private lazy var controllerQueue = DispatchQueue.global(qos: .userInitiated)
@@ -85,8 +98,6 @@ class AnonManager {
 	func start(_ progressCallback: @escaping (_ progress: Int?) -> Void,
 			   _ completion: @escaping (Error?) -> Void)
 	{
-		status = .starting
-
 		if !anonRunning {
 			anonConf = getAnonConf()
 
@@ -104,14 +115,23 @@ class AnonManager {
 				self.anonController = AnonController(controlPortFile: url)
 			}
 
-			if !(self.anonController?.isConnected ?? false) {
+			guard let anonController = self.anonController else {
+				self.log("#startTunnel error=\(Errors.noAnonController)")
+
+				self.stop()
+
+				return completion(Errors.noAnonController)
+			}
+
+
+			if !anonController.isConnected {
 				do {
-					try self.anonController?.connect()
+					try anonController.connect()
 				}
 				catch let error {
 					self.log("#startTunnel error=\(error)")
 
-					self.status = .stopped
+					self.stop()
 
 					return completion(error)
 				}
@@ -125,7 +145,7 @@ class AnonManager {
 				return completion(Errors.cookieUnreadable)
 			}
 
-			self.anonController?.authenticate(with: cookie) { success, error in
+			anonController.authenticate(with: cookie) { success, error in
 				if let error = error {
 					self.log("#startTunnel error=\(error)")
 
@@ -134,7 +154,7 @@ class AnonManager {
 					return completion(error)
 				}
 
-				self.progressObs = self.anonController?.addObserver(forStatusEvents: {
+				self.progressObs = anonController.addObserver(forStatusEvents: {
 					[weak self] (type, severity, action, arguments) -> Bool in
 
 					if type == "STATUS_CLIENT" && action == "BOOTSTRAP" {
@@ -152,7 +172,7 @@ class AnonManager {
 						progressCallback(progress)
 
 						if progress ?? 0 >= 100 {
-							self?.anonController?.removeObserver(self?.progressObs)
+							anonController.removeObserver(self?.progressObs)
 						}
 
 						return true
@@ -161,15 +181,15 @@ class AnonManager {
 					return false
 				})
 
-				self.establishedObs = self.anonController?.addObserver(forCircuitEstablished: { [weak self] established in
+				self.establishedObs = anonController.addObserver(forCircuitEstablished: { [weak self] established in
 					guard established else {
 						return
 					}
 
-					self?.anonController?.removeObserver(self?.establishedObs)
-					self?.anonController?.removeObserver(self?.progressObs)
+					anonController.removeObserver(self?.establishedObs)
+					anonController.removeObserver(self?.progressObs)
 
-					self?.anonController?.getInfoForKeys(["net/listeners/socks"]) { response in
+					anonController.getInfoForKeys(["net/listeners/socks"]) { response in
 						guard let parts = response.first?.split(separator: ":"),
 							  let host = parts.first,
 							  let host = IPv4Address(String(host)),
@@ -183,8 +203,6 @@ class AnonManager {
 
 						self?.anonSocks5 = .hostPort(host: NWEndpoint.Host.ipv4(host), port: port)
 
-						self?.status = .started
-
 						completion(nil)
 					}
 				})
@@ -193,7 +211,7 @@ class AnonManager {
 	}
 
 	func stop() {
-		status = .stopped
+		anonSocks5 = nil
 
 		anonController?.removeObserver(self.establishedObs)
 		anonController?.removeObserver(self.progressObs)
