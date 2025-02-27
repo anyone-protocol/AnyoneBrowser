@@ -1,9 +1,8 @@
 //
 //  AnonManager.swift
-//  Orbot
+//  AnyoneBrowser
 //
-//  Created by Benjamin Erhart on 17.05.21.
-//  Copyright © 2021 Guardian Project. All rights reserved.
+//  Created by Benjamin Erhart on 28.01.25.
 //
 
 import NetworkExtension
@@ -92,7 +91,7 @@ class AnonManager {
 			anonConf = getAnonConf()
 
 //			if let debug = anonConf?.compile().joined(separator: ", ") {
-//				print(debug)
+//				Log.debug(for: Self.self, debug)
 //			}
 
 			anonThread = AnonThread(configuration: anonConf)
@@ -263,7 +262,7 @@ class AnonManager {
 	// MARK: Private Methods
 
 	private func log(_ message: String) {
-		print("[\(String(describing: type(of: self)))] \(message)")
+		Log.debug(for: Self.self, message)
 	}
 
 	private func getAnonConf() -> AnonConfiguration {
