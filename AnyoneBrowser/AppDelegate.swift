@@ -51,10 +51,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 	var testing: Bool {
 		return NSClassFromString("XCTestProbe") != nil
-			|| ProcessInfo.processInfo.environment["ARE_UI_TESTING"] != nil
+		|| ProcessInfo.processInfo.environment["ARE_UI_TESTING"] != nil
 	}
 
 	var firstScene = true
+
+	private var backgroundTaskId: UIBackgroundTaskIdentifier?
 
 
 	// MARK: UIApplicationDelegate
@@ -134,8 +136,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 	}
 
 	/**
-	Unload all webviews of background tabs, if OS says, we're using too much memory.
-	*/
+	 Unload all webviews of background tabs, if OS says, we're using too much memory.
+	 */
 	func applicationDidReceiveMemoryWarning(_ application: UIApplication)
 	{
 		for vc in browsingUis {
@@ -151,9 +153,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 	// MARK: Public Methods
 
 	/**
-	Setting `AVAudioSessionCategoryAmbient` will prevent audio from `WKWebView` from pausing
-	already-playing audio from other apps.
-	*/
+	 Setting `AVAudioSessionCategoryAmbient` will prevent audio from `WKWebView` from pausing
+	 already-playing audio from other apps.
+	 */
 	func adjustMuteSwitchBehavior() {
 		let session = AVAudioSession.sharedInstance()
 
@@ -187,11 +189,39 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		}
 	}
 
-	func maybeStopTor() {
+	func maybeStopApp() {
 		Thread.performOnMain {
-			if self.sceneDelegates.isEmpty {
-				AnonManager.shared.stop()
+			let sceneDelegates = self.sceneDelegates
+
+			if sceneDelegates.isEmpty {
+				// On an iPad. The last scene was just removed. Terminate.
+				self.terminate()
 			}
+			else if sceneDelegates.count == 1 {
+				// Only 1 scene left and we're in the background.
+				// Keep alive as long as possible and then stop Tor properly,
+				// before we have a dangling Tor which got its connections closed.
+				self.endBackgroundTask()
+
+				self.backgroundTaskId = UIApplication.shared.beginBackgroundTask(expirationHandler: self.terminate)
+			}
+		}
+	}
+
+	func dontStopApp() {
+		endBackgroundTask()
+	}
+
+	private func terminate() {
+		applicationWillTerminate(UIApplication.shared)
+
+		endBackgroundTask()
+	}
+
+	private func endBackgroundTask() {
+		if let taskId = backgroundTaskId {
+			UIApplication.shared.endBackgroundTask(taskId)
+			self.backgroundTaskId = nil
 		}
 	}
 }
