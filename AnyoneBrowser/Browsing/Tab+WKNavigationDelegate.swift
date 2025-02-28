@@ -52,7 +52,7 @@ extension Tab: WKNavigationDelegate {
 			else if navigationType == .formSubmitted {
 				Log.debug(for: Self.self, "[Tab \(index)] not doing universal link workaround for form submission to \(url).")
 			}
-			else if (url.scheme?.lowercased().hasPrefix("http") ?? false)
+			else if (url.isHttp || url.isHttps)
 						&& (URLProtocol.property(forKey: Tab.universalLinksWorkaroundKey, in: navigationAction.request) == nil)
 			{
 				if let tr = navigationAction.request as? NSMutableURLRequest {
@@ -105,14 +105,14 @@ extension Tab: WKNavigationDelegate {
 		// - is a valid URL with http: or https: protocol and a .anon hostname,
 		//
 		// https://community.torproject.org/onion-services/advanced/onion-location/
-		if !(url?.host?.lowercased().hasSuffix(".anon") ?? false)
-			&& url?.scheme?.lowercased() == "https"
+		if !(url?.isAnon ?? false)
+			&& (url?.isHttps ?? false)
 			&& HostSettings.for(url?.host).followAnonLocationHeader,
 		   let headers = (navigationResponse.response as? HTTPURLResponse)?.allHeaderFields,
 		   let olHeader = headers.first(where: { ($0.key as? String)?.lowercased() == "anon-location" })?.value as? String,
 		   let anonLocation = URL(string: olHeader),
-		   ["http", "https"].contains(anonLocation.scheme?.lowercased())
-			&& anonLocation.host?.lowercased().hasSuffix(".anon") ?? false
+		   (anonLocation.isHttp || anonLocation.isHttps)
+			&& anonLocation.isAnon
 		{
 			Log.debug(for: Self.self, "Redirect to Anon-Location=\(anonLocation.absoluteString)")
 

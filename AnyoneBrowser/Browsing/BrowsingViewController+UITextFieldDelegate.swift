@@ -259,7 +259,7 @@ extension BrowsingViewController: UITextFieldDelegate {
 	private func setHttpsScheme(_ search: String) -> URL? {
 		let url = URL(string: "https://\(search)")
 
-		if url?.host?.lowercased().hasSuffix(".anon") ?? false {
+		if url?.isAnon ?? false {
 			return URL(string: "http://\(search)")
 		}
 
