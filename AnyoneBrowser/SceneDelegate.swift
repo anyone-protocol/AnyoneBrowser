@@ -30,6 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	 */
 	private var verified = false
 
+	private var firstRun = true
+
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
 			   options connectionOptions: UIScene.ConnectionOptions)
@@ -116,11 +118,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let vc = AnonManager.shared.checkStatus()
 
 		show(vc)
-
-		// Seems, we're running via Anyone. Set up bookmarks, if not done, yet.
-		if vc == nil {
-			Bookmark.firstRunSetup()
-		}
 	}
 
 	func windowScene(_ windowScene: UIWindowScene,
@@ -194,6 +191,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 			completion = { [weak self] finished in
 				self?.browsingUi.becomesVisible()
+
+				// Seems, we're running via Tor. Set up bookmarks, if not done, yet.
+				if self?.firstRun ?? false {
+					self?.firstRun = false
+
+					Bookmark.firstRunSetup()
+				}
 
 				outerCompletion?(finished)
 			}
