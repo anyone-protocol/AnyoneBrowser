@@ -304,7 +304,7 @@ class HostSettings: NSObject {
 				Self.followAnonLocationHeaderKey: Self.false,
 				Self.userAgentKey: "",
 				Self.javaScriptKey: Self.true,
-				Self.lockdownModeKey: Self.false,
+				Self.lockdownModeKey: Self.true,
 				Self.orientationAndMotionKey: Self.false,
 				Self.mediaCaptureKey: Self.false,
 			]
