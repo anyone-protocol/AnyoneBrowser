@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "Башлангыч вакыты";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "3-нче тараф блокланган хостлар";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "Кабызу";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "Хата";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Җиһазыгызның серсүзе яки Touch ID белән кушымтаны бикләү";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "Керү";

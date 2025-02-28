@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "ចាប់ផ្ដើមនៅ";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "ម៉ាស៊ីន​ភាគី​ទី3 ត្រូវបាន​រាំងខ្ទប់";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "បើក";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "កំហុស";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Lock App with Touch ID or Device Passcode";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "ចូលប្រើ";

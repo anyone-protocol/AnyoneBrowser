@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "Inicia em ";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Hosts de terceiros bloqueados";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "Habilitar";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "Erro";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Bloquear aplicativo com Touch ID ou código de acesso do dispositivo";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "Entrar";

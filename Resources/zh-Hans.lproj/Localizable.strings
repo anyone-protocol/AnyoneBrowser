@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "开始时间";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "已阻拦第三方站点";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "启用";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "错误";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "用 Face ID 或设备密码将应用锁上";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "登录";

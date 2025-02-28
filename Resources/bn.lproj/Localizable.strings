@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "শুরুর সময়";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "3rd-Party হোস্টগুলি ব্লক করা হয়েছে";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "সক্রিয়";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "সমস্যা";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Lock App with Touch ID or Device Passcode";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "প্রবেশ";

@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "Byrjar þann";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Bannaðir utanaðkomandi þjónar";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "Virkja";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "Villa";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Læsa forriti með snertiauðkenni (Touch ID) eða aðgangskóða tækis";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "Skrá inn";

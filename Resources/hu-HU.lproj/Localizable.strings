@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "Kezdődik ekkor";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Tiltott 3. fél kiszolgálók";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "Engedélyez";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "Hiba";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Az app zárolása Touch ID-val vagy eszköz jelszóval";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "Bejelentkezés";

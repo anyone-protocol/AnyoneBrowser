@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "آغاز در";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "هاست‌های شخص‌ ثالث مسدود شدند";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "فعال کن";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "خطا";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "برنامه را با Touch ID یا رمز عبور دستگاه قفل کنید";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "ورود";

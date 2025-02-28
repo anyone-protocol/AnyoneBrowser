@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "מתחיל במועד";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "מארחי צד־שלישי חסומים";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "אפשר";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "שגיאה";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Lock App with Touch ID or Device Passcode";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "התחבר";

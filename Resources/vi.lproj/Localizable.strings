@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "Bắt đầu từ";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Các tên miền bên thứ 3 đã chặn";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "Bật";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "Lỗi";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Lock App with Touch ID or Device Passcode";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "Đăng nhập";

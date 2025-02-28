@@ -64,6 +64,9 @@
 /* CertificateViewController */
 "Begins On" = "Başlangıç zamanı";
 
+/* Option title */
+"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Engellenmiş 3. taraf sunucular";
 
@@ -160,9 +163,6 @@
 /* RuleEditorController */
 "Enable" = "Etkinleştir";
 
-/* Option title */
-"Enable Lockdown Mode" = "Enable Lockdown Mode";
-
 /* AlertHelper */
 "Error" = "Hata";
 
@@ -249,6 +249,9 @@
 
 /* SettingsViewController */
 "Lock App with Touch ID or Device Passcode" = "Uygulama Touch ID ya da Aygıt Parolası ile kilitlensin";
+
+/* Option title */
+"Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
 "Log In" = "Oturum aç";
