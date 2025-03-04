@@ -252,6 +252,24 @@ class AnonManager {
 		}
 	}
 
+	func session(_ cookies: [HTTPCookie]? = nil, for url: URL? = nil, delegate: URLSessionDelegate? = nil) -> URLSession {
+		let conf = URLSessionConfiguration.ephemeral
+		conf.waitsForConnectivity = true
+		conf.allowsConstrainedNetworkAccess = true
+		conf.allowsExpensiveNetworkAccess = true
+
+		if let cookies = cookies {
+			conf.httpCookieStorage?.setCookies(cookies, for: url, mainDocumentURL: nil)
+		}
+
+		// There should be a started Anon and the correct proxy configuration available.
+		// If not, use an invalid one to make the request fail and not leak.
+		let proxy = anonSocks5 ?? NWEndpoint.hostPort(host: .ipv4(.loopback), port: .any)
+		conf.proxyConfigurations.append(.init(socksv5Proxy: proxy))
+
+		return .init(configuration: conf, delegate: delegate, delegateQueue: .main)
+	}
+
 
 	/**
 	 Check's Anyone's status, and if not working, returns a view controller to show instead of the browser UI.
