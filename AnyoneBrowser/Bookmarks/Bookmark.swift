@@ -16,7 +16,7 @@ import FavIcon
 @objcMembers
 open class Bookmark: NSObject {
 
-	static let defaultIcon = UIImage(named: "default-icon")!
+	static let defaultIcon = UIImage(named: "icon-anyone")!
 
 	private static let keyBookmarks = "bookmarks"
 	private static let keyVersion = "version"
@@ -107,6 +107,12 @@ open class Bookmark: NSObject {
 		guard var template = try? String(contentsOf: source) else {
 			return
 		}
+
+		var svg = ""
+		if let url = Bundle.main.url(forResource: "globe-bg", withExtension: "svg") {
+			svg = (try? Data(contentsOf: url))?.base64EncodedString() ?? ""
+		}
+		template = template.replacingOccurrences(of: "{{ globe_background }}", with: "data:image/svg+xml;base64,\(svg)")
 
 		if Settings.disableBookmarksOnStartPage {
 			template = template.replacingOccurrences(of: "{{ bookmarks_table_style }}", with: "display: none")
