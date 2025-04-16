@@ -36,6 +36,12 @@ extension URL {
 
 			return urlc?.url
 
+		case "anonabout":
+			var urlc = URLComponents(url: self, resolvingAgainstBaseURL: true)
+			urlc?.scheme = "about"
+
+			return urlc?.url
+
 		default:
 			return self
 		}
@@ -66,6 +72,10 @@ extension URL {
 			return nil
 
 		default:
+			if self.scheme == "anonabout" {
+				return self.withFixedScheme
+			}
+
 			return self
 		}
 	}

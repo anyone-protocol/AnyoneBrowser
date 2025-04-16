@@ -159,6 +159,8 @@ class Tab: UIView {
 			conf.allowsInlineMediaPlayback = true
 			conf.allowsPictureInPictureMediaPlayback = true
 
+			AboutSchemaHandler.register(conf)
+
 			// BUGFIX #438: Popups already have a configuration from their parent tab,
 			// injecting this a second time crashes the app.
 			setupJsInjections(conf)

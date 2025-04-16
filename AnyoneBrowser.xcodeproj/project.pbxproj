@@ -124,6 +124,7 @@
 		A0C582582AE9136200A81084 /* Thread+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C582572AE9136200A81084 /* Thread+Helpers.swift */; };
 		A0CD36982890194900628DA6 /* Tab+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */; };
 		A0D070FD275A513700922D70 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
+		A0E32E682DAFF7EE0030E37F /* AboutSchemaHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E32E672DAFF7EE0030E37F /* AboutSchemaHandler.swift */; };
 		A0E8E8B12938CDFB00DC2A2F /* SearchEnginesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */; };
 		A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
 		A0FA965D2A015EBB005EDC3F /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */; };
@@ -448,6 +449,7 @@
 		A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
 		A0D070FC275A513700922D70 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
 		A0DB59522747D36200B20436 /* Tor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E32E672DAFF7EE0030E37F /* AboutSchemaHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSchemaHandler.swift; sourceTree = "<group>"; };
 		A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnginesViewController.swift; sourceTree = "<group>"; };
 		A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 		A0BF523523AFC3580096624A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A0E32E672DAFF7EE0030E37F /* AboutSchemaHandler.swift */,
 				A0172C6D2888247C008D42CD /* AlertHelper.swift */,
 				A0172C71288827E1008D42CD /* ApiError.swift */,
 				A0BF523623AFC3580096624A /* BlurredSnapshot.swift */,
@@ -1082,6 +1085,7 @@
 				A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */,
 				A0BF525F23AFC3580096624A /* BrowsingViewController+UITextFieldDelegate.swift in Sources */,
 				A09F7ADD2AD80A1A00F7072F /* TorCircuit+Helper.swift in Sources */,
+				A0E32E682DAFF7EE0030E37F /* AboutSchemaHandler.swift in Sources */,
 				A0BF526023AFC3580096624A /* BrowsingViewController+Toolbar.swift in Sources */,
 				A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */,
 				A02A09122AD6CAF000A9334C /* StartTorViewController.swift in Sources */,

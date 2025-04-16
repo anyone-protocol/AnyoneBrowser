@@ -33,8 +33,9 @@ open class Bookmark: NSObject {
 	private static let defaultBookmarks: [Bookmark] = {
 		var defaults = [Bookmark]()
 
-		defaults.append(.init(name: "Anyone official site", url: "https://www.anyone.io/"))
-		defaults.append(.init(name: "Anyone Test Page", url: "https://check.en.anyone.tech/"))
+		defaults.append(.init(name: "Anyone", url: "https://anyone.io/"))
+		defaults.append(.init(name: "Anyone Foundation", url: "http://anyone.anon/"))
+		defaults.append(.init(name: "Anyone Docs", url: "https://docs.anyone.io/"))
 
 
 		return defaults
@@ -161,6 +162,7 @@ open class Bookmark: NSObject {
 								  with: Bundle.main.displayName)
 			.replacingOccurrences(of: "{{ Learn more about Anyone Browser }}",
 								  with: String(format: NSLocalizedString("Learn more about %@", comment: ""), Bundle.main.displayName))
+			.replacingOccurrences(of: "{{ security-levels-url }}", with: "anonabout:security-levels")
 
 		try? template.write(to: URL.start, atomically: true, encoding: .utf8)
 
