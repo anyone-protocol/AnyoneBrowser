@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Сайтны өстәү";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Шуның өстенә, %@ кушымтасыннан кыстыргычлар серверда ясалачак, әгәр алар элек булмаган булса.";
 
 /* BookmarkViewController */
 "Address" = "Адрес";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Хост";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Синхронласагыз, барлык кыстыргычлар сервердан укылачак һәм %@ кушымтасындагы өстәләчәк/яңартылачак.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Бу хост өчен игътибар итмә";

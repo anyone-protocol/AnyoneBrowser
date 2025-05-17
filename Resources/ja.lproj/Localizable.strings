@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "サイトを追加";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "サーバー上にないが%@には保存されているお気に入りが作成されます。";
 
 /* BookmarkViewController */
 "Address" = "アドレス";
@@ -65,7 +65,7 @@
 "Begins On" = "開始日時";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "HTTPリクエストをブロックする";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "ブロックされた第三者ホスト";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "ホスト";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "同期すると、サーバー上のすべての「お気に入り」が%@に追加（更新）されます。";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "このホストを無視";
@@ -251,7 +251,7 @@
 "Lock App with Touch ID or Device Passcode" = "端末のパスワードかTouchIDでロック";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "ロックダウンモード";
 
 /* AppDelegate */
 "Log In" = "ログイン";

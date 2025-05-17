@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Přidat Stránku";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Všechny záložky, které nejsou na serveru ale jsou v %@, budou přidány tam.";
 
 /* BookmarkViewController */
 "Address" = "Adresa";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Hostitel";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Pokud sychronizujete, všechny záložky se načtou ze serveru a budou přidány/aktualizovány v %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Ignorovat na tomto serveru";

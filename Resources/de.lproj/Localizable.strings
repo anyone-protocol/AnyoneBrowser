@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Seite hinzufügen";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Zusätzlich werden alle Lesezeichen, die am Server nicht existieren, aber in %@, dort erstellt.";
 
 /* BookmarkViewController */
 "Address" = "Adresse";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Host";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Wenn Du synchronisierst, werden alle Lesezeichen vom Server gelesen und in %@ hinzugefügt/aktualisiert.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Für diesen Host ignorieren";

@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Thêm Trang web";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Ngoài ra, tất cả dấu trang trên %@ không tồn tại trên máy chủ sẽ được tạo mới trên máy chủ.";
 
 /* BookmarkViewController */
 "Address" = "Địa chỉ";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Tên miền";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Nếu bạn đồng bộ, tất cả dấu trang sẽ được đọc từ máy chủ và thêm/cập nhật vào %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Ngoại lệ cho tên miền này";

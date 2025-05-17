@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Afegeix un lloc";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Addicionalment, totes les adreces d'interès que no existeixin al servidor però sí a l'%@ es crearan aquí.";
 
 /* BookmarkViewController */
 "Address" = "Adreça";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Amfitrió";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Si sincronitzeu, es llegiran tots els marcadors del servidor i s'afegiran o actualitzaran a l'%@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Ignora per a aquest servidor";

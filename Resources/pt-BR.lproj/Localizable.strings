@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Adicionar site";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Além disso, todas as páginas de Favoritos existentes no %@, mas não no servidor, serão criadas aqui.";
 
 /* BookmarkViewController */
 "Address" = "Endereço";
@@ -65,7 +65,7 @@
 "Begins On" = "Inicia em ";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "Bloquear solicitações HTTP inseguras";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Hosts de terceiros bloqueados";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Host";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Se você sincronizar, todos os Favoritos serão lidos pelo servidor e adicionados/atualizados no %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Ignorar para este host";
@@ -251,7 +251,7 @@
 "Lock App with Touch ID or Device Passcode" = "Bloquear aplicativo com Touch ID ou código de acesso do dispositivo";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "Modo de bloqueio";
 
 /* AppDelegate */
 "Log In" = "Entrar";

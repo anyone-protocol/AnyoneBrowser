@@ -456,6 +456,14 @@
 		E171B1A11D583512AF52F41D /* Pods-AnyoneBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A0BB301F2DD87B8D009AFFEB /* .tx */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = .tx;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		01801E8F1A32CA2A002B4718 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -561,6 +569,7 @@
 		A00436111E8185AA0067652D /* Build */ = {
 			isa = PBXGroup;
 			children = (
+				A0BB301F2DD87B8D009AFFEB /* .tx */,
 				A07D655D2208A6DA0002D775 /* .gitignore */,
 				A010FA191E798C0400E04222 /* BUILD.md */,
 				A07D65572208A2540002D775 /* build-util */,

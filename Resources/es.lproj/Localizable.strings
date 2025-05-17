@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Agregar sitio web";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Adicionalmente, todos los marcadores que no existen en el servidor pero sí en %@ serán creados ahí. ";
 
 /* BookmarkViewController */
 "Address" = "Dirección";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Servidor";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Si sincronizas, todos los marcadores se leerán desde el servidor y se añadirán/actualizarán en el %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Ignorar para éste servidor";

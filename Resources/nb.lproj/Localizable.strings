@@ -22,7 +22,7 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Legg til nettsted";
 
-/* Placeholder is 'Anyone Browser' */
+/* Placeholder is 'Onion Browser' */
 "Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
 
 /* BookmarkViewController */
@@ -214,7 +214,7 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Vert";
 
-/* Placeholder is 'Anyone Browser' */
+/* Placeholder is 'Onion Browser' */
 "If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
 
 /* Tab+UIWebViewDelegate */

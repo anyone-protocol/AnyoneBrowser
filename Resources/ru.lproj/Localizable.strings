@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Добавить сайт";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Кроме того, на сервере будут созданы закладки из %@, если ранее они отсутствовали.";
 
 /* BookmarkViewController */
 "Address" = "Адрес";
@@ -65,7 +65,7 @@
 "Begins On" = "Начало";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "Блокировать небезопасные HTTP-запросы";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Заблокированные сторонние хосты";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Хост";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "При синхронизации все закладки будут считаны с сервера и добавлены/обновлены в %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Игнорировать для этого хоста";
@@ -251,7 +251,7 @@
 "Lock App with Touch ID or Device Passcode" = "Блокировка приложения с помощью Touch ID или кода устройства.";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "Режим блокировки";
 
 /* AppDelegate */
 "Log In" = "Вход";

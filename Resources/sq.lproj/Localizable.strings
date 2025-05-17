@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Shtoni Sajt";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Si shtesë, krejt faqerojtësit që nuk ekzistojnë në shërbyes, por te %@, do të krijohen atje.";
 
 /* BookmarkViewController */
 "Address" = "Adresë";
@@ -65,7 +65,7 @@
 "Begins On" = "Fillon Më";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "Blloko Kërkesa HTTP të Pasiguruara";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Hoste të Palëve të Treta të Bllokuara";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Strehë";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Nëse bëni njëkohësim, krejt faqerojtësit do të lexohen prej shërbyesit dhe shtohen/përditësohen në %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Shpërfille për këtë strehë";
@@ -251,7 +251,7 @@
 "Lock App with Touch ID or Device Passcode" = "Kyçe Aplikacionin me Touch ID ose Kodkalim Pajisjeje";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "Mënyra “Lockdown”";
 
 /* AppDelegate */
 "Log In" = "Kyçu";

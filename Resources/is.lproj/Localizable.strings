@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Bæta vefsvæði við";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Að auki verða öll bókamerki, sem ekki eru á netþjóninum en finnast í %@, búin til hér.";
 
 /* BookmarkViewController */
 "Address" = "Vistfang";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Hýsilþjónn";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Ef þú samstillir verða öll bókamerki lesin frá netþjóninum og bætt við eða þau uppfærð í %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Hunsa fyrir þennan hýsil";

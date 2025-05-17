@@ -11,7 +11,7 @@
 "Add" = "Ekle";
 
 /* AddSearchEngineViewController */
-"Add \"%@\" as the search term placeholder!" = "Arama ifadesi yer belirteci olarak \"%@\" ekle!";
+"Add \"%@\" as the search term placeholder!" = "Arama ifadesi yer belirticisi olarak \"%@\" ekleyin!";
 
 /* BookmarkViewController */
 "Add Bookmark" = "Yer imi ekle";
@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Site ekle";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Ek olarak, %@ üzerinde bulunan ancak sunucuda bulunmayan tüm yer imleri sunucuya eklenir.";
 
 /* BookmarkViewController */
 "Address" = "Adres";
@@ -65,7 +65,7 @@
 "Begins On" = "Başlangıç zamanı";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "Güvenli olmayan HTTP istekleri engellensin";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Engellenmiş 3. taraf sunucular";
@@ -95,13 +95,13 @@
 "Close Tab" = "Sekmeyi kapat";
 
 /* CircuitViewController */
-"Connect to a website to see your circuit." = "Devrenizi görebilmek için bir web sitesine bağlanın.";
+"Connect to a website to see your circuit." = "Devrenizi görebilmek için bir siteye bağlanın.";
 
 /* SyncViewController */
 "Connection to Nextcloud Server Failed" = "Nextcloud sunucusu ile bağlantı kurulamadı";
 
 /* No comment provided by engineer. */
-"Cookies" = "Çerezler";
+"Cookies" = "Tanımlama bilgileri";
 
 /* SettingsViewController, Storage1ViewController, Storage2ViewController */
 "Cookies and Local Storage" = "Çerezler ve yerel depolama";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Sunucu";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Eşitlerseniz, sunucudaki tüm yer imleri okunur ve %@ üzerindeki yer imlerine eklenir ya da güncellenir.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Bu sunucu için yok sayılsın";
@@ -251,7 +251,7 @@
 "Lock App with Touch ID or Device Passcode" = "Uygulama Touch ID ya da Aygıt Parolası ile kilitlensin";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "Kilit modu";
 
 /* AppDelegate */
 "Log In" = "Oturum aç";
@@ -284,7 +284,7 @@
 "No valid HTTP response." = "Geçerli bir HTTP yanıtı alınamadı.";
 
 /* No comment provided by engineer. */
-"Offline Web Application Cache" = "Çevrimdışı internet uygulaması ön belleği";
+"Offline Web Application Cache" = "Çevrim dışı internet uygulaması ön belleği";
 
 /* JAHPAuthenticatingHTTPProtocol, AlertHelper */
 "OK" = "Tamam";

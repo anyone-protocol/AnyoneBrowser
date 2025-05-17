@@ -1,0 +1,46 @@
+[main]
+host = https://www.transifex.com
+
+[o:ator:p:anyone-browser:r:localizablestrings]
+file_filter  = Resources/<lang>.lproj/Localizable.strings
+source_file  = Resources/en.lproj/Localizable.strings
+source_lang  = en_US
+type         = STRINGS
+minimum_perc = 50
+trans.pt_PT  = Resources/pt-PT.lproj/Localizable.strings
+trans.tr_TR  = Resources/tr-TR.lproj/Localizable.strings
+trans.hu_HU  = Resources/hu-HU.lproj/Localizable.strings
+trans.pt_BR  = Resources/pt-BR.lproj/Localizable.strings
+
+[o:ator:p:anyone-browser:r:localizable-stringsdict]
+file_filter  = Resources/<lang>.lproj/Localizable.stringsdict
+source_file  = Resources/en.lproj/Localizable.stringsdict
+source_lang  = en
+type         = STRINGSDICT
+minimum_perc = 0
+trans.pt_PT  = Resources/pt-PT.lproj/Localizable.stringsdict
+trans.tr_TR  = Resources/tr-TR.lproj/Localizable.stringsdict
+trans.hu_HU  = Resources/hu-HU.lproj/Localizable.stringsdict
+trans.pt_BR  = Resources/pt-BR.lproj/Localizable.stringsdict
+
+[o:ator:p:anyone-browser:r:infoplist-strings]
+file_filter  = Resources/<lang>.lproj/InfoPlist.strings
+source_file  = Resources/en.lproj/InfoPlist.strings
+source_lang  = en_US
+type         = STRINGS
+minimum_perc = 75
+trans.hu_HU  = Resources/hu-HU.lproj/InfoPlist.strings
+trans.pt_BR  = Resources/pt-BR.lproj/InfoPlist.strings
+trans.pt_PT  = Resources/pt-PT.lproj/InfoPlist.strings
+trans.tr_TR  = Resources/tr-TR.lproj/InfoPlist.strings
+
+[o:ator:p:anyone-browser:r:security-levels]
+file_filter  = Resources/<lang>.lproj/security-levels.html
+source_file  = Resources/en.lproj/security-levels.html
+source_lang  = en_US
+type         = HTML
+minimum_perc = 50
+trans.hu_HU  = Resources/hu-HU.lproj/security-levels.html
+trans.pt_BR  = Resources/pt-BR.lproj/security-levels.html
+trans.pt_PT  = Resources/pt-PT.lproj/security-levels.html
+trans.tr_TR  = Resources/tr-TR.lproj/security-levels.html

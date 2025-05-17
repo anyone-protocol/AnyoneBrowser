@@ -22,8 +22,8 @@
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Adaugă Site Web";
 
-/* Placeholder is 'Anyone Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+/* Placeholder is 'Onion Browser' */
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Adițional, toate semnele de care neexistente în server dar în %@ vor fi create acolo.";
 
 /* BookmarkViewController */
 "Address" = "Adresă";
@@ -214,8 +214,8 @@
 /* AddSiteViewController, SyncViewController */
 "Host" = "Gazdă";
 
-/* Placeholder is 'Anyone Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+/* Placeholder is 'Onion Browser' */
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "Dacă sincronizezi, toate semnele de carte vor fi citite de la server și adăugate/actualizate în %@.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "Ignoră pentru această gazdă";
