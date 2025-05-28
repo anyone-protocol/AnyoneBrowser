@@ -6,20 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		8AC3B3A721700AD300E0CB4A /* OBVersion */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 8AC3B3A821700AD300E0CB4A /* Build configuration list for PBXAggregateTarget "OBVersion" */;
-			buildPhases = (
-				8A3EBA9221700AE80054A9FF /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = OBVersion;
-			productName = OBVersion;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		016B2FCD1A5648AE002D2730 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016B2FCC1A5648AE002D2730 /* WebKit.framework */; };
 		019516D11B7D8B400078586A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 019516D01B7D8B400078586A /* libz.tbd */; };
@@ -147,13 +133,6 @@
 			remoteGlobalIDString = 01801E911A32CA2A002B4718;
 			remoteInfo = Endless;
 		};
-		8A3EBA9321700B0A0054A9FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01801E8A1A32CA2A002B4718 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AC3B3A721700AD300E0CB4A;
-			remoteInfo = OBVersion;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -227,10 +206,6 @@
 		A07037C223C74DC900D670EC /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		A07037C523C7571B00D670EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A07B55FB23D736D60051663B /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
-		A07D65582208A2540002D775 /* mk_build_versions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mk_build_versions.sh; sourceTree = "<group>"; };
-		A07D65592208A2540002D775 /* decode_bundle_version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = decode_bundle_version.sh; sourceTree = "<group>"; };
-		A07D655A2208A2540002D775 /* decimalize_git_hash.bash */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = decimalize_git_hash.bash; sourceTree = "<group>"; };
-		A07D655B2208A2540002D775 /* minutes_since_date.bash */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = minutes_since_date.bash; sourceTree = "<group>"; };
 		A07D655C2208A4320002D775 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
 		A07D655D2208A6DA0002D775 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A07DD6B42AC5914B00441B48 /* AnonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonManager.swift; sourceTree = "<group>"; };
@@ -386,11 +361,9 @@
 		A0B2240E23A92B2700EA2C47 /* AnyoneBrowser_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnyoneBrowser_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0B9A2D9BB388E64788975B8 /* Pods-AnyoneBrowser Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser Tests.release.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A0BF51AE23AFBF250096624A /* urlblocker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = urlblocker.json; sourceTree = "<group>"; };
-		A0BF51C523AFBF250096624A /* credits.html.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.html.in; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
 		A0BF51C723AFBF250096624A /* start.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = start.html; sourceTree = "<group>"; };
 		A0BF51D123AFBF250096624A /* SearchEngines.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SearchEngines.plist; sourceTree = "<group>"; };
 		A0BF51DE23AFBF250096624A /* credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = credits.html; sourceTree = "<group>"; };
-		A0BF520023AFC3580096624A /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A0BF520223AFC3580096624A /* CircuitNodeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircuitNodeCell.xib; sourceTree = "<group>"; };
 		A0BF520323AFC3580096624A /* SecurityPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityPopUpViewController.xib; sourceTree = "<group>"; };
 		A0BF520423AFC3580096624A /* CircuitNodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircuitNodeCell.swift; sourceTree = "<group>"; };
@@ -595,10 +568,6 @@
 			isa = PBXGroup;
 			children = (
 				A0BFD3EA289D6D9100CB9F6D /* testpage */,
-				A07D65582208A2540002D775 /* mk_build_versions.sh */,
-				A07D65592208A2540002D775 /* decode_bundle_version.sh */,
-				A07D655A2208A2540002D775 /* decimalize_git_hash.bash */,
-				A07D655B2208A2540002D775 /* minutes_since_date.bash */,
 			);
 			path = "build-util";
 			sourceTree = "<group>";
@@ -625,7 +594,6 @@
 				A0550648271094A900922E18 /* ua-strings.plist */,
 				A0A1A3582A03DAB800DE4991 /* security-levels.html */,
 				A0BF51DE23AFBF250096624A /* credits.html */,
-				A0BF51C523AFBF250096624A /* credits.html.in */,
 				A0BF51C723AFBF250096624A /* start.html */,
 				A022F2B42D9AC9F4008C782D /* globe-bg.svg */,
 				A0BF51AE23AFBF250096624A /* urlblocker.json */,
@@ -651,7 +619,6 @@
 				A0A81AE52D4942DD00AB9DA0 /* Reachability.swift */,
 				A0A81AE32D4941BD00AB9DA0 /* IpSupport.swift */,
 				A0BF523023AFC3580096624A /* AnyoneBrowser-Bridging-Header.h */,
-				A0BF520023AFC3580096624A /* version.h */,
 				A0BF523523AFC3580096624A /* Helpers */,
 			);
 			path = AnyoneBrowser;
@@ -777,7 +744,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8A3EBA9421700B0A0054A9FF /* PBXTargetDependency */,
 			);
 			name = AnyoneBrowser;
 			productName = Endless;
@@ -832,11 +798,6 @@
 						DevelopmentTeam = W36S8KLY7S;
 						ProvisioningStyle = Manual;
 					};
-					8AC3B3A721700AD300E0CB4A = {
-						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = W36S8KLY7S;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 01801E8D1A32CA2A002B4718 /* Build configuration list for PBXProject "AnyoneBrowser" */;
@@ -890,7 +851,6 @@
 			targets = (
 				01801E911A32CA2A002B4718 /* AnyoneBrowser */,
 				018333D61A35727C00670CD1 /* AnyoneBrowser Tests */,
-				8AC3B3A721700AD300E0CB4A /* OBVersion */,
 			);
 		};
 /* End PBXProject section */
@@ -984,24 +944,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		8A3EBA9221700AE80054A9FF /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/build-util/mk_build_versions.sh\n";
 		};
 		A06F5F4A275692870023622E /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1172,11 +1114,6 @@
 			isa = PBXTargetDependency;
 			target = 01801E911A32CA2A002B4718 /* AnyoneBrowser */;
 			targetProxy = 018333DD1A35727C00670CD1 /* PBXContainerItemProxy */;
-		};
-		8A3EBA9421700B0A0054A9FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AC3B3A721700AD300E0CB4A /* OBVersion */;
-			targetProxy = 8A3EBA9321700B0A0054A9FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1387,7 +1324,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1406,9 +1342,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_PREFIX_HEADER = AnyoneBrowser/version.h;
 				INFOPLIST_PREPROCESS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1446,7 +1381,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1458,9 +1392,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_PREFIX_HEADER = AnyoneBrowser/version.h;
 				INFOPLIST_PREPROCESS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1597,22 +1530,6 @@
 			};
 			name = Release;
 		};
-		8AC3B3A921700AD300E0CB4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8AC3B3AA21700AD300E0CB4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1639,15 +1556,6 @@
 			buildConfigurations = (
 				018333E01A35727C00670CD1 /* Debug */,
 				018333E11A35727C00670CD1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8AC3B3A821700AD300E0CB4A /* Build configuration list for PBXAggregateTarget "OBVersion" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AC3B3A921700AD300E0CB4A /* Debug */,
-				8AC3B3AA21700AD300E0CB4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

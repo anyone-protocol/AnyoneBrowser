@@ -16,11 +16,6 @@ Carthage/Checkouts/
 
 fabric.apikey
 fabric.buildsecret
-AnyoneBrowser/version.h
-
-Resources/credits.html
-Resources/geoip
-Resources/geoip6
 
 # metadata containing sensitive data
 fastlane/metadata/review_information
