@@ -406,7 +406,6 @@ extension Tab: WKNavigationDelegate {
 		// Allow the user to enter an authentication key in that case.
 		if error.domain == NSURLErrorDomain
 			&& (error.code == NSURLErrorNetworkConnectionLost /* iOS 14/15 */ || error.code == NSURLErrorNotConnectedToInternet /* iOS 13 */),
-		   let host = failedUrl.host,
 		   failedUrl.isAnon
 		{
 			msg += "\n\n"
