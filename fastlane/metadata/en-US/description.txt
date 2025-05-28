@@ -1,1 +1,23 @@
+Complete anonymity at your fingertips
 
+Anyone Browser is the free, open-source iOS browser that puts anonymity first. Powered by the decentralized Anyone Network, every connection routes through a global onion routing network, creating built-in anonymity more secure than any VPN, while remaining easy to use. 
+
+Secure Onion Routing
+Every user gets free access to routing over the Anyone Network. This isn’t a VPN add-on: this is trustless anonymity done right. Your traffic passes through a series of three encrypted hops run by node operators around the world. No single server knows both who you are and where you’re going; see your three-hop 'circuit' for every page you visit!
+
+No Tracking, No Logging, Anywhere.
+Traffic never touches centralized servers. Your ISP, Wi-Fi router, or even the websites you visit can’t track you.  The browser stores no history, and tabs can auto-delete all history every time you exit the app. You also get built-in protections against trackers:
+- Script and cookie blocking
+- Device fingerprint masking: hide your OS and default settings
+- System obfuscation: masquerade as a different device altogether!
+
+Fast, Private Browsing
+Unlike older onion networks, the Anyone Network is built for speed. It’s noticeably less congested, meaning you can stream video, browse media-heavy sites, and get stuff done. 
+
+Privacy, Your Way  
+Take control with detailed privacy settings. Choose between Bronze, Silver, and Gold privacy levels, or customise every setting individually. Configure everything from:
+- Your search engine 
+- Local protection with Face ID, 
+- Auto-delete tabs and more
+
+Whether you care about data collection, surveillance, fingerprinting, or just want a browser that respects you, this is the complete privacy solution for iOS browsing.
