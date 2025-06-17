@@ -275,7 +275,7 @@ class SettingsViewController: FixedFormViewController {
 			self?.dismsiss_()
 		}
 
-		if let url = URL(string: "itms-apps://itunes.apple.com/app/id519296448"),
+		if let url = URL(string: "itms-apps://itunes.apple.com/app/id6741429520"),
 			UIApplication.shared.canOpenURL(url) {
 
 			section
