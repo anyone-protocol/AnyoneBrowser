@@ -26,7 +26,7 @@ class StartTorViewController: UIViewController {
 
 	@IBOutlet weak var progressView: UIProgressView!
 
-	@IBOutlet weak var errorLb: UILabel!
+	@IBOutlet weak var statusLb: UILabel!
 
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -42,22 +42,32 @@ class StartTorViewController: UIViewController {
 	func retry() {
 		retryBt.isHidden = true
 		progressView.progress = 0
-		errorLb.isHidden = true
+		statusLb.isHidden = true
 
-		AnonManager.shared.start() { [weak self] progress in
+		AnonManager.shared.start() { [weak self] progress, summary in
 			guard let progress = progress else {
 				return
 			}
 
 			DispatchQueue.main.async {
 				self?.progressView.setProgress(Float(progress) / 100, animated: true)
+
+				if let summary = summary, !summary.isEmpty {
+					self?.statusLb.text = summary
+					self?.statusLb.textColor = .label
+					self?.statusLb.isHidden = false
+				}
+				else {
+					self?.statusLb.isHidden = true
+				}
 			}
 		} _: { [weak self] error in
 			guard error == nil else {
 				DispatchQueue.main.async {
 					self?.retryBt.isHidden = false
-					self?.errorLb.text = (error ?? AnonManager.Errors.noSocksAddr).localizedDescription
-					self?.errorLb.isHidden = false
+					self?.statusLb.text = (error ?? AnonManager.Errors.noSocksAddr).localizedDescription
+					self?.statusLb.textColor = .systemRed
+					self?.statusLb.isHidden = false
 				}
 
 				return

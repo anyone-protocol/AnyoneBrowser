@@ -95,7 +95,7 @@ class AnonManager {
 		})
 	}
 
-	func start(_ progressCallback: @escaping (_ progress: Int?) -> Void,
+	func start(_ progressCallback: @escaping (_ progress: Int?, _ summary: String?) -> Void,
 			   _ completion: @escaping (Error?) -> Void)
 	{
 		if !anonRunning {
@@ -158,18 +158,14 @@ class AnonManager {
 					[weak self] (type, severity, action, arguments) -> Bool in
 
 					if type == "STATUS_CLIENT" && action == "BOOTSTRAP" {
-						let progress: Int?
+						self?.log("#startTunnel arguments=\(arguments?.description ?? "(nil)")")
 
+						var progress: Int? = nil
 						if let p = arguments?["PROGRESS"] {
 							progress = Int(p)
 						}
-						else {
-							progress = nil
-						}
 
-						self?.log("#startTunnel progress=\(progress?.description ?? "(nil)")")
-
-						progressCallback(progress)
+						progressCallback(progress, arguments?["SUMMARY"])
 
 						if progress ?? 0 >= 100 {
 							anonController.removeObserver(self?.progressObs)
