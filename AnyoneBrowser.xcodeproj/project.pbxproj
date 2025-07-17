@@ -17,6 +17,8 @@
 		54F7DBC8281C189700CBEFDB /* CALayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */; };
 		A003A1932A0D1628008D8845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003A1922A0D1628008D8845 /* SceneDelegate.swift */; };
 		A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DF455241A60E700A07796 /* SecureEnclave.swift */; };
+		A00748212E294BAC0083E115 /* BlocklistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00748202E294BAC0083E115 /* BlocklistViewController.xib */; };
+		A00748232E294BAC0083E115 /* BlocklistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00748202E294BAC0083E115 /* BlocklistViewController.xib */; };
 		A013DEDA2434E69A0087D12B /* UIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013DED92434E69A0087D12B /* UIImage+Helpers.swift */; };
 		A0140DBB2D70C29700BD2658 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0140DBA2D70C29700BD2658 /* Log.swift */; };
 		A0172C6E2888247C008D42CD /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C6D2888247C008D42CD /* AlertHelper.swift */; };
@@ -173,6 +175,7 @@
 		A003A1922A0D1628008D8845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A004360B1E81856F0067652D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A004360C1E81856F0067652D /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A00748202E294BAC0083E115 /* BlocklistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlocklistViewController.xib; sourceTree = "<group>"; };
 		A010FA171E7986DE00E04222 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		A010FA191E798C0400E04222 /* BUILD.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = BUILD.md; sourceTree = "<group>"; };
 		A013DED92434E69A0087D12B /* UIImage+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Helpers.swift"; sourceTree = "<group>"; };
@@ -432,15 +435,11 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A078517C2DE7344A00BA3747 /* fastlane */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = fastlane;
 			sourceTree = "<group>";
 		};
 		A0BB301F2DD87B8D009AFFEB /* .tx */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = .tx;
 			sourceTree = "<group>";
 		};
@@ -569,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				A0444F2A2D4A8A370020FC70 /* BlocklistViewController.swift */,
+				A00748202E294BAC0083E115 /* BlocklistViewController.xib */,
 				A0FDC60E2D4B8EC6006F1EA2 /* UrlBlocker.swift */,
 			);
 			path = Blocking;
@@ -893,6 +893,7 @@
 				A0BF524923AFC3580096624A /* CircuitNodeCell.xib in Resources */,
 				A02A09142AD6E8C000A9334C /* StartTorViewController.xib in Resources */,
 				A0BF526323AFC3580096624A /* BookmarksViewController.xib in Resources */,
+				A00748212E294BAC0083E115 /* BlocklistViewController.xib in Resources */,
 				A022F2B52D9AC9F4008C782D /* globe-bg.svg in Resources */,
 				A0BF51ED23AFBF250096624A /* start.html in Resources */,
 			);
@@ -904,6 +905,7 @@
 			files = (
 				01F2AE461B827D3E00D5651A /* wildcard.pushover.net.crt in Resources */,
 				01F2AE481B82822600D5651A /* paypal.com.crt in Resources */,
+				A00748232E294BAC0083E115 /* BlocklistViewController.xib in Resources */,
 				01F2AE451B827D3E00D5651A /* lobste.rs.crt in Resources */,
 				01F2AE4A1B82835A00D5651A /* expired.superblock.net.crt in Resources */,
 			);
@@ -942,9 +944,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1001,9 +1007,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
