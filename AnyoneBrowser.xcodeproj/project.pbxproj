@@ -36,6 +36,7 @@
 		A03CFA042892B05500F01DB5 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CFA032892B05500F01DB5 /* DownloadHelper.swift */; };
 		A0444F2B2D4A8A370020FC70 /* BlocklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0444F2A2D4A8A370020FC70 /* BlocklistViewController.swift */; };
 		A0550649271094A900922E18 /* ua-strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0550648271094A900922E18 /* ua-strings.plist */; };
+		A06155902E3262C800937318 /* light-onlydomains.txt in Resources */ = {isa = PBXBuildFile; fileRef = A061558F2E3262C800937318 /* light-onlydomains.txt */; };
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
 		A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAC2406C7D000512695 /* SyncViewController.swift */; };
 		A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAE2406D94200512695 /* Nextcloud.swift */; };
@@ -55,7 +56,6 @@
 		A0A81AE62D4942DD00AB9DA0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A81AE52D4942DD00AB9DA0 /* Reachability.swift */; };
 		A0A83AC228A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A83AC128A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift */; };
 		A0AF2C062A123E65000BCC85 /* BrowsingViewController+UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AF2C052A123E65000BCC85 /* BrowsingViewController+UIResponder.swift */; };
-		A0BF51E523AFBF250096624A /* urlblocker.json in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51AE23AFBF250096624A /* urlblocker.json */; };
 		A0BF51ED23AFBF250096624A /* start.html in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51C723AFBF250096624A /* start.html */; };
 		A0BF51EF23AFBF250096624A /* SearchEngines.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51D123AFBF250096624A /* SearchEngines.plist */; };
 		A0BF51F423AFBF250096624A /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51DE23AFBF250096624A /* credits.html */; };
@@ -200,6 +200,8 @@
 		A03CFA032892B05500F01DB5 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
 		A0444F2A2D4A8A370020FC70 /* BlocklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistViewController.swift; sourceTree = "<group>"; };
 		A0550648271094A900922E18 /* ua-strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ua-strings.plist"; sourceTree = "<group>"; };
+		A061558B2E32594000937318 /* update-blocklist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-blocklist.sh"; sourceTree = "<group>"; };
+		A061558F2E3262C800937318 /* light-onlydomains.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "light-onlydomains.txt"; sourceTree = "<group>"; };
 		A06881D12A66B0070084D26D /* AnyoneBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnyoneBrowser.entitlements; sourceTree = "<group>"; };
 		A0696EAC2406C7D000512695 /* SyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewController.swift; sourceTree = "<group>"; };
 		A0696EAE2406D94200512695 /* Nextcloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nextcloud.swift; sourceTree = "<group>"; };
@@ -363,7 +365,6 @@
 		A0AF2C052A123E65000BCC85 /* BrowsingViewController+UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowsingViewController+UIResponder.swift"; sourceTree = "<group>"; };
 		A0B2240E23A92B2700EA2C47 /* AnyoneBrowser_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnyoneBrowser_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0B9A2D9BB388E64788975B8 /* Pods-AnyoneBrowser Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyoneBrowser Tests.release.xcconfig"; path = "Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A0BF51AE23AFBF250096624A /* urlblocker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = urlblocker.json; sourceTree = "<group>"; };
 		A0BF51C723AFBF250096624A /* start.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = start.html; sourceTree = "<group>"; };
 		A0BF51D123AFBF250096624A /* SearchEngines.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SearchEngines.plist; sourceTree = "<group>"; };
 		A0BF51DE23AFBF250096624A /* credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = credits.html; sourceTree = "<group>"; };
@@ -578,6 +579,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BFD3EA289D6D9100CB9F6D /* testpage */,
+				A061558B2E32594000937318 /* update-blocklist.sh */,
 			);
 			path = "build-util";
 			sourceTree = "<group>";
@@ -606,7 +608,7 @@
 				A0BF51DE23AFBF250096624A /* credits.html */,
 				A0BF51C723AFBF250096624A /* start.html */,
 				A022F2B42D9AC9F4008C782D /* globe-bg.svg */,
-				A0BF51AE23AFBF250096624A /* urlblocker.json */,
+				A061558F2E3262C800937318 /* light-onlydomains.txt */,
 				A08563842A05419000A3A7FF /* Launch Screen.storyboard */,
 				A06881D12A66B0070084D26D /* AnyoneBrowser.entitlements */,
 				01801E961A32CA2A002B4718 /* Info.plist */,
@@ -746,6 +748,7 @@
 			buildPhases = (
 				65319E2856D38575BBE828A1 /* [CP] Check Pods Manifest.lock */,
 				A06F5F4A275692870023622E /* BartyCrouch */,
+				A061558C2E325A1F00937318 /* Load Blocklist */,
 				01801E8E1A32CA2A002B4718 /* Sources */,
 				01801E8F1A32CA2A002B4718 /* Frameworks */,
 				01801E901A32CA2A002B4718 /* Resources */,
@@ -878,9 +881,9 @@
 				A0550649271094A900922E18 /* ua-strings.plist in Resources */,
 				A07037C723C79AE500D670EC /* Media.xcassets in Resources */,
 				A0BF526723AFC3580096624A /* BookmarkCell.xib in Resources */,
+				A06155902E3262C800937318 /* light-onlydomains.txt in Resources */,
 				A0BF526523AFC3580096624A /* FavIconCell.xib in Resources */,
 				A0BF525823AFC3580096624A /* TabCell.xib in Resources */,
-				A0BF51E523AFBF250096624A /* urlblocker.json in Resources */,
 				A0BF51EF23AFBF250096624A /* SearchEngines.plist in Resources */,
 				A0BF524C23AFC3580096624A /* CircuitViewController.xib in Resources */,
 				A08563142A04E9D900A3A7FF /* Localizable.strings in Resources */,
@@ -956,6 +959,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A061558C2E325A1F00937318 /* Load Blocklist */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Load Blocklist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuild-util/update-blocklist.sh\n";
 		};
 		A06F5F4A275692870023622E /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;

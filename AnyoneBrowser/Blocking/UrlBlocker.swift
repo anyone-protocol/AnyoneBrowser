@@ -35,36 +35,40 @@ class UrlBlocker: NSObject {
 		return cache
 	}()
 
+	private lazy var titleRegex = try? NSRegularExpression(pattern: "^# Title: (.+)$", options: .caseInsensitive)
+
 
 	private override init() {
 		super.init()
 
-		guard let url = Bundle.main.url(forResource: "urlblocker", withExtension: "json")
-		else {
-			assertionFailure("urlblocker.json file could not be found!")
+		if let url = Bundle.main.url(forResource: "light-onlydomains", withExtension: "txt") {
+			do {
+				let blocklist = try String(contentsOf: url, encoding: .utf8)
+				var title = "HaGeZi's Light DNS Blocklist"
 
-			// Injected for testing.
-			targets["twitter.com"] = "Social - Twitter"
+				for line in blocklist.split(whereSeparator: { $0.isNewline }) {
+					guard !line.hasPrefix("#") else {
+						let line = String(line)
+						if let match = titleRegex?.firstMatch(in: line, range: NSRange(line.startIndex ..< line.endIndex, in: line)),
+						   match.numberOfRanges > 1,
+						   let range = Range(match.range(at: 1), in: line)
+						{
+							title = String(line[range])
+						}
 
-			return
-		}
+						continue
+					}
 
-		let raw: [String: [String]]
+					targets[String(line)] = title
+				}
+			}
+			catch {
+				assertionFailure("light-onlydomains.txt file could not be found!")
 
-		do {
-			let data = try Data(contentsOf: url)
+				// Injected for testing.
+				targets["twitter.com"] = "Social - Twitter"
 
-			raw = try JSONDecoder().decode([String: [String]].self, from: data)
-		}
-		catch {
-			assertionFailure(error.localizedDescription)
-			return
-		}
-
-		// convert from { "desc" => [ "host1", "host2" ] } to { "host1" => "desc", "host2" => "desc" }
-		for key in raw.keys {
-			for host in raw[key] ?? [] {
-				targets[host] = key
+				return
 			}
 		}
 

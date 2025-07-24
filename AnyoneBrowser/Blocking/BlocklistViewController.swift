@@ -76,7 +76,7 @@ class BlocklistViewController: UIViewController, UITableViewDelegate, UITableVie
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "rule") ?? .init(style: .subtitle, reuseIdentifier: "rule")
+		let cell = tableView.dequeueReusableCell(withIdentifier: "rule") ?? newCell("rule")
 		cell.selectionStyle = .none
 
 		let host = hosts(for: indexPath.section)[indexPath.row]
@@ -172,5 +172,19 @@ class BlocklistViewController: UIViewController, UITableViewDelegate, UITableVie
 		else {
 			UrlBlocker.shared.disable(host: host, with: NSLocalizedString("User disabled", comment: ""))
 		}
+	}
+
+	private func newCell(_ reuseIdentifier: String) -> UITableViewCell {
+		let cell = UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
+
+		cell.textLabel?.adjustsFontSizeToFitWidth = true
+		cell.textLabel?.minimumScaleFactor = 0.5
+		cell.textLabel?.lineBreakMode = .byTruncatingMiddle
+
+		cell.detailTextLabel?.adjustsFontSizeToFitWidth = true
+		cell.detailTextLabel?.minimumScaleFactor = 0.75
+		cell.detailTextLabel?.lineBreakMode = .byTruncatingMiddle
+
+		return cell
 	}
 }
