@@ -14,17 +14,22 @@ class UrlBlocker: NSObject {
 
 	static let shared = UrlBlocker()
 
+	static let updateUrl = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?
+		.appendingPathComponent("blocklist.txt")
 
-	var hosts: [String] {
-		targets.keys.sorted(using: .localizedStandard)
-	}
+
+	private(set) var hosts = [String]()
+
+	private(set) var title = "HaGeZi's Light DNS Blocklist"
+
+	private(set) var desc = "Hand brush - Cleans the Internet and protects your privacy! Blocks Ads, Tracking, Metrics and some Badware."
+
+	private(set) var modified = "–"
 
 
 	private static let disabledUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?
 		.appendingPathComponent("url_blocker_disabled.plist")
 
-
-	private var targets = [String: String]()
 
 	private var disabled = [String: String]()
 
@@ -35,42 +40,15 @@ class UrlBlocker: NSObject {
 		return cache
 	}()
 
-	private lazy var titleRegex = try? NSRegularExpression(pattern: "^# Title: (.+)$", options: .caseInsensitive)
+	private lazy var titleRegex = try? NSRegularExpression(pattern: "^#\\s*Title:\\s*(.+)$", options: .caseInsensitive)
+	private lazy var descRegex = try? NSRegularExpression(pattern: "^#\\s*Description:\\s*(.+)$", options: .caseInsensitive)
+	private lazy var modifiedRegex = try? NSRegularExpression(pattern: "^#\\s*Last\\s+modified:\\s*(.+)$", options: .caseInsensitive)
 
 
 	private override init() {
 		super.init()
 
-		if let url = Bundle.main.url(forResource: "light-onlydomains", withExtension: "txt") {
-			do {
-				let blocklist = try String(contentsOf: url, encoding: .utf8)
-				var title = "HaGeZi's Light DNS Blocklist"
-
-				for line in blocklist.split(whereSeparator: { $0.isNewline }) {
-					guard !line.hasPrefix("#") else {
-						let line = String(line)
-						if let match = titleRegex?.firstMatch(in: line, range: NSRange(line.startIndex ..< line.endIndex, in: line)),
-						   match.numberOfRanges > 1,
-						   let range = Range(match.range(at: 1), in: line)
-						{
-							title = String(line[range])
-						}
-
-						continue
-					}
-
-					targets[String(line)] = title
-				}
-			}
-			catch {
-				assertionFailure("light-onlydomains.txt file could not be found!")
-
-				// Injected for testing.
-				targets["twitter.com"] = "Social - Twitter"
-
-				return
-			}
-		}
+		reload()
 
 		if let disabledUrl = Self.disabledUrl, disabledUrl.exists {
 			do {
@@ -86,6 +64,61 @@ class UrlBlocker: NSObject {
 
 
 	// MARK: Public Methods
+
+	func reload() {
+		var blocklist = ""
+
+		if let updateUrl = Self.updateUrl, updateUrl.exists {
+			blocklist = (try? String(contentsOf: updateUrl, encoding: .utf8)) ?? ""
+		}
+		else if let url = Bundle.main.url(forResource: "light-onlydomains", withExtension: "txt") {
+			do {
+				blocklist = try String(contentsOf: url, encoding: .utf8)
+			}
+			catch {
+				assertionFailure("light-onlydomains.txt file could not be found!")
+
+				// Injected for testing.
+				blocklist = "twitter.com"
+			}
+		}
+
+		ruleCache.removeAllObjects()
+
+		hosts.removeAll()
+
+		for line in blocklist.split(whereSeparator: { $0.isNewline }) {
+			guard !line.hasPrefix("#") else {
+				let line = String(line)
+				let range = NSRange(line.startIndex ..< line.endIndex, in: line)
+
+				if let match = titleRegex?.firstMatch(in: line, range: range),
+				   match.numberOfRanges > 1,
+				   let range = Range(match.range(at: 1), in: line)
+				{
+					title = String(line[range])
+				}
+				else if let match = descRegex?.firstMatch(in: line, range: range),
+				   match.numberOfRanges > 1,
+				   let range = Range(match.range(at: 1), in: line)
+				{
+					desc = String(line[range])
+				}
+				else if let match = modifiedRegex?.firstMatch(in: line, range: range),
+				   match.numberOfRanges > 1,
+				   let range = Range(match.range(at: 1), in: line)
+				{
+					modified = String(line[range])
+				}
+
+				continue
+			}
+
+			hosts.append(String(line))
+		}
+
+		hosts.sort(using: .localizedStandard)
+	}
 
 	func blockRule(for url: URL, withMain mainUrl: URL? = nil) -> String? {
 		guard Settings.enableUrlBlocker else {
@@ -104,11 +137,6 @@ class UrlBlocker: NSObject {
 
 		return rule
 	}
-
-	func description(for host: String) -> String? {
-		targets[host]
-	}
-
 
 	func isDisabled(host: String) -> String? {
 		disabled[host]
@@ -158,7 +186,7 @@ class UrlBlocker: NSObject {
 
 		var rule = ""
 
-		if targets[host] != nil {
+		if hosts.firstIndex(of: host) != nil {
 			rule = host
 		}
 		else {
@@ -169,7 +197,7 @@ class UrlBlocker: NSObject {
 				for i in 1 ..< p.count - 1 {
 					let domain = p[i ..< p.count].joined(separator: ".")
 
-					if targets[domain] != nil {
+					if hosts.firstIndex(of: domain) != nil {
 						rule = domain
 						break
 					}

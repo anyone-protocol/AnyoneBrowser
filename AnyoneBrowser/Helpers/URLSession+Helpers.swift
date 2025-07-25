@@ -36,7 +36,12 @@ public extension URLSession {
 				completion?(nil, ApiError.noBody)
 				return
 			}
-			
+
+			if String(describing: T.self) == "Data" {
+				completion?(data as? T, nil)
+				return
+			}
+
 			do {
 				completion?(try JSONDecoder().decode(T.self, from: data), nil)
 			}
