@@ -1,6 +1,3 @@
-/* RuleEditorController */
-"%1$@ (Disabled: %2$@)" = "%1$@ (Devre dışı: %2$@)";
-
 /* No comment provided by engineer. */
 "(not recommended)" = "(önerilmez)";
 
@@ -90,6 +87,9 @@
 
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Uygulamanın açık sekmeleri hatırlama süresini seçin.";
+
+/* No comment provided by engineer. */
+"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
 
 /* AppDelegate */
 "Close Tab" = "Sekmeyi kapat";
@@ -448,8 +448,14 @@
 /* AddSearchEngineViewController */
 "Update" = "Güncelle";
 
+/* No comment provided by engineer. */
+"Update Blocklist" = "Update Blocklist";
+
 /* SettingsViewController */
 "URL Blocker" = "Adres engelleyici";
+
+/* No comment provided by engineer. */
+"Use URL Blocker" = "Use URL Blocker";
 
 /* SecurityViewController */
 "User Agent" = "Kullanıcı uygulaması";

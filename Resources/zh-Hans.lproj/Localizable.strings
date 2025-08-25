@@ -1,6 +1,3 @@
-/* RuleEditorController */
-"%1$@ (Disabled: %2$@)" = "%1$@（已禁用：%2$@）";
-
 /* No comment provided by engineer. */
 "(not recommended)" = "（不推荐）";
 
@@ -90,6 +87,9 @@
 
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "选择应用记住打开的标签页多久";
+
+/* No comment provided by engineer. */
+"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
 
 /* AppDelegate */
 "Close Tab" = "关闭标签页";
@@ -448,8 +448,14 @@
 /* AddSearchEngineViewController */
 "Update" = "更新";
 
+/* No comment provided by engineer. */
+"Update Blocklist" = "Update Blocklist";
+
 /* SettingsViewController */
 "URL Blocker" = "URL 拦截程序";
+
+/* No comment provided by engineer. */
+"Use URL Blocker" = "Use URL Blocker";
 
 /* SecurityViewController */
 "User Agent" = "用户代理";

@@ -1,6 +1,3 @@
-/* RuleEditorController */
-"%1$@ (Disabled: %2$@)" = "%1$@ (Díchumasaithe: %2$@)";
-
 /* No comment provided by engineer. */
 "(not recommended)" = "(ní mholtar é seo)";
 
@@ -90,6 +87,9 @@
 
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "Cé chomh fada is a mheabhraíonn an aip cluaisíní oscailte.";
+
+/* No comment provided by engineer. */
+"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
 
 /* AppDelegate */
 "Close Tab" = "Dún an Cluaisín";
@@ -448,8 +448,14 @@
 /* AddSearchEngineViewController */
 "Update" = "Update";
 
+/* No comment provided by engineer. */
+"Update Blocklist" = "Update Blocklist";
+
 /* SettingsViewController */
 "URL Blocker" = "Coscaire URL";
+
+/* No comment provided by engineer. */
+"Use URL Blocker" = "Use URL Blocker";
 
 /* SecurityViewController */
 "User Agent" = "Teaghrán User-Agent";
