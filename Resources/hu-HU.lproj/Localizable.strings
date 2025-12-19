@@ -13,6 +13,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "Könyvjelző hozzáadása";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Keresőmotor hozzáadása";
 
@@ -157,6 +160,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "Könyvjelző szerkesztése";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Keresőmotor szerkesztése";
 
@@ -168,6 +174,9 @@
 
 /* CertificateViewController */
 "Expires After" = "Lejár ekkor";
+
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
 
 /* CertificateViewController */
 "Extended Validation: Organization" = "Extended Validation: Szervezet";
@@ -222,6 +231,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "TLS hibák ignorálása";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB Databases";
@@ -286,7 +298,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Offline Web Application Cache";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "OK";
 
 /* Tab+Gestures */
@@ -397,14 +409,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Váltás az %d fülre";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Könyvjelző szinkronizálás";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "A könyvjelzők szinkronizálása a Nextcloud szerverrel";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Szinkronizálás Nextcloud-dal";
 
 /* SettingsViewController */
 "Tab Security" = "Fül biztonság";

@@ -13,6 +13,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "اضافه کردن به بوکمارک";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "افزودن موتور جستجو";
 
@@ -20,7 +23,7 @@
 "Add Site" = "افزودن سایت";
 
 /* Placeholder is 'Onion Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = " علاوه بر این، همه‌ی بوکمارک هایی که روی سرور وجود ندارند ولی در %@ موجودند، در سرور ایجاد خواهند شد.";
 
 /* BookmarkViewController */
 "Address" = "آدرس";
@@ -32,16 +35,16 @@
 "Allow 3rd-Party Keyboards" = "اجازه دادن به کیبوردهای متفرقه";
 
 /* Option title */
-"Allow Access to Microphone and Video" = "Allow Access to Microphone and Video";
+"Allow Access to Microphone and Video" = " دسترسی به میکروفون و ویدیو را مجاز کنید.";
 
 /* Option title */
-"Allow Access to Orientation and Motion Data" = "Allow Access to Orientation and Motion Data";
+"Allow Access to Orientation and Motion Data" = " دسترسی به اطلاعات جهت‌یابی و حرکت دستگاه را مجاز کنید.";
 
 /* SecurityViewController */
-"Allow hosts to permanently store cookies and local storage databases." = "به هاست‌ها اجازه‌ی ذخیره دائمی کوکی‌ها و حافظه داخلی  بانک‌های اطلاعاتی  را بدهید";
+"Allow hosts to permanently store cookies and local storage databases." = "به هاست‌ها اجازه‌ی ذخیره دائمی کوکی‌ها و حافظه داخلی بانک‌های اطلاعاتی را بدهید.";
 
 /* Option title */
-"Allow JavaScript" = "Allow JavaScript";
+"Allow JavaScript" = "اجازه دادن به جاوا اسکریپت";
 
 /* SecurityViewController */
 "Allow Persistent Cookies" = "اجازه به کوکی‌های دائمی";
@@ -50,7 +53,7 @@
 "Anyone Circuit" = "Anyone Circuit";
 
 /* AppDelegate */
-"Authentication Required" = " شناسایی هویت نیاز است";
+"Authentication Required" = " شناسایی هویت نیاز است.";
 
 /* SettingsViewController */
 "Auto-Complete Search Results" = "تکمیل خودکار نتایج جستجو";
@@ -62,10 +65,10 @@
 "Begins On" = "آغاز در";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = " مسدود کردن درخواست‌های HTTP ناامن";
 
 /* URLBlockerRuleController */
-"Blocked 3rd-Party Hosts" = "هاست‌های شخص‌ ثالث مسدود شدند";
+"Blocked 3rd-Party Hosts" = "هاست‌های متفرقه مسدود شدند.";
 
 /* BookmarksViewController */
 "Bookmarks" = "بوکمارک‌ها";
@@ -83,13 +86,13 @@
 "Certificate Information" = "اطلاعات گواهینامه";
 
 /* SettingsViewController */
-"Changing this option requires restarting the app." = "تغییر این گزینه نیازمند راه‌اندازی مجدد برنامه است";
+"Changing this option requires restarting the app." = "تغییر این گزینه نیازمند راه‌اندازی مجدد برنامه است.";
 
 /* SettingsViewController */
 "Choose how long app remembers open tabs." = "انتخاب کنید که برنامه چه مدت پنجره‌های باز را به خاطر بسپارد.";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "لیست بلاک ترجیحی خود را انتخاب کنید.";
 
 /* AppDelegate */
 "Close Tab" = "بستن تب";
@@ -98,7 +101,7 @@
 "Connect to a website to see your circuit." = "اتصال به یک سایت برای دیدن چرخه خود.";
 
 /* SyncViewController */
-"Connection to Nextcloud Server Failed" = "اتصال به سرور Nextcloud انجام نشد";
+"Connection to Nextcloud Server Failed" = "اتصال به سرور Nextcloud انجام نشد.";
 
 /* No comment provided by engineer. */
 "Cookies" = "کوکی ها";
@@ -119,7 +122,7 @@
 "Custom Site Security" = "امنیت سایت سفارشی";
 
 /* SecurityViewController */
-"Custom user-agent string, or blank to use the default." = "User-Agent String سفارشی، و یا برای پیش فرض خالی بگذارید";
+"Custom user-agent string, or blank to use the default." = "User-Agent String سفارشی، و یا برای پیش‌فرض خالی بگذارید.";
 
 /* SecurityPopUpViewController */
 "Customize" = "شخصی‌سازی";
@@ -143,19 +146,22 @@
 "Disabled: %@" = "غیرفعال شد: %@";
 
 /* No comment provided by engineer. */
-"Disk Cache" = "Disk Cache";
+"Disk Cache" = "کش حافظه";
 
 /* BrowsingViewController */
 "Done" = "انجام شد";
 
 /* No comment provided by engineer. */
-"Download" = "Download";
+"Download" = "دانلود";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "مثل آب خوردن! هر چند ممکن است خطرناک باشد.";
 
 /* BookmarkViewController */
 "Edit Bookmark" = "ویرایش بوکمارک";
+
+/* Scene title */
+"Edit Folder" = "Edit Folder";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "ویرایش موتور جستجو";
@@ -169,14 +175,17 @@
 /* CertificateViewController */
 "Expires After" = "انقضا پس از";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "اعتبار تمدید شده: سازمان";
 
 /* No comment provided by engineer. */
-"Fetch Cache" = "Fetch Cache";
+"Fetch Cache" = "فراخوانی کش";
 
 /* No comment provided by engineer. */
-"Find in Page" = "Find in Page";
+"Find in Page" = " جستجو در صفحه";
 
 /* AppDelegate */
 "Focus URL Field" = "توجه به فیلد آدرس صفحه";
@@ -188,7 +197,7 @@
 "Forget at Shutdown" = "فراموشی پس از بستن";
 
 /* SettingsViewController */
-"Forget in Background" = "فراموشی در زمینه";
+"Forget in Background" = "فراموشی در پس‌زمینه";
 
 /* AppDelegate */
 "Go Back" = "بازگشت";
@@ -215,7 +224,7 @@
 "Host" = "میزبان";
 
 /* Placeholder is 'Onion Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = " اگر همگام‌سازی کنید، همه بوکمارک از سرور خوانده شده و در%@ افزوده یا به‌روزرسانی خواهند شد.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "چشم‌پوشی از این میزبان";
@@ -223,8 +232,11 @@
 /* SecurityViewController */
 "Ignore TLS Errors" = "چشم‌پوشی از خطاهای TLS";
 
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
+
 /* No comment provided by engineer. */
-"IndexedDB Databases" = "IndexedDB Databases";
+"IndexedDB Databases" = "پایگاه های داده ی IndexedDB";
 
 /* CertificateViewController */
 "Issued By" = "صادر شده توسط";
@@ -251,13 +263,13 @@
 "Lock App with Touch ID or Device Passcode" = "برنامه را با Touch ID یا رمز عبور دستگاه قفل کنید";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = " حالت قفل کامل (Lockdown Mode)";
 
 /* AppDelegate */
 "Log In" = "ورود";
 
 /* No comment provided by engineer. */
-"Memory Cache" = "Memory Cache";
+"Memory Cache" = "کش حافظه";
 
 /* SettingsViewController */
 "Miscellaneous" = "متفرقه";
@@ -284,9 +296,9 @@
 "No valid HTTP response." = "پاسخ HTTP معتبری وجود ندارد.";
 
 /* No comment provided by engineer. */
-"Offline Web Application Cache" = "Offline Web Application Cache";
+"Offline Web Application Cache" = " ذخیره‌سازی آفلاین اپلیکیشن‌های وب";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "تایید";
 
 /* Tab+Gestures */
@@ -296,7 +308,7 @@
 "Open in Background Tab" = "بازکردن در صفحه زمینه";
 
 /* No comment provided by engineer. */
-"Open in Default Browser" = "Open in Default Browser";
+"Open in Default Browser" = " باز کردن در مرورگر پیش‌فرض";
 
 /* SecurityViewController */
 "Other" = "سایر";
@@ -317,10 +329,10 @@
 "Privacy & Security" = "امنیت و حریم خصوصی";
 
 /* Tab */
-"Pull to Refresh Page" = "برای بازآوری صفحه بکشید";
+"Pull to Refresh Page" = "برای بازآوری صفحه بکشید.";
 
 /* SettingsViewController */
-"Rate on App Store" = "در اپ‌استور به ما امتیاز دهید";
+"Rate on App Store" = "در اپ‌استور به ما امتیاز دهید.";
 
 /* AppDelegate */
 "Reload Tab" = "بارگیری دوباره برگه";
@@ -341,7 +353,7 @@
 "Response body missing." = "بدنه پاسخ یافت نشد.";
 
 /* No comment provided by engineer. */
-"Retry" = "Retry";
+"Retry" = "تلاش دوباره";
 
 /* RuleEditorController */
 "Rules in use on current page" = "قوانین در حال استفاده در این صفحه";
@@ -362,10 +374,10 @@
 "Serial Number" = "سریال نامبر";
 
 /* No comment provided by engineer. */
-"Service Worker Registrations" = "Service Worker Registrations";
+"Service Worker Registrations" = " ثبت‌های Service Worker";
 
 /* No comment provided by engineer. */
-"Session Storage" = "Session Storage";
+"Session Storage" = " ذخیره‌سازی نشست (Session Storage)";
 
 /* SettingsViewController */
 "Settings" = "تنظیمات";
@@ -395,25 +407,25 @@
 "Support" = "پشتیبانی";
 
 /* AppDelegate */
-"Switch to Tab %d" = "تعویض به صفحه %d";
+"Switch to Tab %d" = "تعویض به تب %d";
+
+/* BookmarksViewController */
+"Sync" = "Sync";
 
 /* SyncViewController */
 "Sync Bookmarks" = "همگام‌سازی نشانک‌ها";
 
 /* SyncViewController */
-"Sync Bookmarks with Nextcloud Server" = "نشانک‌ها را با سرور Nextcloud همگام‌سازی کنید";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "همگام‌سازی با Nextcloud";
+"Sync Bookmarks with Nextcloud Server" = "نشانک‌ها را با سرور Nextcloud همگام‌سازی کنید.";
 
 /* SettingsViewController */
-"Tab Security" = "امنیت پنجره";
+"Tab Security" = "امنیت تب";
 
 /* Option title */
-"Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";
+"Tell websites that you object to processing and selling of your personal data" = " به وب‌سایت‌ها اعلام کنید که با پردازش و فروش داده‌های شخصی خود مخالف هستید.";
 
 /* No comment provided by engineer. */
-"The encryption method for this server is outdated." = "The encryption method for this server is outdated.";
+"The encryption method for this server is outdated." = " روش رمزگذاری این سرور قدیمی است.";
 
 /* SecurityViewController */
 "These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers." = "این‌ها ممکن است رفتار سرور را تغییر دهند. به عنوان مثال. نمایش یا عدم نمایش Captcha یا صفحات بازگشتی که برای مرورگرهای دسکتاپ در نظر گرفته شده است.";
@@ -422,10 +434,10 @@
 "This browser" = "این مرورگر";
 
 /* SecurityViewController, placeholder is app name "Onion Browser" */
-"This is your default security setting for every website you visit in %@." = "این تنظیمات امنیت پیشفرض شما هنگام مشاهده وبسایت در %@ است.";
+"This is your default security setting for every website you visit in %@." = "این تنظیمات امنیت پیش‌فرض شما هنگام مشاهده وبسایت در %@ است.";
 
 /* Placeholder is 'Orbot' */
-"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "This site may need authentication. If you received an authentication key for this site, add it to %@!";
+"This site may need authentication. If you received an authentication key for this site, add it to %@!" = " این سایت ممکن است به احراز هویت نیاز داشته باشد. اگر کلید احراز هویتی برای این سایت دریافت کرده‌اید، آن را به %@ اضافه کنید!";
 
 /* BookmarkViewController */
 "Title" = "عنوان";
@@ -449,13 +461,13 @@
 "Update" = "به‌روز‌رسانی";
 
 /* No comment provided by engineer. */
-"Update Blocklist" = "Update Blocklist";
+"Update Blocklist" = "بلاک‌لیست خود را آپدیت کنید.";
 
 /* SettingsViewController */
 "URL Blocker" = "مسدود کننده نشانی اینترنتی";
 
 /* No comment provided by engineer. */
-"Use URL Blocker" = "Use URL Blocker";
+"Use URL Blocker" = "استفاده از مسدود کننده ی نشانی اینترنتی";
 
 /* SecurityViewController */
 "User Agent" = "مامور کاربر";
@@ -476,25 +488,25 @@
 "We couldn't sync your bookmarks at this time. Try again to make sure your information is synced." = "هم‌اکنون قادر به همگام‌سازی نشانک‌های شما نیستیم. دوباره سعی کنید تا از همگام‌سازی اطلاعات خود مطمئن شوید.";
 
 /* SecurityPresetsRow */
-"Websites may break. But you get great security." = "ممکن است وبسایت خراب شود. اما بهترین امنیت را خواهید داشت.";
+"Websites may break. But you get great security." = "ممکن است وبسایت خراب شود. اما شما بهترین امنیت را خواهید داشت.";
 
 /* No comment provided by engineer. */
-"WebSQL Databases" = "WebSQL Databases";
+"WebSQL Databases" = " پایگاه‌های داده WebSQL";
 
 /* Placeholder is 'Onion Browser' */
-"Welcome to %@" = "Welcome to %@";
+"Welcome to %@" = " به %@ خوش آمدید";
 
 /* SettingsViewController */
-"When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "اگر غیرفعال باشد، هر متنی که در نوار جستجو نوشته شود، به موتور جستجو ارسال می‌شود مگر اینکه با \"http\" آغاز شود";
+"When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "اگر غیرفعال باشد، هر متنی که در نوار جستجو نوشته شود، به موتور جستجو ارسال می‌شود مگر اینکه با \"http\" آغاز شود.";
 
 /* SecurityPresetsRow */
 "Works pretty well. Your identity is mostly protected." = "خوب کار می‌کند. هویت شما تقریبا حفظ می‌شود.";
 
 /* Placeholder is server domain */
-"You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk.";
+"You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = " ممکن است به سروری متصل شده باشید که وانمود می‌کند “%@” است، که می‌تواند اطلاعات محرمانه شما را در معرض خطر قرار دهد.";
 
 /* No comment provided by engineer. */
-"You're one step closer to private browsing." = "You're one step closer to private browsing.";
+"You're one step closer to private browsing." = " فقط یک قدم تا مرور خصوصی فاصله دارید.";
 
 /* CircuitViewController */
 "Your traffic goes to 3 different parts of the world." = "ترافیک شما به 3 بخش مختلف در جهان می رود.";

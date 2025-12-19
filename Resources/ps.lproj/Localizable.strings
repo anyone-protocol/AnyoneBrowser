@@ -1,17 +1,17 @@
 /* No comment provided by engineer. */
-"(not recommended)" = "(niet aanbevolen)";
+"(not recommended)" = "(سپارښتل شوی نه دی)";
 
 /* SettingsViewController */
-"About" = "Over";
+"About" = "په اړه";
 
 /* SearchEnginesViewController, AddSearchEngineViewController */
-"Add" = "Toevoegen";
+"Add" = "Add";
 
 /* AddSearchEngineViewController */
 "Add \"%@\" as the search term placeholder!" = "Add \"%@\" as the search term placeholder!";
 
 /* BookmarkViewController */
-"Add Bookmark" = "Bladwijzer toevoegen";
+"Add Bookmark" = "ليكنښه زیاتول";
 
 /* Scene title */
 "Add Folder" = "Add Folder";
@@ -20,19 +20,19 @@
 "Add Search Engine" = "Add Search Engine";
 
 /* CustomSitesViewController, AddSiteViewController */
-"Add Site" = "Website toevoegen";
+"Add Site" = "ګورتځی زیاتول";
 
 /* Placeholder is 'Onion Browser' */
 "Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
 
 /* BookmarkViewController */
-"Address" = "Adres";
+"Address" = "پته ";
 
 /* RuleEditorController */
-"All rules" = "Alle regels";
+"All rules" = "ټول دويونه";
 
 /* SettingsViewController */
-"Allow 3rd-Party Keyboards" = "Toetsenborden van derden toestaan";
+"Allow 3rd-Party Keyboards" = "۳م ګړو کيليدړو پرېښل";
 
 /* Option title */
 "Allow Access to Microphone and Video" = "Allow Access to Microphone and Video";
@@ -41,124 +41,124 @@
 "Allow Access to Orientation and Motion Data" = "Allow Access to Orientation and Motion Data";
 
 /* SecurityViewController */
-"Allow hosts to permanently store cookies and local storage databases." = "Toestaan dat hosts cookies en lokale opslagdatabases permanent opslaan.";
+"Allow hosts to permanently store cookies and local storage databases." = "کوربانه د ککوړو او ځايي توكبنسټونو د تل لپاره زېرمه کولو ته پرېښل.";
 
 /* Option title */
 "Allow JavaScript" = "Allow JavaScript";
 
 /* SecurityViewController */
-"Allow Persistent Cookies" = "Persistente cookies toestaan";
+"Allow Persistent Cookies" = "پاتېکېدونکي ککوړي پرېښل ";
 
 /* No comment provided by engineer. */
 "Anyone Circuit" = "Anyone Circuit";
 
 /* AppDelegate */
-"Authentication Required" = "Verificatie vereist";
+"Authentication Required" = "كرونه په کار ده";
 
 /* SettingsViewController */
-"Auto-Complete Search Results" = "Zoekresultaten automatisch aanvullen";
+"Auto-Complete Search Results" = "په خپلکارې توګه د لټون پایلې بشپړول";
 
 /* AddSearchEngineViewController */
 "Autocomplete URL" = "Autocomplete URL";
 
 /* CertificateViewController */
-"Begins On" = "Geldig vanaf";
+"Begins On" = "پیل کېږي پر";
 
 /* Option title */
 "Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
 
 /* URLBlockerRuleController */
-"Blocked 3rd-Party Hosts" = "Geblokkeerde hosts van derden";
+"Blocked 3rd-Party Hosts" = "تړل شوي 3م-ګړي کوربانه";
 
 /* BookmarksViewController */
-"Bookmarks" = "Bladwijzers";
+"Bookmarks" = "ليكنښې";
 
 /* SecurityPresetsRow; a security level */
-"Bronze" = "Brons";
+"Bronze" = "ژړ";
 
 /* SecurityViewController */
-"By editing this setting, you have created a custom security setting." = "By editing this setting, you have created a custom security setting.";
+"By editing this setting, you have created a custom security setting." = "ددې امستنې سمون سره، تاسې د دوديز خونديتوب یوه نوې امستنه پنځوله.";
 
 /* AlertHelper */
-"Cancel" = "Annuleren";
+"Cancel" = "لېرې کول";
 
 /* CertificateViewController */
-"Certificate Information" = "Certificate Information";
+"Certificate Information" = "منښتلیک خبرتياوې";
 
 /* SettingsViewController */
-"Changing this option requires restarting the app." = "Deze optie wijzigen vereist dat de app opnieuw wordt opgestart.";
+"Changing this option requires restarting the app." = "ددې غوراوي بدلول، د کاریال بیاپیلول غواړي.";
 
 /* SettingsViewController */
-"Choose how long app remembers open tabs." = "Kies hoelang de app geopende tabbladen mag onthouden";
+"Choose how long app remembers open tabs." = "Choose how long app remembers open tabs.";
 
 /* No comment provided by engineer. */
 "Choose your preferred blocklist:" = "Choose your preferred blocklist:";
 
 /* AppDelegate */
-"Close Tab" = "Tabblad sluiten";
+"Close Tab" = "ټوپ بندول";
 
 /* CircuitViewController */
-"Connect to a website to see your circuit." = "Connect to a website to see your circuit.";
+"Connect to a website to see your circuit." = "یو ګورتځي پورې پیوست شئ تر څو خپله څرخ لیکه وګورئ. ";
 
 /* SyncViewController */
-"Connection to Nextcloud Server Failed" = "Connection to Nextcloud Server Failed";
+"Connection to Nextcloud Server Failed" = "د Nextcloud پالنګر پورې پیوستون نابریالی شو";
 
 /* No comment provided by engineer. */
 "Cookies" = "Cookies";
 
 /* SettingsViewController, Storage1ViewController, Storage2ViewController */
-"Cookies and Local Storage" = "Cookies en lokale opslag";
+"Cookies and Local Storage" = "ککوړي او ځايي زېرمه";
 
 /* No comment provided by engineer. */
-"Couldn't understand server response." = "Couldn't understand server response.";
+"Couldn't understand server response." = "د پالنګر ځواب باندې پوه نه شو.";
 
 /* AppDelegate */
-"Create New Tab" = "Nieuw tabblad openen";
+"Create New Tab" = "نوی ټوپ پنځول";
 
 /* SecurityPresetsRow; a security level */
-"Custom" = "Aangepast";
+"Custom" = "دوديز";
 
 /* SettingsViewController, CustomSitesViewController */
-"Custom Site Security" = "Custom Site Security";
+"Custom Site Security" = "ګورتځي دوديز خوندیتوب";
 
 /* SecurityViewController */
-"Custom user-agent string, or blank to use the default." = "Aangepaste gebruikersagenttekenreeks. Laat dit leeg om de standaard te gebruiken.";
+"Custom user-agent string, or blank to use the default." = "Custom user-agent string, or blank to use the default.";
 
 /* SecurityPopUpViewController */
-"Customize" = "Aanpassen";
+"Customize" = "دودیزول";
 
 /* SecurityViewController */
-"Default Security" = "Default Security";
+"Default Security" = "تلواله خونديتوب";
 
 /* CustomSitesViewController */
-"Define custom settings for specific sites." = "Define custom settings for specific sites.";
+"Define custom settings for specific sites." = "د ځانګړو ګورتځایونو لپاره دودیزې امستنې وټاکئ.";
 
 /* SearchEnginesViewController */
-"Delete" = "Verwijderen";
+"Delete" = "Delete";
 
 /* RuleEditorController */
-"Disable" = "Uitschakelen";
+"Disable" = "ناچارندول ";
 
 /* SettingsViewController */
 "Disable Bookmarks on Start Page" = "Disable Bookmarks on Start Page";
 
 /* RuleEditorController */
-"Disabled: %@" = "Uitgeschakeld: %@";
+"Disabled: %@" = "ناچارندول شوی: %@";
 
 /* No comment provided by engineer. */
 "Disk Cache" = "Disk Cache";
 
 /* BrowsingViewController */
-"Done" = "Klaar";
+"Done" = "وشو";
 
 /* No comment provided by engineer. */
 "Download" = "Download";
 
 /* SecurityPresetsRow */
-"Easy breezy. Though it could be dangerous." = "Easy breezy. Though it could be dangerous.";
+"Easy breezy. Though it could be dangerous." = "دا اسانه ده. خو ښايي چې خطرناکه وي.";
 
 /* BookmarkViewController */
-"Edit Bookmark" = "Bladwijzer bewerken";
+"Edit Bookmark" = "ليكنښې سمون";
 
 /* Scene title */
 "Edit Folder" = "Edit Folder";
@@ -167,19 +167,19 @@
 "Edit Search Engine" = "Edit Search Engine";
 
 /* RuleEditorController */
-"Enable" = "Inschakelen";
+"Enable" = "سالول";
 
 /* AlertHelper */
-"Error" = "Fout";
+"Error" = "تېروتنه";
 
 /* CertificateViewController */
-"Expires After" = "Vervalt Na";
+"Expires After" = "Expires After";
 
 /* BookmarksViewController */
 "Export Bookmarks" = "Export Bookmarks";
 
 /* CertificateViewController */
-"Extended Validation: Organization" = "Uitgebreide Validatie : Organisatie";
+"Extended Validation: Organization" = "اوږدلې باورتیا: سازمان";
 
 /* No comment provided by engineer. */
 "Fetch Cache" = "Fetch Cache";
@@ -188,49 +188,49 @@
 "Find in Page" = "Find in Page";
 
 /* AppDelegate */
-"Focus URL Field" = "Focus URL-veld";
+"Focus URL Field" = "د پتې ډګر منځواله کول";
 
 /* No comment provided by engineer. */
 "Follow Anon-Location Header Automatically" = "Follow Anon-Location Header Automatically";
 
 /* SettingsViewController */
-"Forget at Shutdown" = "Forget at Shutdown";
+"Forget at Shutdown" = "پر بندولو هېرول";
 
 /* SettingsViewController */
 "Forget in Background" = "Forget in Background";
 
 /* AppDelegate */
-"Go Back" = "Ga terug";
+"Go Back" = "شا ته تلل";
 
 /* AppDelegate */
-"Go Forward" = "Ga vooruit";
+"Go Forward" = "پر مخ تلل";
 
 /* SecurityPresetsRow; a security level */
-"Gold" = "Gold";
+"Gold" = "سره زر";
 
 /* CircuSitsViewController */
-"Guard" = "Guard";
+"Guard" = "ساتونكى";
 
 /* SecurityViewController */
-"Handle tapping on links in a non-standard way to avoid possibly opening external applications." = "Verwerk het aanklikken van koppelingen op een niet-standaard-manier, om te voorkomen dat er mogelijk externe apps worden geopend.";
+"Handle tapping on links in a non-standard way to avoid possibly opening external applications." = "Handle tapping on links in a non-standard way to avoid possibly opening external applications.";
 
 /* SettingsViewController */
 "Hide App Content when in Background" = "Hide App Content when in Background";
 
 /* HistoryViewController */
-"History" = "Geschiedenis";
+"History" = "مخينه";
 
 /* AddSiteViewController, SyncViewController */
-"Host" = "Host";
+"Host" = "کوربه";
 
 /* Placeholder is 'Onion Browser' */
 "If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
 
 /* Tab+UIWebViewDelegate */
-"Ignore for this host" = "Negeren voor deze host";
+"Ignore for this host" = "ددې کوربه لپاره ناګارل";
 
 /* SecurityViewController */
-"Ignore TLS Errors" = "TLS-fouten negeren";
+"Ignore TLS Errors" = "د TLS تېروتنې ناګارل";
 
 /* BookmarksViewController */
 "Import Bookmarks" = "Import Bookmarks";
@@ -245,13 +245,13 @@
 "Issued To" = "Issued To";
 
 /* SecurityPopUpViewController */
-"Learn More" = "Learn More";
+"Learn More" = "نور زده کړئ";
 
 /* Bookmark, placeholder is app name "Onion Browser" */
-"Learn more about %@" = "Leer meer over %@";
+"Learn more about %@" = "د انین لټونګر %@ په اړه نور زده كړئ";
 
 /* Storage2ViewController */
-"Local Storage" = "Lokale Opslag";
+"Local Storage" = "ځايي زېرمه";
 
 /* SettingsViewController */
 "Lock App with Device Passcode" = "Lock App with Device Passcode";
@@ -266,28 +266,28 @@
 "Lockdown Mode" = "Lockdown Mode";
 
 /* AppDelegate */
-"Log In" = "Inloggen";
+"Log In" = "ننوتون";
 
 /* No comment provided by engineer. */
 "Memory Cache" = "Memory Cache";
 
 /* SettingsViewController */
-"Miscellaneous" = "Diverse";
+"Miscellaneous" = "Miscellaneous";
 
 /* SettingsViewController */
-"Mute Audio with Mute Switch" = "Audio dempen met dempschakelaar";
+"Mute Audio with Mute Switch" = "Mute Audio with Mute Switch";
 
 /* AddSearchEngineViewController */
 "My Search Engine" = "My Search Engine";
 
 /* AddSearchEngineViewController */
-"Name" = "Naam";
+"Name" = "Name";
 
 /* CircuSitsViewController */
-"New Circuit for this Site" = "New Circuit for this Site";
+"New Circuit for this Site" = "ددې ګورتځي لپاره نوې څرخ ليکه";
 
 /* No comment provided by engineer. */
-"Next" = "Volgende";
+"Next" = "بل";
 
 /* No comment provided by engineer. */
 "No success, but \"%@\" instead." = "No success, but \"%@\" instead.";
@@ -299,52 +299,52 @@
 "Offline Web Application Cache" = "Offline Web Application Cache";
 
 /* AlertHelper */
-"OK" = "Oké";
+"OK" = "سمه ده";
 
 /* Tab+Gestures */
-"Open in a New Tab" = "Openen in een nieuw tabblad";
+"Open in a New Tab" = "په یو نوي ټوپ کښې پرانېستل";
 
 /* Tab+Gestures */
-"Open in Background Tab" = "Openen in achtergrondtabblad";
+"Open in Background Tab" = "Open in Background Tab";
 
 /* No comment provided by engineer. */
 "Open in Default Browser" = "Open in Default Browser";
 
 /* SecurityViewController */
-"Other" = "Ander";
+"Other" = "نور";
 
 /* AppDelegate, SyncViewController */
-"Password" = "Wachtwoord";
+"Password" = "تېرنويى ";
 
 /* CertificateViewController */
-"Period of Validity" = "Period of Validity";
+"Period of Validity" = "د باور پېر";
 
 /* SecurityViewController */
 "Popular User Agents" = "Popular User Agents";
 
 /* SecurityViewController */
-"Privacy" = "Privacy";
+"Privacy" = "پټتيا";
 
 /* SettingsViewController */
-"Privacy & Security" = "Privacy & Security";
+"Privacy & Security" = "پټتيا او خونديتوب";
 
 /* Tab */
-"Pull to Refresh Page" = "Trek om de pagina te vernieuwen";
+"Pull to Refresh Page" = "د پاڼې تاندولو لپاره راوکاږئ";
 
 /* SettingsViewController */
-"Rate on App Store" = "Beoordelen in de App Store";
+"Rate on App Store" = "پر اپ سټور نومرې ورکړئ";
 
 /* AppDelegate */
-"Reload Tab" = "Tab Herladen";
+"Reload Tab" = "ټوپ بیالېښل";
 
 /* TabSecurity */
-"Remember Tabs" = "Tabs Onthouden";
+"Remember Tabs" = "ټوپونه يادول ";
 
 /* Storage2ViewController */
-"Remove All Local Storage" = "Remove All Local Storage";
+"Remove All Local Storage" = "ټوله ځايي زېرمه ړنګول";
 
 /* SettingsViewController */
-"Report a Bug" = "Rapporteer een bug";
+"Report a Bug" = "ستونزه را په ګوته کړئ";
 
 /* No comment provided by engineer. */
 "Request could not be formed. Please check host and username/password!" = "Request could not be formed. Please check host and username/password!";
@@ -353,25 +353,25 @@
 "Response body missing." = "Response body missing.";
 
 /* No comment provided by engineer. */
-"Retry" = "Opnieuw proberen";
+"Retry" = "Retry";
 
 /* RuleEditorController */
-"Rules in use on current page" = "Regels in gebruik op huidige pagina";
+"Rules in use on current page" = "پر اوسنۍ پاڼې باندې په کار اچول شوي دویونه ";
 
 /* SettingsViewController */
-"Search" = "Zoeken";
+"Search" = "لټون";
 
 /* SettingsViewController */
-"Search Engine" = "Zoekmachine";
+"Search Engine" = "لټون چورلاوو";
 
 /* AddSearchEngineViewController */
 "Search URL" = "Search URL";
 
 /* SecurityPopUpViewController */
-"Security Level for This Site" = "Security Level for This Site";
+"Security Level for This Site" = "ددې ګورتځي لپاره د خونديتوب کچه";
 
 /* CertificateViewController */
-"Serial Number" = "Serienummer";
+"Serial Number" = "لړيزه شمېره";
 
 /* No comment provided by engineer. */
 "Service Worker Registrations" = "Service Worker Registrations";
@@ -380,46 +380,46 @@
 "Session Storage" = "Session Storage";
 
 /* SettingsViewController */
-"Settings" = "Instellingen";
+"Settings" = "امستنې";
 
 /* SecurityPresetsRow */
-"Settings have been customized." = "Settings have been customized.";
+"Settings have been customized." = "امستنې دودیزول شوي دي.";
 
 /* Storage2ViewController */
-"Show All Sites" = "Show All Sites";
+"Show All Sites" = "ټول ګورتځي ښودل";
 
 /* AppDelegate */
-"Show Bookmarks" = "Bladwijzers tonen";
+"Show Bookmarks" = "ليكنښې ښودل";
 
 /* CertificateViewController */
-"Signature Algorithm" = "Signature Algorithm";
+"Signature Algorithm" = "الګورېتم لاسليک";
 
 /* SecurityPresetsRow; a security level */
-"Silver" = "Silver";
+"Silver" = "سپين زر";
 
 /* No comment provided by engineer. */
 "Starting Anyone…" = "Starting Anyone…";
 
 /* SettingsViewController */
-"Stop Auto-Complete at First Dot" = "Automatisch aanvullen stoppen bij eerste punt";
+"Stop Auto-Complete at First Dot" = "Stop Auto-Complete at First Dot";
 
 /* SettingsViewController */
-"Support" = "Ondersteuning";
+"Support" = "ملاتړ";
 
 /* AppDelegate */
-"Switch to Tab %d" = "Wissel naar tabblad %d";
+"Switch to Tab %d" = "%d ټوپ ته ونجول";
 
 /* BookmarksViewController */
 "Sync" = "Sync";
 
 /* SyncViewController */
-"Sync Bookmarks" = "Sync Bookmarks";
+"Sync Bookmarks" = "ليكنښو هممهالول";
 
 /* SyncViewController */
-"Sync Bookmarks with Nextcloud Server" = "Sync Bookmarks with Nextcloud Server";
+"Sync Bookmarks with Nextcloud Server" = "د Nextcloud پالنګر سره ليکنښې هممهالې کړئ";
 
 /* SettingsViewController */
-"Tab Security" = "Tabbladbeveiliging";
+"Tab Security" = "ټوپ خونديتوب";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";
@@ -431,31 +431,31 @@
 "These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers." = "These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers.";
 
 /* CircuitsViewController */
-"This browser" = "Deze browser";
+"This browser" = "دا لټونګر";
 
 /* SecurityViewController, placeholder is app name "Onion Browser" */
-"This is your default security setting for every website you visit in %@." = "This is your default security setting for every website you visit in %@.";
+"This is your default security setting for every website you visit in %@." = "دا ستاسې د تلواله خونديتوب امستنه ده، د هر هغه ګورتځي لپاره چې تاسې يې ليدنه کړئ په %@ کښې.";
 
 /* Placeholder is 'Orbot' */
 "This site may need authentication. If you received an authentication key for this site, add it to %@!" = "This site may need authentication. If you received an authentication key for this site, add it to %@!";
 
 /* BookmarkViewController */
-"Title" = "Title";
+"Title" = "سرلیک ";
 
 /* Tab+UIWebViewDelegate */
-"TLS certificate chain verification error (self-signed certificate?)" = "Validatiefout in TLS-certificaatsketen (zelfondertekend certificaat?)";
+"TLS certificate chain verification error (self-signed certificate?)" = "TLS certificate chain verification error (self-signed certificate?)";
 
 /* Tab+UIWebViewDelegate */
-"TLS handshake failed" = "TLS-handshake mislukt";
+"TLS handshake failed" = "TLS پیوستون نابریالی شو";
 
 /* Tab+UIWebViewDelegate */
-"TLS protocol error" = "TLS protocol fout";
+"TLS protocol error" = "TLS باندرې تېروتنه";
 
 /* SyncViewController */
-"Try Again" = "Try Again";
+"Try Again" = "بيا هڅه";
 
 /* SecurityViewController */
-"Universal Link Protection" = "Universele koppelingsbescherming";
+"Universal Link Protection" = "له نړیوالو پیوندونو خونديېنه";
 
 /* AddSearchEngineViewController */
 "Update" = "Update";
@@ -464,43 +464,43 @@
 "Update Blocklist" = "Update Blocklist";
 
 /* SettingsViewController */
-"URL Blocker" = "URL-blokkering";
+"URL Blocker" = "پتو تړونکی";
 
 /* No comment provided by engineer. */
 "Use URL Blocker" = "Use URL Blocker";
 
 /* SecurityViewController */
-"User Agent" = "Gebruikersagent";
+"User Agent" = "User Agent";
 
 /* RuleEditorController */
-"User disabled" = "Gebruiker uitgeschakeld";
+"User disabled" = "د کارن له خوا ناچارندول شوی";
 
 /* AppDelegate, SyncViewController */
-"Username" = "Gebruikersnaam";
+"Username" = "کارن نوم";
 
 /* CertificateViewController */
-"Version" = "Versie";
+"Version" = "بڼه";
 
 /* SettingsViewController */
-"Version %@" = "Versie %@";
+"Version %@" = "بڼه %@";
 
 /* SyncViewController */
-"We couldn't sync your bookmarks at this time. Try again to make sure your information is synced." = "We couldn't sync your bookmarks at this time. Try again to make sure your information is synced.";
+"We couldn't sync your bookmarks at this time. Try again to make sure your information is synced." = "موږ ونکړی شو چې دا مهال ستاسې ليکنښې هممهالې کړو. بیا هڅه وکړئ تر څو ډاډمن شئ چې ستاسې خبرتیاوې هممهالې شوي دي.";
 
 /* SecurityPresetsRow */
-"Websites may break. But you get great security." = "Websites may break. But you get great security.";
+"Websites may break. But you get great security." = "ګورتځي کېدای شي چې سم کار ونکړي. خو تاسې ته تر ټولو ښه خونديتوب درکړل کېږي.";
 
 /* No comment provided by engineer. */
 "WebSQL Databases" = "WebSQL Databases";
 
-/* Placeholder is 'Anyone Browser' */
+/* Placeholder is 'Onion Browser' */
 "Welcome to %@" = "Welcome to %@";
 
 /* SettingsViewController */
-"When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "Indien uitgeschakeld, wordt alle tekst ingegeven in de zoekbalk verzonden naar de zoekmachine, tenzij deze begint met ‘http’.";
+"When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\".";
 
 /* SecurityPresetsRow */
-"Works pretty well. Your identity is mostly protected." = "Works pretty well. Your identity is mostly protected.";
+"Works pretty well. Your identity is mostly protected." = "ډېر ښه کار کوي. ستاسې پېژندنه څه نا څه خوندي وي.";
 
 /* Placeholder is server domain */
 "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk.";
@@ -509,4 +509,4 @@
 "You're one step closer to private browsing." = "You're one step closer to private browsing.";
 
 /* CircuitViewController */
-"Your traffic goes to 3 different parts of the world." = "Your traffic goes to 3 different parts of the world.";
+"Your traffic goes to 3 different parts of the world." = "ستاسې ټرافيک د نړۍ ۳ بېلابېلو برخو ته ځي.";

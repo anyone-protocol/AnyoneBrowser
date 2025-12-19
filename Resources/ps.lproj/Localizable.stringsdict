@@ -13,9 +13,9 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>one</key>
-			<string>%d کوکی</string>
+			<string>%d ككوړى</string>
 			<key>other</key>
-			<string>%d کوکی‌ها</string>
+			<string>%d ككوړي</string>
 		</dict>
 	</dict>
 </dict>

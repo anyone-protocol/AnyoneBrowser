@@ -425,6 +425,10 @@
 		A0C0FD812EF580BC00619E60 /* NcBookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcBookmarks.swift; sourceTree = "<group>"; };
 		A0C0FD822EF580BC00619E60 /* NcFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcFolder.swift; sourceTree = "<group>"; };
 		A0C0FD832EF580BC00619E60 /* NcServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcServer.swift; sourceTree = "<group>"; };
+		A0C0FDD52EF59DD500619E60 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ps; path = ps.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A0C0FDD62EF59DE100619E60 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ps; path = ps.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A0C0FDD72EF59DF000619E60 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ps; path = ps.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A0C0FDD82EF59E0200619E60 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = ps; path = "ps.lproj/security-levels.html"; sourceTree = "<group>"; };
 		A0C3770D1F47342C0039198E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0C582572AE9136200A81084 /* Thread+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Helpers.swift"; sourceTree = "<group>"; };
 		A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
@@ -859,6 +863,7 @@
 				fi,
 				tt,
 				id,
+				ps,
 			);
 			mainGroup = 01801E891A32CA2A002B4718;
 			preferredProjectObjectVersion = 90;
@@ -1175,6 +1180,7 @@
 				A08563372A04EA0D00A3A7FF /* vi */,
 				A02AB5C12AA5F34000CC6779 /* tt */,
 				A0970A462BB31E4C00176402 /* id */,
+				A0C0FDD52EF59DD500619E60 /* ps */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1217,6 +1223,7 @@
 				A085635D2A04EA7B00A3A7FF /* vi */,
 				A02AB5C22AA5F34000CC6779 /* tt */,
 				A0970A472BB31E4C00176402 /* id */,
+				A0C0FDD62EF59DE100619E60 /* ps */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -1262,6 +1269,7 @@
 				A08563832A04EAC700A3A7FF /* vi */,
 				A02AB5C32AA5F34000CC6779 /* tt */,
 				A0970A482BB31E4C00176402 /* id */,
+				A0C0FDD72EF59DF000619E60 /* ps */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1302,6 +1310,7 @@
 				A0A1A37D2A03DB5A00DE4991 /* vi */,
 				A02AB5C42AA5F34000CC6779 /* tt */,
 				A0970A492BB31E4C00176402 /* id */,
+				A0C0FDD82EF59E0200619E60 /* ps */,
 			);
 			name = "security-levels.html";
 			sourceTree = "<group>";

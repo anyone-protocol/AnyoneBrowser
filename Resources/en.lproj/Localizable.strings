@@ -175,7 +175,7 @@
 /* CertificateViewController */
 "Expires After" = "Expires After";
 
-/* No comment provided by engineer. */
+/* BookmarksViewController */
 "Export Bookmarks" = "Export Bookmarks";
 
 /* CertificateViewController */
@@ -232,7 +232,7 @@
 /* SecurityViewController */
 "Ignore TLS Errors" = "Ignore TLS Errors";
 
-/* No comment provided by engineer. */
+/* BookmarksViewController */
 "Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
@@ -298,7 +298,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Offline Web Application Cache";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "OK";
 
 /* Tab+Gestures */
@@ -409,7 +409,7 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Switch to Tab %d";
 
-/* No comment provided by engineer. */
+/* BookmarksViewController */
 "Sync" = "Sync";
 
 /* SyncViewController */

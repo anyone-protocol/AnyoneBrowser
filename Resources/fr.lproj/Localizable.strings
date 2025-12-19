@@ -8,13 +8,16 @@
 "Add" = "Ajouter";
 
 /* AddSearchEngineViewController */
-"Add \"%@\" as the search term placeholder!" = "Add \"%@\" as the search term placeholder!";
+"Add \"%@\" as the search term placeholder!" = "Ajoutez « %@  » comme espace réservé pour le terme d’interrogation";
 
 /* BookmarkViewController */
 "Add Bookmark" = "Ajouter un marque-page";
 
+/* Scene title */
+"Add Folder" = "Ajouter un dossier";
+
 /* AddSearchEngineViewController */
-"Add Search Engine" = "Add Search Engine";
+"Add Search Engine" = "Ajouter un moteur de recherche";
 
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "Ajouter un site";
@@ -32,16 +35,16 @@
 "Allow 3rd-Party Keyboards" = "Permettre les claviers tiers";
 
 /* Option title */
-"Allow Access to Microphone and Video" = "Allow Access to Microphone and Video";
+"Allow Access to Microphone and Video" = "Autoriser l’accès au microphone et à l’appareil photo";
 
 /* Option title */
-"Allow Access to Orientation and Motion Data" = "Allow Access to Orientation and Motion Data";
+"Allow Access to Orientation and Motion Data" = "Autoriser l’accès aux données d’orientation et de mouvement";
 
 /* SecurityViewController */
 "Allow hosts to permanently store cookies and local storage databases." = "Permettre aux hôtes d’ajouter des témoins et des bases de données de stockage locales de façon permanente.";
 
 /* Option title */
-"Allow JavaScript" = "Allow JavaScript";
+"Allow JavaScript" = "Autoriser JavaScript";
 
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Permettre les témoins persistants";
@@ -56,13 +59,13 @@
 "Auto-Complete Search Results" = "Saisie semi-automatique des résultats de recherche";
 
 /* AddSearchEngineViewController */
-"Autocomplete URL" = "Autocomplete URL";
+"Autocomplete URL" = "Saisie automatique de l’URL";
 
 /* CertificateViewController */
 "Begins On" = "Commence le";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "Bloquer les requêtes HTTP non sécurisées";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Bloquer les hôtes tiers";
@@ -89,7 +92,7 @@
 "Choose how long app remembers open tabs." = "Choisir la durée de mémorisation des onglets ouverts par l’appli";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "Choisissez votre liste de blocage préférée :";
 
 /* AppDelegate */
 "Close Tab" = "Fermer l’onglet";
@@ -143,13 +146,13 @@
 "Disabled: %@" = "Désactivée : %@";
 
 /* No comment provided by engineer. */
-"Disk Cache" = "Disk Cache";
+"Disk Cache" = "Cache disque";
 
 /* BrowsingViewController */
 "Done" = "Terminé";
 
 /* No comment provided by engineer. */
-"Download" = "Download";
+"Download" = "Télécharger";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "Tout fonctionne, bien que cela puisse être dangereux.";
@@ -157,8 +160,11 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "Modifier le marque-page";
 
+/* Scene title */
+"Edit Folder" = "Modifier le dossier";
+
 /* AddSearchEngineViewController */
-"Edit Search Engine" = "Edit Search Engine";
+"Edit Search Engine" = "Modifier le moteur de recherche";
 
 /* RuleEditorController */
 "Enable" = "Activer";
@@ -169,14 +175,17 @@
 /* CertificateViewController */
 "Expires After" = "Expire le";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Exporter les marque-pages";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "Validation renforcée : organisation";
 
 /* No comment provided by engineer. */
-"Fetch Cache" = "Fetch Cache";
+"Fetch Cache" = "Cache d’extraction";
 
 /* No comment provided by engineer. */
-"Find in Page" = "Find in Page";
+"Find in Page" = "Chercher dans la page";
 
 /* AppDelegate */
 "Focus URL Field" = "Cibler le champ URL";
@@ -206,7 +215,7 @@
 "Handle tapping on links in a non-standard way to avoid possibly opening external applications." = "Gérer le toucher des liens de façon non habituelle afin d’éviter l’ouverture éventuelle d’applis externes.";
 
 /* SettingsViewController */
-"Hide App Content when in Background" = "Hide App Content when in Background";
+"Hide App Content when in Background" = "Cacher le contenu de l’appli si en arrière-plan";
 
 /* HistoryViewController */
 "History" = "Historique";
@@ -223,8 +232,11 @@
 /* SecurityViewController */
 "Ignore TLS Errors" = "Ignorer les erreurs TLS";
 
+/* BookmarksViewController */
+"Import Bookmarks" = "Importer les marque-pages";
+
 /* No comment provided by engineer. */
-"IndexedDB Databases" = "IndexedDB Databases";
+"IndexedDB Databases" = "Bases de données IndexedDB";
 
 /* CertificateViewController */
 "Issued By" = "Délivré par";
@@ -251,13 +263,13 @@
 "Lock App with Touch ID or Device Passcode" = "Verrouiller l’appli avec Touch ID ou le code d’accès de l’appareil";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "Mode verrouillage";
 
 /* AppDelegate */
 "Log In" = "Connexion";
 
 /* No comment provided by engineer. */
-"Memory Cache" = "Memory Cache";
+"Memory Cache" = "Cache mémoire";
 
 /* SettingsViewController */
 "Miscellaneous" = "Divers";
@@ -266,7 +278,7 @@
 "Mute Audio with Mute Switch" = "Mettre le son en sourdine avec le bouton Sourdine";
 
 /* AddSearchEngineViewController */
-"My Search Engine" = "My Search Engine";
+"My Search Engine" = "Mon moteur de recherche";
 
 /* AddSearchEngineViewController */
 "Name" = "Nom";
@@ -284,9 +296,9 @@
 "No valid HTTP response." = "Pas de réponse HTTP valide.";
 
 /* No comment provided by engineer. */
-"Offline Web Application Cache" = "Offline Web Application Cache";
+"Offline Web Application Cache" = "Cache d’applis Web hors ligne";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "Valider";
 
 /* Tab+Gestures */
@@ -296,7 +308,7 @@
 "Open in Background Tab" = "Ouvrir dans un onglet d’arrière-plan";
 
 /* No comment provided by engineer. */
-"Open in Default Browser" = "Open in Default Browser";
+"Open in Default Browser" = "Ouvrir dans le navigateur par défaut";
 
 /* SecurityViewController */
 "Other" = "Autre";
@@ -335,7 +347,7 @@
 "Report a Bug" = "Signaler un bogue";
 
 /* No comment provided by engineer. */
-"Request could not be formed. Please check host and username/password!" = "Impossible de créer la demande. Veuillez vérifier l’hôte, le nom d’utilisateur et le mot de passe.";
+"Request could not be formed. Please check host and username/password!" = "Impossible de créer la demande. Vérifiez l’hôte, le nom d’utilisateur et le mot de passe.";
 
 /* No comment provided by engineer. */
 "Response body missing." = "Le corps de la réponse manque.";
@@ -353,7 +365,7 @@
 "Search Engine" = "Moteur de recherche";
 
 /* AddSearchEngineViewController */
-"Search URL" = "Search URL";
+"Search URL" = "URL de recherche";
 
 /* SecurityPopUpViewController */
 "Security Level for This Site" = "Niveau de sécurité pour ce site";
@@ -362,10 +374,10 @@
 "Serial Number" = "Numéro de série";
 
 /* No comment provided by engineer. */
-"Service Worker Registrations" = "Service Worker Registrations";
+"Service Worker Registrations" = "Enregistrements des agents de service";
 
 /* No comment provided by engineer. */
-"Session Storage" = "Session Storage";
+"Session Storage" = "Stockage des sessions";
 
 /* SettingsViewController */
 "Settings" = "Paramètres";
@@ -397,23 +409,23 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Basculer vers l’onglet %d";
 
+/* BookmarksViewController */
+"Sync" = "Synchroniser";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Synchroniser les marque-pages";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "Synchroniser les marque-pages avec le serveur Nextcloud";
 
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Synchroniser avec Nextcloud";
-
 /* SettingsViewController */
 "Tab Security" = "Sécurité des onglets";
 
 /* Option title */
-"Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";
+"Tell websites that you object to processing and selling of your personal data" = "Indiquez aux sites Web que vous vous opposez au traitement et à la vente de vos données personnelles";
 
 /* No comment provided by engineer. */
-"The encryption method for this server is outdated." = "The encryption method for this server is outdated.";
+"The encryption method for this server is outdated." = "La méthode de chiffrement de ce serveur est obsolète.";
 
 /* SecurityViewController */
 "These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers." = "Cela pourrait changer le comportement des serveurs, par exemple, afficher ou non les captchas ou les pages de retour destinées aux navigateurs pour ordinateurs.";
@@ -425,7 +437,7 @@
 "This is your default security setting for every website you visit in %@." = "Votre paramètre de sécurité par défaut pour tous les sites Web que vous visitez dans %@.";
 
 /* Placeholder is 'Orbot' */
-"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "This site may need authentication. If you received an authentication key for this site, add it to %@!";
+"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "Il est possible que ce site demande une authentification. Si vous avez reçu une clé d’authentification pour ce site, ajoutez-la à %@.";
 
 /* BookmarkViewController */
 "Title" = "Titre";
@@ -446,16 +458,16 @@
 "Universal Link Protection" = "Protection universelle des liens";
 
 /* AddSearchEngineViewController */
-"Update" = "Update";
+"Update" = "Mettre à jour";
 
 /* No comment provided by engineer. */
-"Update Blocklist" = "Update Blocklist";
+"Update Blocklist" = "Mettre à jour la liste de blocage";
 
 /* SettingsViewController */
 "URL Blocker" = "Bloqueur d’URLs";
 
 /* No comment provided by engineer. */
-"Use URL Blocker" = "Use URL Blocker";
+"Use URL Blocker" = "Utiliser le bloqueur d’URL";
 
 /* SecurityViewController */
 "User Agent" = "Agent utilisateur";
@@ -479,10 +491,10 @@
 "Websites may break. But you get great security." = "Les sites Web pourraient ne pas fonctionner, mais le niveau de sécurité est excellent.";
 
 /* No comment provided by engineer. */
-"WebSQL Databases" = "WebSQL Databases";
+"WebSQL Databases" = "Bases de données WebSQL";
 
 /* Placeholder is 'Onion Browser' */
-"Welcome to %@" = "Welcome to %@";
+"Welcome to %@" = "Bienvenue sur le %@";
 
 /* SettingsViewController */
 "When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "Si cette option est désactivée, tout texte saisi dans la barre de recherche sera envoyé au moteur de recherche, sauf s’il commence par « http ».";
@@ -491,10 +503,10 @@
 "Works pretty well. Your identity is mostly protected." = "Tout fonctionne plutôt bien, votre identité est généralement protégée.";
 
 /* Placeholder is server domain */
-"You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk.";
+"You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "Il est possible que vous vous connectiez à un serveur qui se fait passer pour « %@ », ce qui pourrait compromettre vos renseignements confidentiels.";
 
 /* No comment provided by engineer. */
-"You're one step closer to private browsing." = "You're one step closer to private browsing.";
+"You're one step closer to private browsing." = "Vous vous rapprochez d’une navigation confidentielle.";
 
 /* CircuitViewController */
 "Your traffic goes to 3 different parts of the world." = "Votre trafic passe par trois différentes régions du monde.";

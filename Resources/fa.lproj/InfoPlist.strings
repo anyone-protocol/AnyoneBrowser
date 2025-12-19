@@ -7,9 +7,9 @@
 //
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
-NSPhotoLibraryAddUsageDescription = "برای ذخیره‌ی عکس‌های انتخاب شده در تصاویر شما.";
-NSCameraUsageDescription = "برای خواندن آدرس‌های پل از روی کدهای QR.";
+NSPhotoLibraryAddUsageDescription = "برای ذخیره‌ی عکس‌های انتخاب شده در تصاویر شما لازم است.";
+NSCameraUsageDescription = "برای خواندن آدرس‌های پل از روی کدهای QR لازم است.";
 NSFaceIDUsageDescription = "اگر می‌خواهید قفل برنامه را با Face ID باز کنید، لازم است.";
-"New Tab" = "برگه جدید";
+"New Tab" = "تب جدید";
 "Clear Data" = "پاکسازی داده‌ها";
-"Close tabs and clear data" = "بستن برگه‌ها و پاکسازی داده‌ها";
+"Close tabs and clear data" = "بستن تب‌ها و پاکسازی داده‌ها";
