@@ -14,24 +14,23 @@ import Eureka
 class BookmarkViewController: FixedFormViewController {
 
 	var index: Int?
+	var folder: NcFolder = NcBookmarks.root
 	var delegate: BookmarksViewControllerDelegate?
 
-	private var bookmark: Bookmark?
-
-	private var nextcloudId: String?
+	private var bookmark: NcBookmark?
 
 	private var sceneGoneStoreImmediately = false
 
 	private let favIconRow = FavIconRow() {
 		$0.disabled = true
-		$0.placeholderImage = Bookmark.defaultIcon
+		$0.placeholderImage = NcBookmark.defaultIcon
 	}
 
 	private let titleRow = TextRow() {
 		$0.placeholder = NSLocalizedString("Title", comment: "Bookmark title placeholder")
 	}
 
-	private let urlRow =  URLRow() {
+	private let urlRow = URLRow() {
 		$0.placeholder = NSLocalizedString("Address", comment: "Bookmark URL placeholder")
 	}
 
@@ -45,9 +44,9 @@ class BookmarkViewController: FixedFormViewController {
 			if let info = AddSiteViewController.getCurrentTabInfo(view.sceneDelegate) {
 
 				// Check, if this page is already bookmarked. If so, edit that.
-				if let bookmark = Bookmark.all.first(where: { $0.url == info.url }) {
+				if let bookmark = folder.bookmarks.first(where: { $0.url == info.url.absoluteString }) {
 					self.bookmark = bookmark
-					index = Bookmark.all.firstIndex(of: bookmark)
+					index = folder.bookmarks.firstIndex(of: bookmark)
 				}
 				else {
 					titleRow.value = info.title
@@ -58,11 +57,11 @@ class BookmarkViewController: FixedFormViewController {
 			}
 		}
 		else {
-			bookmark = Bookmark.all[index!]
+			bookmark = folder.bookmarks[index!]
 		}
 
 		navigationItem.title = index == nil
-			? NSLocalizedString("Add Bookmark", comment: "Scene titlebar")
+			? NSLocalizedString("Add Bookmark", comment: "Scene title")
 			: NSLocalizedString("Edit Bookmark", comment: "Scene title")
 
 		if index == nil {
@@ -75,18 +74,11 @@ class BookmarkViewController: FixedFormViewController {
 
 		if let bookmark = bookmark {
 			favIconRow.value = bookmark.icon
-			titleRow.value = bookmark.name
-			urlRow.value = bookmark.url
+			titleRow.value = bookmark.title
+			urlRow.value = URL(string: bookmark.url)
 
 			if bookmark.icon == nil {
 				acquireIcon()
-			}
-
-			// Get Nextcloud ID *before* user changes URL, which is our unique
-			// identifier. So we later *update* an existing bookmark on Nextcloud
-			// with a changed URL and not create a new one.
-			Nextcloud.getId(bookmark) { id in
-				self.nextcloudId = id
 			}
 		}
 
@@ -106,19 +98,30 @@ class BookmarkViewController: FixedFormViewController {
 		// Store changes, if user edits an existing bookmark or bookmark was created
 		// with #addNew.
 		if index != nil {
-			bookmark?.name = titleRow.value
+			bookmark?.title = titleRow.value ?? bookmark?.title ?? ""
 
 			// Don't allow empty URL.
 			if let url = cleanUrl() {
-				bookmark?.url = url
+				bookmark?.url = url.absoluteString
 			}
 
 			bookmark?.icon = favIconRow.value
 
-			Bookmark.store()
+			bookmark?.updateLastModified()
 
-			if let bookmark = bookmark {
-				Nextcloud.store(bookmark, id: nextcloudId)
+			NcBookmarks.store()
+
+			if let bookmark {
+				Task {
+					do {
+						if try await bookmark.upload() {
+							NcBookmarks.store()
+						}
+					}
+					catch {
+						Log.error(for: Self.self, "\(error)")
+					}
+				}
 			}
 
 			delegate?.needsReload()
@@ -131,12 +134,12 @@ class BookmarkViewController: FixedFormViewController {
 	// MARK: Private Methods
 
 	@objc private func addNew() {
-		if urlRow.value != nil {
-			bookmark = Bookmark()
+		if let url = cleanUrl() {
+			bookmark = NcBookmark(url: url.absoluteString, title: titleRow.value ?? "", folder: folder)
 
-			Bookmark.all.append(bookmark!)
+			folder.bookmarks.append(bookmark!)
 			// Trigger store in #viewWillDisappear by setting index != nil.
-			index = Bookmark.all.firstIndex(of: bookmark!)
+			index = folder.bookmarks.firstIndex(of: bookmark!)
 
 			navigationController?.popViewController(animated: true)
 		}
@@ -147,16 +150,17 @@ class BookmarkViewController: FixedFormViewController {
 			return
 		}
 
-		Bookmark.icon(for: url) { image in
-			self.favIconRow.value = image
-			self.favIconRow.reload()
+		Task {
+			let image = await NcBookmark.icon(for: url)
+			favIconRow.value = image
+			favIconRow.reload()
 
 			// User stored bookmark and left scene.
 			// If we return to late, store the icon of the bookmark immediately,
 			// so we don't loose that information.
 			if self.sceneGoneStoreImmediately {
 				self.bookmark?.icon = image
-				Bookmark.store()
+				NcBookmarks.store()
 			}
 		}
 	}

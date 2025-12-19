@@ -230,7 +230,7 @@ class SettingsViewController: FixedFormViewController {
 			if let value = row.value, value != Settings.disableBookmarksOnStartPage {
 				Settings.disableBookmarksOnStartPage = value
 
-				Bookmark.updateStartPage(force: true)
+				NcBookmarks.updateStartPage(force: true)
 
 				for tab in AppDelegate.shared?.allOpenTabs ?? [] {
 					if tab.url == URL.start {

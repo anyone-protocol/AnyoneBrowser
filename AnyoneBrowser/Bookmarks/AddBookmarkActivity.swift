@@ -23,12 +23,12 @@ class AddBookmarkActivity: UIActivity {
 	}
 
 	override var activityImage: UIImage? {
-		return .init(systemName: "bookmark")
+		return UIImage(systemName: "bookmark")
 	}
 
 	override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
 		for item in activityItems {
-			if !(item is URL) || Bookmark.contains(url: item as! URL) {
+			if !(item is URL) || NcBookmarks.find(item as! URL) != nil {
 				return false
 			}
 		}
@@ -43,32 +43,36 @@ class AddBookmarkActivity: UIActivity {
 	override func perform() {
 		let tabs = AppDelegate.shared?.allOpenTabs
 
-		DispatchQueue.global(qos: .userInitiated).async {
-			for url in self.urls ?? [] {
-				var title: String?
-
-				// .title contains a call which needs the UI thread.
-				DispatchQueue.main.sync {
-					title = tabs?.first(where: { $0.url == url })?.title
+		Task {
+			for url in urls ?? [] {
+				let title = await MainActor.run {
+					// .title contains a call which needs the UI thread.
+					tabs?.first(where: { $0.url == url })?.title
 				}
 
-				let b = Bookmark.add(title, url.absoluteString)
-				Bookmark.store() // First store, so the user sees it immediately.
+				let b = NcBookmark(url: url.absoluteString, title: title ?? "")
+				NcBookmarks.root.bookmarks.append(b)
 
-				Nextcloud.getId(b) { id in
-					Nextcloud.store(b, id: id)
+				NcBookmarks.store() // First store, so the user sees it immediately.
+
+				if await b.acquireIcon() {
+					// Second store, so the user sees the icon, too.
+					NcBookmarks.store()
 				}
 
-				b.acquireIcon { updated in
-					if updated {
-						// Second store, so the user sees the icon, too.
-						Bookmark.store()
+				do {
+					if try await b.upload() {
+						// Third store, so we keep the server ID.
+						NcBookmarks.store()
 					}
+				}
+				catch {
+					Log.error(for: Self.self, "\(error)")
 				}
 			}
 
-			DispatchQueue.main.async {
-				self.activityDidFinish(true)
+			await MainActor.run {
+				activityDidFinish(true)
 			}
 		}
 	}

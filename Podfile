@@ -16,6 +16,8 @@ target 'AnyoneBrowser' do
   pod 'Eureka', '~> 5.5'
   pod 'ImageRow', :git => 'https://github.com/erickyim/ImageRow.git', :commit => 'd38369b8894425a9225ccf1e267226833b1950f0'
 
+  pod 'SwiftSoup', '~> 2.7'
+
   pod 'AnyoneKit',
     '~> 409'
 #    :path => '../AnyoneKit'

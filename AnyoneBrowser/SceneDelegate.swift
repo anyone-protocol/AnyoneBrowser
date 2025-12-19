@@ -196,7 +196,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 				if self?.firstRun ?? false {
 					self?.firstRun = false
 
-					Bookmark.firstRunSetup()
+					NcBookmarks.firstRunSetup()
 				}
 
 				outerCompletion?(finished)
@@ -243,7 +243,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			}
 
 			WebsiteStorage.shared.cleanup()
-
 
 			completion?(true)
 		}

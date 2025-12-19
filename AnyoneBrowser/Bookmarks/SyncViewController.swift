@@ -77,16 +77,27 @@ class SyncViewController: FixedFormViewController {
 
 					let hud = MBProgressHUD.showAdded(to: vc.navigationController?.view ?? vc.view, animated: true)
 
-					Nextcloud.sync { error in
-						DispatchQueue.main.async {
-							hud.mode = .customView
-							hud.customView = UIImageView(image: UIImage(named: "check"))
-							hud.hide(animated: true, afterDelay: 1)
+					Task {
+						do {
+							try await NcServer.sync()
 
-							if let error = error {
+							await MainActor.run {
+								hud.mode = .customView
+								hud.customView = UIImageView(image: UIImage(systemName: "checkmark"))
+								hud.hide(animated: true, afterDelay: 1)
+
+								vc.delegate?.needsReload()
+							}
+						}
+						catch {
+							await MainActor.run {
+								hud.mode = .customView
+								hud.customView = UIImageView(image: UIImage(systemName: "xmark"))
+								hud.hide(animated: true, afterDelay: 1)
+
 								let message = NSLocalizedString("We couldn't sync your bookmarks at this time. Try again to make sure your information is synced.", comment: "")
-									+ "\n\n"
-									+ error.localizedDescription
+								+ "\n\n"
+								+ error.localizedDescription
 
 								AlertHelper.present(
 									vc,
@@ -99,11 +110,11 @@ class SyncViewController: FixedFormViewController {
 												vc.form.rowBy(tag: "sync")?.didSelect()
 											}
 										})
-								])
+									])
+
+								vc.delegate?.needsReload()
 							}
 						}
-
-						vc.delegate?.needsReload()
 					}
 				}
 			}

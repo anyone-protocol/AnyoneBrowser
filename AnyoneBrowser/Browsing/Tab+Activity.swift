@@ -124,7 +124,9 @@ extension Tab: UIActivityItemSource {
 		metadata.url = url
 		metadata.title = title
 
-		let bookmark = Bookmark.all.first { $0.url?.host == url.host }
+		let bookmark = NcBookmarks.find { bookmark in
+			URL(string: bookmark.url)?.host == url.host
+		}.first
 
 		if #available(iOS 16.0, *), let icon = bookmark?.iconUrl {
 			metadata.iconProvider = .init(contentsOf: icon, contentType: .png, openInPlace: false,
@@ -134,8 +136,8 @@ extension Tab: UIActivityItemSource {
 			let iconProvider = NSItemProvider()
 			iconProvider.registerObject(ofClass: UIImage.self, visibility: .all) { [weak self] completion in
 				if let url = self?.url {
-					Bookmark.icon(for: url) { image in
-						if let image = image {
+					Task {
+						if let image = await NcBookmark.icon(for: url) {
 							completion(image, nil)
 						}
 						else {

@@ -115,6 +115,10 @@ class Tab: UIView {
 			else {
 				secureMode = .secure
 			}
+
+			DispatchQueue.main.async { [weak self] in
+				self?.tabDelegate?.updateChrome()
+			}
 		}
 	}
 
@@ -265,7 +269,7 @@ class Tab: UIView {
 	@objc
 	func refresh() {
 		if url == URL.start {
-			Bookmark.updateStartPage()
+			NcBookmarks.updateStartPage()
 		}
 
 		needsRefresh = false
@@ -313,14 +317,12 @@ class Tab: UIView {
 
 		if let url = request.url {
 			if url == URL.start {
-				Bookmark.updateStartPage()
+				NcBookmarks.updateStartPage()
 			}
-			else if let bookmark = Bookmark.all.first(where: { $0.url == url }) {
-				DispatchQueue.global(qos: .utility).async {
-					bookmark.acquireIcon { updated in
-						if updated {
-							Bookmark.store()
-						}
+			else if let bookmark = NcBookmarks.find(url) {
+				Task {
+					if await bookmark.acquireIcon() {
+						NcBookmarks.store()
 					}
 				}
 			}
@@ -373,12 +375,13 @@ class Tab: UIView {
 		}
 	}
 
-	func toggleFind() {
+	func toggleFind(searchText: String? = nil) {
 		if #available(iOS 16.0, *) {
 			webView?.isFindInteractionEnabled = !((webView?.isFindInteractionEnabled ?? false) && webView?.findInteraction?.isFindNavigatorVisible ?? false)
 
 			if webView?.isFindInteractionEnabled ?? false {
 				webView?.findInteraction?.presentFindNavigator(showingReplace: false)
+				webView?.findInteraction?.searchText = searchText
 			}
 		}
 	}
@@ -427,11 +430,11 @@ class Tab: UIView {
 
 			// Will empty the webView, but keep the URL and doesn't create a history entry.
 			self.stringByEvaluatingJavaScript(from: "document.open()") { _ in }
-			
+
 			self.needsRefresh = true
 		}
 	}
-	
+
 	func getSnapshot(size: CGSize) -> UIImage? {
 		if snapshot == nil, let scrollView = scrollView {
 			let offset = scrollView.contentOffset
@@ -463,7 +466,7 @@ class Tab: UIView {
 		needsRefresh = true
 	}
 
-	
+
 	// MARK: Private Methods
 
 	private func setup() {

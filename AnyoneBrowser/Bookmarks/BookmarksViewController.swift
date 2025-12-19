@@ -16,8 +16,9 @@ protocol BookmarksViewControllerDelegate {
 }
 
 class BookmarksViewController: UIViewController, UITableViewDataSource,
-UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
-
+							   UITableViewDelegate, UISearchResultsUpdating,
+							   BookmarksViewControllerDelegate, UIDocumentPickerDelegate
+{
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var toolbar: UIToolbar!
 
@@ -30,7 +31,9 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 											  target: self, action: #selector(edit))
 
 	private let searchController = UISearchController(searchResultsController: nil)
-	private var filtered = [Bookmark]()
+	private var filtered = [NcBookmark]()
+
+	var folder: NcFolder = NcBookmarks.root
 
 	private var _needsReload = false
 
@@ -53,12 +56,27 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 
 		toolbarItems = [
 			UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add)),
-			UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-			UIBarButtonItem(title: NSLocalizedString("Sync with Nextcloud", comment: ""), style: .plain,
-							target: self, action: #selector(showSyncScene)),
+			UIBarButtonItem(image: NcFolder.icon, style: .plain, target: self, action: #selector(addFolder)),
 			UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)]
 
-		navigationItem.title = NSLocalizedString("Bookmarks", comment: "Scene title")
+		toolbarItems?.first?.accessibilityLabel = NSLocalizedString("Add Bookmark", comment: "")
+		toolbarItems?[1].accessibilityLabel = NSLocalizedString("Add Folder", comment: "")
+
+		if folder.id == -1 {
+			toolbarItems?.append(contentsOf: [
+				UIBarButtonItem(title: NSLocalizedString("Sync", comment: ""), style: .plain,
+								target: self, action: #selector(showSyncScene)),
+				UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)])
+		}
+
+		navigationItem.title = folder.title.isEmpty ? NSLocalizedString("Bookmarks", comment: "Scene title") : folder.title
+
+		navigationItem.rightBarButtonItems = [
+			.init(image: .init(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(exportBookmarks)),
+			.init(image: .init(systemName: "square.and.arrow.down"), style: .plain, target: self, action: #selector(importBookmarks))]
+		navigationItem.rightBarButtonItems?.first?.accessibilityLabel = NSLocalizedString("Import Bookmarks", comment: "")
+		navigationItem.rightBarButtonItems?.last?.accessibilityLabel = NSLocalizedString("Export Bookmarks", comment: "")
+
 		updateButtons()
 
 		tableView.register(BookmarkCell.nib, forCellReuseIdentifier: BookmarkCell.reuseId)
@@ -82,8 +100,16 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 
 	// MARK: UITableViewDataSource
 
+	func numberOfSections(in tableView: UITableView) -> Int {
+		2
+	}
+
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return (isFiltering ? filtered : Bookmark.all).count
+		if section == 0 {
+			return folder.folders.count
+		}
+
+		return isFiltering ? filtered.count : folder.bookmarks.count
 	}
 
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -93,7 +119,11 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: BookmarkCell.reuseId, for: indexPath) as! BookmarkCell
 
-		return cell.set((isFiltering ? filtered : Bookmark.all)[indexPath.row])
+		if indexPath.section == 0 {
+			return cell.set(folder.folders[indexPath.row])
+		}
+
+		return cell.set((isFiltering ? filtered : folder.bookmarks)[indexPath.row])
 	}
 
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -104,19 +134,77 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 		return !isFiltering
 	}
 
-	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-		if editingStyle == .delete {
-			Bookmark.all[indexPath.row].icon = nil // Delete icon file.
-			let bookmark = Bookmark.all.remove(at: indexPath.row)
-			Bookmark.store()
-			Nextcloud.delete(bookmark)
-			tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+	/**
+	 Limits moves within their own section.
+	 */
+	func tableView(_ tableView: UITableView,
+				   targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath,
+				   toProposedIndexPath proposedDestinationIndexPath: IndexPath
+	) -> IndexPath {
+		if sourceIndexPath.section != proposedDestinationIndexPath.section {
+			var row = 0
+
+			if sourceIndexPath.section < proposedDestinationIndexPath.section {
+				row = tableView.numberOfRows(inSection: sourceIndexPath.section) - 1
+			}
+
+			return IndexPath(row: row, section: sourceIndexPath.section)
 		}
+
+		return proposedDestinationIndexPath
+	}
+
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		guard editingStyle == .delete else {
+			return
+		}
+
+		if indexPath.section == 0 {
+			let subfolder = folder.folders[indexPath.row]
+
+			folder.folders.remove(at: indexPath.row)
+
+			Task {
+				do {
+					try await NcServer.delete(subfolder)
+				}
+				catch {
+					Log.error(for: Self.self, "\(error)")
+				}
+			}
+		}
+		else {
+			let bookmark = folder.bookmarks[indexPath.row]
+			bookmark.icon = nil // Delete icon file.
+
+			folder.bookmarks.remove(at: indexPath.row)
+
+			Task {
+				do{
+					try await NcServer.delete(bookmark)
+				}
+				catch {
+					Log.error(for: Self.self, "\(error)")
+				}
+			}
+		}
+
+		NcBookmarks.store()
+
+		tableView.reloadSections([indexPath.section], with: .automatic)
 	}
 
 	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		Bookmark.all.insert(Bookmark.all.remove(at: sourceIndexPath.row), at: destinationIndexPath.row)
-		Bookmark.store()
+		if sourceIndexPath.section == 0 && destinationIndexPath.section == 0 {
+			folder.folders.insert(folder.folders.remove(at: sourceIndexPath.row), at: destinationIndexPath.row)
+
+			NcBookmarks.store()
+		}
+		else if sourceIndexPath.section > 0 && destinationIndexPath.section > 0 {
+			folder.bookmarks.insert(folder.bookmarks.remove(at: sourceIndexPath.row), at: destinationIndexPath.row)
+
+			NcBookmarks.store()
+		}
 	}
 
 
@@ -126,22 +214,41 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 		var index: Int? = indexPath.row
 
 		if isFiltering {
-			index = Bookmark.all.firstIndex(of: filtered[index!])
+			index = folder.bookmarks.firstIndex(of: filtered[index!])
 		}
 
-		if let index = index {
+		if let index {
 			if tableView.isEditing {
-				let vc = BookmarkViewController()
-				vc.delegate = self
-				vc.index = index
+				if indexPath.section == 0 {
+					let vc = FolderViewController()
+					vc.delegate = self
+					vc.index = index
+					vc.parentFolder = folder
+
+					navigationController?.pushViewController(vc, animated: true)
+				}
+				else {
+					let vc = BookmarkViewController()
+					vc.delegate = self
+					vc.index = index
+					vc.folder = folder
+
+					navigationController?.pushViewController(vc, animated: true)
+				}
+			}
+			else if indexPath.section == 0 {
+				let folder = folder.folders[index]
+
+				let vc = BookmarksViewController()
+				vc.folder = folder
 
 				navigationController?.pushViewController(vc, animated: true)
 			}
 			else {
-				let bookmark = Bookmark.all[index]
+				let bookmark = folder.bookmarks[index]
 
 				view.sceneDelegate?.browsingUi.addNewTab(
-					bookmark.url, transition: .notAnimated) { [weak self] _ in
+					URL(string: bookmark.url), transition: .notAnimated) { [weak self] _ in
 						self?.dismiss_()
 					}
 			}
@@ -155,9 +262,9 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 
 	func updateSearchResults(for searchController: UISearchController) {
 		if let search = searchController.searchBar.text?.lowercased() {
-			filtered = Bookmark.all.filter() {
-				$0.name?.lowercased().contains(search) ?? false
-					|| $0.url?.absoluteString.lowercased().contains(search) ?? false
+			filtered = folder.bookmarks.filter() {
+				$0.title.lowercased().contains(search)
+					|| $0.url.lowercased().contains(search)
 			}
 		}
 		else {
@@ -175,15 +282,98 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 	}
 
 
+	// MARK: UIDocumentPickerDelegate
+
+	func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+		guard let file = urls.first else {
+			return
+		}
+
+		let data: Data
+
+		do {
+			data = try Data(contentsOf: file)
+		}
+		catch {
+			return AlertHelper.present(self, message: error.localizedDescription)
+		}
+
+		guard let contents = String(data: data, encoding: .utf8) else {
+			return
+		}
+
+		let hud = MBProgressHUD.showAdded(to: view, animated: true)
+		hud.mode = .indeterminate
+		hud.label.numberOfLines = 0
+
+		Task {
+			var err: Error? = nil
+
+			do {
+				try await MozillaBookmarks.import(contents)
+			}
+			catch {
+				Log.error(for: Self.self, error.localizedDescription)
+
+				err = error
+			}
+
+			await MainActor.run {
+				if let err {
+					hud.mode = .text
+					hud.label.text = err.localizedDescription
+					hud.hide(animated: true, afterDelay: 3)
+				}
+				else {
+					hud.hide(animated: true)
+				}
+
+				tableView.reloadData()
+			}
+		}
+	}
+
+
 	// MARK: Actions
 
 	@objc private func dismiss_() {
 		navigationController?.dismiss(animated: true)
 	}
 
+	@objc private func exportBookmarks(sender: UIBarButtonItem) {
+		do {
+			let exported = try MozillaBookmarks.export(folder)
+
+			let vc = UIActivityViewController(activityItems: [exported], applicationActivities: nil)
+			vc.modalPresentationStyle = .popover
+			vc.popoverPresentationController?.barButtonItem = sender
+
+			present(vc, animated: true)
+		}
+		catch {
+			AlertHelper.present(self, message: error.localizedDescription)
+		}
+	}
+
+	@objc private func importBookmarks() {
+		let vc = UIDocumentPickerViewController(forOpeningContentTypes: [.html], asCopy: true)
+		vc.delegate = self
+
+		present(vc)
+	}
+
 	@objc private func add() {
 		let vc = BookmarkViewController()
 		vc.delegate = self
+		vc.folder = folder
+
+		navigationController?.pushViewController(vc, animated: true)
+	}
+
+	@objc private func addFolder() {
+		let vc = FolderViewController()
+		vc.delegate = self
+		vc.parentFolder = folder
 
 		navigationController?.pushViewController(vc, animated: true)
 	}
@@ -205,9 +395,12 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 	// MARK: Private Methods
 
 	private func updateButtons() {
-		navigationItem.leftBarButtonItem = tableView.isEditing
-			? nil
-			: doneBt
+		if tableView.isEditing || folder.id != -1 {
+			navigationItem.leftBarButtonItem = nil
+		}
+		else {
+			navigationItem.leftBarButtonItem = doneBt
+		}
 
 		var items = toolbarItems
 

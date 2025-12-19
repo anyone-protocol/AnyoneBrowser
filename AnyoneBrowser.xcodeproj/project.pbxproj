@@ -39,7 +39,6 @@
 		A06155902E3262C800937318 /* light-onlydomains.txt in Resources */ = {isa = PBXBuildFile; fileRef = A061558F2E3262C800937318 /* light-onlydomains.txt */; };
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
 		A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAC2406C7D000512695 /* SyncViewController.swift */; };
-		A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAE2406D94200512695 /* Nextcloud.swift */; };
 		A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */; };
 		A07037C623C7571B00D670EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07037C523C7571B00D670EC /* AppDelegate.swift */; };
 		A07037C723C79AE500D670EC /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07037C223C74DC900D670EC /* Media.xcassets */; };
@@ -84,7 +83,6 @@
 		A0BF526123AFC3580096624A /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF521B23AFC3580096624A /* BookmarkViewController.swift */; };
 		A0BF526223AFC3580096624A /* FavIconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF521C23AFC3580096624A /* FavIconRow.swift */; };
 		A0BF526323AFC3580096624A /* BookmarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF521D23AFC3580096624A /* BookmarksViewController.xib */; };
-		A0BF526423AFC3580096624A /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF521E23AFC3580096624A /* Bookmark.swift */; };
 		A0BF526523AFC3580096624A /* FavIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF521F23AFC3580096624A /* FavIconCell.xib */; };
 		A0BF526623AFC3580096624A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522023AFC3580096624A /* BookmarksViewController.swift */; };
 		A0BF526723AFC3580096624A /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF522123AFC3580096624A /* BookmarkCell.xib */; };
@@ -108,6 +106,12 @@
 		A0BF527F23AFC3580096624A /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF524023AFC3580096624A /* URL+Helpers.swift */; };
 		A0BF528223AFC3580096624A /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF524323AFC3580096624A /* String+Helpers.swift */; };
 		A0BFD3E9289D4F5200CB9F6D /* Tab+WKUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BFD3E8289D4F5200CB9F6D /* Tab+WKUIDelegate.swift */; };
+		A0C0FD842EF580BC00619E60 /* NcFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0FD822EF580BC00619E60 /* NcFolder.swift */; };
+		A0C0FD852EF580BC00619E60 /* MozillaBookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0FD7F2EF580BC00619E60 /* MozillaBookmarks.swift */; };
+		A0C0FD862EF580BC00619E60 /* NcBookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0FD812EF580BC00619E60 /* NcBookmarks.swift */; };
+		A0C0FD872EF580BC00619E60 /* NcServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0FD832EF580BC00619E60 /* NcServer.swift */; };
+		A0C0FD882EF580BC00619E60 /* NcBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0FD802EF580BC00619E60 /* NcBookmark.swift */; };
+		A0C0FD892EF580BC00619E60 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C0FD7E2EF580BC00619E60 /* FolderViewController.swift */; };
 		A0C3770E1F47342C0039198E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C3770D1F47342C0039198E /* CoreData.framework */; };
 		A0C582582AE9136200A81084 /* Thread+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C582572AE9136200A81084 /* Thread+Helpers.swift */; };
 		A0CD36982890194900628DA6 /* Tab+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */; };
@@ -204,7 +208,6 @@
 		A061558F2E3262C800937318 /* light-onlydomains.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "light-onlydomains.txt"; sourceTree = "<group>"; };
 		A06881D12A66B0070084D26D /* AnyoneBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnyoneBrowser.entitlements; sourceTree = "<group>"; };
 		A0696EAC2406C7D000512695 /* SyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewController.swift; sourceTree = "<group>"; };
-		A0696EAE2406D94200512695 /* Nextcloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nextcloud.swift; sourceTree = "<group>"; };
 		A06DF455241A60E700A07796 /* SecureEnclave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclave.swift; sourceTree = "<group>"; };
 		A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A06F5F49275692060023622E /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
@@ -393,7 +396,6 @@
 		A0BF521B23AFC3580096624A /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		A0BF521C23AFC3580096624A /* FavIconRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavIconRow.swift; sourceTree = "<group>"; };
 		A0BF521D23AFC3580096624A /* BookmarksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarksViewController.xib; sourceTree = "<group>"; };
-		A0BF521E23AFC3580096624A /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		A0BF521F23AFC3580096624A /* FavIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavIconCell.xib; sourceTree = "<group>"; };
 		A0BF522023AFC3580096624A /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		A0BF522123AFC3580096624A /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
@@ -419,6 +421,12 @@
 		A0BF524323AFC3580096624A /* String+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		A0BFD3E8289D4F5200CB9F6D /* Tab+WKUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKUIDelegate.swift"; sourceTree = "<group>"; };
 		A0BFD3EA289D6D9100CB9F6D /* testpage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testpage; sourceTree = "<group>"; };
+		A0C0FD7E2EF580BC00619E60 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
+		A0C0FD7F2EF580BC00619E60 /* MozillaBookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MozillaBookmarks.swift; sourceTree = "<group>"; };
+		A0C0FD802EF580BC00619E60 /* NcBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcBookmark.swift; sourceTree = "<group>"; };
+		A0C0FD812EF580BC00619E60 /* NcBookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcBookmarks.swift; sourceTree = "<group>"; };
+		A0C0FD822EF580BC00619E60 /* NcFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcFolder.swift; sourceTree = "<group>"; };
+		A0C0FD832EF580BC00619E60 /* NcServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcServer.swift; sourceTree = "<group>"; };
 		A0C3770D1F47342C0039198E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0C582572AE9136200A81084 /* Thread+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Helpers.swift"; sourceTree = "<group>"; };
 		A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
@@ -436,11 +444,15 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A078517C2DE7344A00BA3747 /* fastlane */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = fastlane;
 			sourceTree = "<group>";
 		};
 		A0BB301F2DD87B8D009AFFEB /* .tx */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = .tx;
 			sourceTree = "<group>";
 		};
@@ -675,17 +687,21 @@
 		A0BF521A23AFC3580096624A /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
-				A0BF521E23AFC3580096624A /* Bookmark.swift */,
-				A0696EAE2406D94200512695 /* Nextcloud.swift */,
 				A0BF521D23AFC3580096624A /* BookmarksViewController.xib */,
 				A0BF522023AFC3580096624A /* BookmarksViewController.swift */,
 				A0BF522123AFC3580096624A /* BookmarkCell.xib */,
 				A0BF522223AFC3580096624A /* BookmarkCell.swift */,
 				A0BF521B23AFC3580096624A /* BookmarkViewController.swift */,
+				A0C0FD7E2EF580BC00619E60 /* FolderViewController.swift */,
 				A0BF521F23AFC3580096624A /* FavIconCell.xib */,
 				A0BF521C23AFC3580096624A /* FavIconRow.swift */,
 				A02CB2B423D0B0B300880720 /* AddBookmarkActivity.swift */,
 				A0696EAC2406C7D000512695 /* SyncViewController.swift */,
+				A0C0FD7F2EF580BC00619E60 /* MozillaBookmarks.swift */,
+				A0C0FD802EF580BC00619E60 /* NcBookmark.swift */,
+				A0C0FD812EF580BC00619E60 /* NcBookmarks.swift */,
+				A0C0FD822EF580BC00619E60 /* NcFolder.swift */,
+				A0C0FD832EF580BC00619E60 /* NcServer.swift */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -947,13 +963,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1029,13 +1041,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1066,6 +1074,12 @@
 				A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */,
 				A0BF525F23AFC3580096624A /* BrowsingViewController+UITextFieldDelegate.swift in Sources */,
 				A09F7ADD2AD80A1A00F7072F /* TorCircuit+Helper.swift in Sources */,
+				A0C0FD842EF580BC00619E60 /* NcFolder.swift in Sources */,
+				A0C0FD852EF580BC00619E60 /* MozillaBookmarks.swift in Sources */,
+				A0C0FD862EF580BC00619E60 /* NcBookmarks.swift in Sources */,
+				A0C0FD872EF580BC00619E60 /* NcServer.swift in Sources */,
+				A0C0FD882EF580BC00619E60 /* NcBookmark.swift in Sources */,
+				A0C0FD892EF580BC00619E60 /* FolderViewController.swift in Sources */,
 				A0E32E682DAFF7EE0030E37F /* AboutSchemaHandler.swift in Sources */,
 				A0BF526023AFC3580096624A /* BrowsingViewController+Toolbar.swift in Sources */,
 				A004FB2A241A782500451A9E /* SecureEnclave.swift in Sources */,
@@ -1079,8 +1093,6 @@
 				A0BF525123AFC3580096624A /* HistoryViewController.swift in Sources */,
 				A0BF524F23AFC3580096624A /* CircuitViewController.swift in Sources */,
 				A0BF527E23AFC3580096624A /* UIButton+Helpers.swift in Sources */,
-				A0BF526423AFC3580096624A /* Bookmark.swift in Sources */,
-				A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */,
 				A0BF528223AFC3580096624A /* String+Helpers.swift in Sources */,
 				A0172C70288824BD008D42CD /* FixedFormViewController.swift in Sources */,
 				A0A83AC228A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift in Sources */,

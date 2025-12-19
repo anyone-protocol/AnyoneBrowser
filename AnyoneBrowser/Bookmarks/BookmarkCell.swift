@@ -30,21 +30,36 @@ class BookmarkCell: UITableViewCell {
     @IBOutlet weak var nameLeading: NSLayoutConstraint!
 
 
-	func set(_ bookmark: Bookmark) -> BookmarkCell {
+	func set(_ folder: NcFolder) -> BookmarkCell {
+		iconImg.image = NcFolder.icon
+
+		nameLb.text = folder.title
+
+		iconWidth.constant = 32
+		nameLeading.constant = 8
+
+		accessoryType = .disclosureIndicator
+
+		return self
+	}
+
+	func set(_ bookmark: NcBookmark) -> BookmarkCell {
 		iconImg.image = bookmark.icon
 
-		if iconImg.image == nil {
-            iconWidth.constant = 0
-            nameLeading.constant = 0
-		}
-        else {
-            iconWidth.constant = 32
-            nameLeading.constant = 8
-        }
+		nameLb.text = bookmark.title.isEmpty
+			? bookmark.url
+			: bookmark.title
 
-		nameLb.text = bookmark.name?.isEmpty ?? true
-			? bookmark.url?.absoluteString
-			: bookmark.name
+		if iconImg.image == nil {
+			iconWidth.constant = 0
+			nameLeading.constant = 0
+		}
+		else {
+			iconWidth.constant = 32
+			nameLeading.constant = 8
+		}
+
+		accessoryType = .none
 
 		return self
 	}

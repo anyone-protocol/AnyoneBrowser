@@ -10,6 +10,7 @@ PODS:
   - MBProgressHUD (1.2.0)
   - OCMock (3.9.4)
   - SDCAlertView (12.0.5)
+  - SwiftSoup (2.11.3)
   - TUSafariActivity (1.0.4)
 
 DEPENDENCIES:
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - MBProgressHUD (from `https://github.com/jdg/MBProgressHUD.git`, commit `4a7c5f3e53cdea77c5dcb8578c2ee5acacdf6781`)
   - OCMock
   - SDCAlertView (~> 12)
+  - SwiftSoup (~> 2.7)
   - TUSafariActivity
 
 SPEC REPOS:
@@ -30,6 +32,7 @@ SPEC REPOS:
     - Eureka
     - OCMock
     - SDCAlertView
+    - SwiftSoup
     - TUSafariActivity
 
 EXTERNAL SOURCES:
@@ -62,8 +65,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1b0fb447e80a0fda94808180750e8b78a07b3cd2
   OCMock: 589f2c84dacb1f5aaf6e4cec1f292551fe748e74
   SDCAlertView: c9042ba201897da46d833193b8462a186f79c47c
+  SwiftSoup: 959c9ac70d7053fbf476341bfac90ab228523f2a
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
 
-PODFILE CHECKSUM: aba31e3be28a12c21829cabbad457d3eabb00d3d
+PODFILE CHECKSUM: a0f709912a4c7b5a898a492f39698395061676c5
 
 COCOAPODS: 1.16.2
