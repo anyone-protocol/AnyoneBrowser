@@ -40,6 +40,11 @@ class SyncViewController: FixedFormViewController {
 			.cellUpdate { cell, _ in
 				cell.textField.clearButtonMode = .whileEditing
 			}
+			.onChange { row in
+				if row.value?.isEmpty ?? true {
+					Settings.nextcloudServer = nil
+				}
+			}
 
 			<<< AccountRow("username") {
 				$0.title = NSLocalizedString("Username", comment: "")
@@ -48,6 +53,11 @@ class SyncViewController: FixedFormViewController {
 			.cellUpdate { cell, _ in
 				cell.textField.clearButtonMode = .whileEditing
 			}
+			.onChange { row in
+				if row.value?.isEmpty ?? true {
+					Settings.nextcloudUsername = nil
+				}
+			}
 
 			<<< PasswordRow("password") {
 				$0.title = NSLocalizedString("Password", comment: "")
@@ -55,6 +65,11 @@ class SyncViewController: FixedFormViewController {
 			}
 			.cellUpdate { cell, _ in
 				cell.textField.clearButtonMode = .whileEditing
+			}
+			.onChange { row in
+				if row.value?.isEmpty ?? true {
+					Settings.nextcloudPassword = nil
+				}
 			}
 
 			+++ ButtonRow("sync") {
