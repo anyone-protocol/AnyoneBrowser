@@ -313,9 +313,14 @@ class BookmarksViewController: UIViewController, UITableViewDataSource,
 				try await MozillaBookmarks.import(contents)
 			}
 			catch {
-				Log.error(for: Self.self, error.localizedDescription)
+				if case ApiError.noRequestPossible = error {
+					// This just means, that no sync is set up.
+				}
+				else {
+					Log.error(for: Self.self, error.localizedDescription)
 
-				err = error
+					err = error
+				}
 			}
 
 			await MainActor.run {
