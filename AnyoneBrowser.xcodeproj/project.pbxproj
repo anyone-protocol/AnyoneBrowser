@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -144,12 +144,10 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		8A1177102010FD1F00741429 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolder = Resources;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -444,15 +442,11 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A078517C2DE7344A00BA3747 /* fastlane */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = fastlane;
 			sourceTree = "<group>";
 		};
 		A0BB301F2DD87B8D009AFFEB /* .tx */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = .tx;
 			sourceTree = "<group>";
 		};
@@ -461,22 +455,18 @@
 /* Begin PBXFrameworksBuildPhase section */
 		01801E8F1A32CA2A002B4718 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				A0C3770E1F47342C0039198E /* CoreData.framework in Frameworks */,
 				019516D11B7D8B400078586A /* libz.tbd in Frameworks */,
 				016B2FCD1A5648AE002D2730 /* WebKit.framework in Frameworks */,
 				DB0E243D0DF8FBC859044A20 /* Pods_AnyoneBrowser.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		018333D41A35727C00670CD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				CC3F3537E5B2F8693B50D4AE /* Pods_AnyoneBrowser_Tests.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -772,8 +762,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = AnyoneBrowser;
 			productName = Endless;
 			productReference = 01801E921A32CA2A002B4718 /* AnyoneBrowser.app */;
@@ -873,7 +861,7 @@
 				id,
 			);
 			mainGroup = 01801E891A32CA2A002B4718;
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = 01801E931A32CA2A002B4718 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -887,7 +875,6 @@
 /* Begin PBXResourcesBuildPhase section */
 		01801E901A32CA2A002B4718 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				A0BF524E23AFC3580096624A /* SecurityLevelCell.xib in Resources */,
 				A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */,
@@ -916,11 +903,9 @@
 				A022F2B52D9AC9F4008C782D /* globe-bg.svg in Resources */,
 				A0BF51ED23AFBF250096624A /* start.html in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		018333D51A35727C00670CD1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				01F2AE461B827D3E00D5651A /* wildcard.pushover.net.crt in Resources */,
 				01F2AE481B82822600D5651A /* paypal.com.crt in Resources */,
@@ -928,38 +913,36 @@
 				01F2AE451B827D3E00D5651A /* lobste.rs.crt in Resources */,
 				01F2AE4A1B82835A00D5651A /* expired.superblock.net.crt in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		65319E2856D38575BBE828A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AnyoneBrowser-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = (
+				"diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null",
+				"if [ $? != 0 ] ; then",
+				"    # print error to STDERR",
+				"    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2",
+				"    exit 1",
+				"fi",
+				"# This output is used by Xcode 'outputs' to avoid re-running this script phase.",
+				"echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"",
+				"",
+			);
 			showEnvVarsInLog = 0;
 		};
 		75010C1DF4431D7C131B801C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
@@ -967,77 +950,66 @@
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks.sh\"\n";
+			shellScript = (
+				"\"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks.sh\"",
+				"",
+			);
 			showEnvVarsInLog = 0;
 		};
 		A061558C2E325A1F00937318 /* Load Blocklist */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
 			name = "Load Blocklist";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuild-util/update-blocklist.sh\n";
+			shellScript = (
+				"# Type a script or drag a script file from your workspace to insert its path.",
+				"build-util/update-blocklist.sh",
+				"",
+			);
 		};
 		A06F5F4A275692870023622E /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
 			name = BartyCrouch;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -f /opt/homebrew/bin/bartycrouch ]; then\n    /opt/homebrew/bin/bartycrouch update -x\n    /opt/homebrew/bin/bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed. Download it form https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+			shellScript = (
+				"if [ -f /opt/homebrew/bin/bartycrouch ]; then",
+				"    /opt/homebrew/bin/bartycrouch update -x",
+				"    /opt/homebrew/bin/bartycrouch lint -x",
+				"else",
+				"    echo \"warning: BartyCrouch not installed. Download it form https://github.com/Flinesoft/BartyCrouch\"",
+				"fi",
+				"",
+			);
 		};
 		C8C76E728A4BA9CC9C2E5513 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AnyoneBrowser Tests-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = (
+				"diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null",
+				"if [ $? != 0 ] ; then",
+				"    # print error to STDERR",
+				"    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2",
+				"    exit 1",
+				"fi",
+				"# This output is used by Xcode 'outputs' to avoid re-running this script phase.",
+				"echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"",
+				"",
+			);
 			showEnvVarsInLog = 0;
 		};
 		D95B93887130336183D59208 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
@@ -1045,9 +1017,11 @@
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks.sh\"\n";
+			shellScript = (
+				"\"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks.sh\"",
+				"",
+			);
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1055,7 +1029,6 @@
 /* Begin PBXSourcesBuildPhase section */
 		01801E8E1A32CA2A002B4718 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				A0BF526623AFC3580096624A /* BookmarksViewController.swift in Sources */,
 				A0BF527923AFC3580096624A /* Bundle+Helpers.swift in Sources */,
@@ -1136,11 +1109,9 @@
 				A0BF525723AFC3580096624A /* SecurityPopUpViewController.swift in Sources */,
 				A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		018333D31A35727C00670CD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */,
 				A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */,
@@ -1151,7 +1122,6 @@
 				A0FDC6102D4BAFA4006F1EA2 /* URLBlocker_Tests.m in Sources */,
 				01F2AE421B827BC200D5651A /* TlsLCertificate_Tests.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -1339,7 +1309,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		01801EB61A32CA2A002B4718 /* Debug */ = {
+		01801EB61A32CA2A002B4718 /* Debug configuration for PBXProject "AnyoneBrowser" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A025F27421F62C100034B947 /* Config.xcconfig */;
 			buildSettings = {
@@ -1397,7 +1367,7 @@
 			};
 			name = Debug;
 		};
-		01801EB71A32CA2A002B4718 /* Release */ = {
+		01801EB71A32CA2A002B4718 /* Release configuration for PBXProject "AnyoneBrowser" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A025F27421F62C100034B947 /* Config.xcconfig */;
 			buildSettings = {
@@ -1450,7 +1420,7 @@
 			};
 			name = Release;
 		};
-		01801EB91A32CA2A002B4718 /* Debug */ = {
+		01801EB91A32CA2A002B4718 /* Debug configuration for PBXNativeTarget "AnyoneBrowser" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4385FC60FF67F3E28BB37B73 /* Pods-AnyoneBrowser.debug.xcconfig */;
 			buildSettings = {
@@ -1477,7 +1447,7 @@
 			};
 			name = Debug;
 		};
-		01801EBA1A32CA2A002B4718 /* Release */ = {
+		01801EBA1A32CA2A002B4718 /* Release configuration for PBXNativeTarget "AnyoneBrowser" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D55AD9E1DC35120872696F6 /* Pods-AnyoneBrowser.release.xcconfig */;
 			buildSettings = {
@@ -1502,7 +1472,7 @@
 			};
 			name = Release;
 		};
-		018333E01A35727C00670CD1 /* Debug */ = {
+		018333E01A35727C00670CD1 /* Debug configuration for PBXNativeTarget "AnyoneBrowser Tests" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E171B1A11D583512AF52F41D /* Pods-AnyoneBrowser Tests.debug.xcconfig */;
 			buildSettings = {
@@ -1542,7 +1512,7 @@
 			};
 			name = Debug;
 		};
-		018333E11A35727C00670CD1 /* Release */ = {
+		018333E11A35727C00670CD1 /* Release configuration for PBXNativeTarget "AnyoneBrowser Tests" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0B9A2D9BB388E64788975B8 /* Pods-AnyoneBrowser Tests.release.xcconfig */;
 			buildSettings = {
@@ -1584,28 +1554,25 @@
 		01801E8D1A32CA2A002B4718 /* Build configuration list for PBXProject "AnyoneBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01801EB61A32CA2A002B4718 /* Debug */,
-				01801EB71A32CA2A002B4718 /* Release */,
+				01801EB61A32CA2A002B4718 /* Debug configuration for PBXProject "AnyoneBrowser" */,
+				01801EB71A32CA2A002B4718 /* Release configuration for PBXProject "AnyoneBrowser" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		01801EB81A32CA2A002B4718 /* Build configuration list for PBXNativeTarget "AnyoneBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01801EB91A32CA2A002B4718 /* Debug */,
-				01801EBA1A32CA2A002B4718 /* Release */,
+				01801EB91A32CA2A002B4718 /* Debug configuration for PBXNativeTarget "AnyoneBrowser" */,
+				01801EBA1A32CA2A002B4718 /* Release configuration for PBXNativeTarget "AnyoneBrowser" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		018333DF1A35727C00670CD1 /* Build configuration list for PBXNativeTarget "AnyoneBrowser Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				018333E01A35727C00670CD1 /* Debug */,
-				018333E11A35727C00670CD1 /* Release */,
+				018333E01A35727C00670CD1 /* Debug configuration for PBXNativeTarget "AnyoneBrowser Tests" */,
+				018333E11A35727C00670CD1 /* Release configuration for PBXNativeTarget "AnyoneBrowser Tests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
