@@ -170,7 +170,7 @@ class NcBookmarks {
 								  with: Bundle.main.displayName)
 			.replacingOccurrences(of: "{{ Learn more about Anyone Browser }}",
 								  with: String(format: NSLocalizedString("Learn more about %@", comment: ""), Bundle.main.displayName))
-			.replacingOccurrences(of: "{{ security-levels-url }}", with: "anonabout:security-levels")
+			.replacingOccurrences(of: "{{ security-levels-url }}", with: "anyoneabout:security-levels")
 
 		try? template.write(to: URL.start, atomically: true, encoding: .utf8)
 

@@ -14,7 +14,7 @@ public class AboutSchemaHandler: NSObject, WKURLSchemeHandler {
 	public class func register(_ conf: WKWebViewConfiguration) {
 		let handler = AboutSchemaHandler()
 
-		conf.setURLSchemeHandler(handler, forURLScheme: "anonabout")
+		conf.setURLSchemeHandler(handler, forURLScheme: "anyoneabout")
 	}
 
 

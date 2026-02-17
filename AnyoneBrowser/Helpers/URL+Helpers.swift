@@ -24,19 +24,19 @@ extension URL {
 
 	var withFixedScheme: URL? {
 		switch scheme?.lowercased() {
-		case "anonhttp":
+		case "anyonehttp":
 			var urlc = URLComponents(url: self, resolvingAgainstBaseURL: true)
 			urlc?.scheme = "http"
 
 			return urlc?.url
 
-		case "anonhttps":
+		case "anyonehttps":
 			var urlc = URLComponents(url: self, resolvingAgainstBaseURL: true)
 			urlc?.scheme = "https"
 
 			return urlc?.url
 
-		case "anonabout":
+		case "anyoneabout":
 			var urlc = URLComponents(url: self, resolvingAgainstBaseURL: true)
 			urlc?.scheme = "about"
 
@@ -72,7 +72,7 @@ extension URL {
 			return nil
 
 		default:
-			if self.scheme == "anonabout" {
+			if self.scheme == "anyoneabout" {
 				return self.withFixedScheme
 			}
 
@@ -82,7 +82,7 @@ extension URL {
 
 	var isSpecial: Bool {
 		switch scheme?.lowercased() {
-		case "http", "https", "anonhttp", "anonhttps":
+		case "http", "https", "anyonehttp", "anyonehttps":
 			break
 
 		default:
@@ -109,11 +109,11 @@ extension URL {
 	}
 
 	var isHttp: Bool {
-		["http", "anonhttp"].contains(scheme?.lowercased())
+		["http", "anyonehttp"].contains(scheme?.lowercased())
 	}
 
 	var isHttps: Bool {
-		["https", "anonhttps"].contains(scheme?.lowercased())
+		["https", "anyonehttps"].contains(scheme?.lowercased())
 	}
 
 	var isAnon: Bool {
