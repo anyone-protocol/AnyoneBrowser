@@ -306,7 +306,7 @@ class Tab: UIView {
 			self.webView?.stopLoading()
 		}
 
-		reset()
+		reset(request?.url)
 
 		var request = request ?? URLRequest(url: URL.start)
 
@@ -351,8 +351,13 @@ class Tab: UIView {
 	}
 
 	func reset(_ url: URL? = nil) {
-		applicableUrlBlockerRules.removeAll()
-		tlsCertificate = nil
+		// Only delete this, when scheme or host is differently,
+		// to not loose certificate information and blocker rules again.
+		if self.url.scheme != url?.scheme || self.url.host != url?.host {
+			applicableUrlBlockerRules.removeAll()
+			tlsCertificate = nil
+		}
+
 		self.url = url ?? URL.start
 	}
 
