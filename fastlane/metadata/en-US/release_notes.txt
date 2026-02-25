@@ -1,5 +1,1 @@
-- Added bookmarks folder support.
-- Added bookmarks import/export with Firefox-compatible HTML file.
-- Updated translations.
-- Fixed bug where certificate info sometimes wouldn't show.
-- Added scheme handler for "anyonehttp" and "anyonehttps", so foreign apps can hand over URL to Anyone Browser.
+- Fixed bug where `anyonehttp`/`anyonehttps` links wouldn't open right after app start.

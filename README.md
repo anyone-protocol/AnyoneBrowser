@@ -11,7 +11,7 @@ Please see the [LICENSE][license] file for usage and redistribution terms.
 
 ---
 
-* **Anyone Browser**: 1.1.0 - See [official release history][releases] and [changelog][changelog].
+* **Anyone Browser**: 1.1.1 - See [official release history][releases] and [changelog][changelog].
 
 [official]: https://www.anyone.io
 [help]: https://github.com/anyone-protocol/AnyoneBrowser/issues

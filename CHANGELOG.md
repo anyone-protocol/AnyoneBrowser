@@ -1,5 +1,9 @@
 #  Anyone Browser Changelog
 
+## 1.1.1
+
+- Fixed bug where `anyonehttp`/`anyonehttps` links wouldn't open right after app start. 
+
 ## 1.1.0
 
 - Added bookmarks folder support.
