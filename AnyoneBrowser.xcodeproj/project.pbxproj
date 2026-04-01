@@ -808,7 +808,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 2620;
+				LastUpgradeCheck = 2640;
 				ORGANIZATIONNAME = Anyone;
 				TargetAttributes = {
 					01801E911A32CA2A002B4718 = {
