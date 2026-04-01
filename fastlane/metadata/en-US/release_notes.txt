@@ -1,1 +1,1 @@
-- Fixed bug where `anyonehttp`/`anyonehttps` links wouldn't open right after app start.
+- Updated anon to version 0.4.9.13.
