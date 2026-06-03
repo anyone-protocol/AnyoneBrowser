@@ -448,11 +448,15 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A078517C2DE7344A00BA3747 /* fastlane */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = fastlane;
 			sourceTree = "<group>";
 		};
 		A0BB301F2DD87B8D009AFFEB /* .tx */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = .tx;
 			sourceTree = "<group>";
 		};
@@ -808,7 +812,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 2640;
+				LastUpgradeCheck = 2650;
 				ORGANIZATIONNAME = Anyone;
 				TargetAttributes = {
 					01801E911A32CA2A002B4718 = {
@@ -964,13 +968,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser/Pods-AnyoneBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1046,13 +1046,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnyoneBrowser Tests/Pods-AnyoneBrowser Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
