@@ -19,7 +19,7 @@ target 'AnyoneBrowser' do
   pod 'SwiftSoup', '~> 2.7'
 
   pod 'AnyoneKit',
-    '~> 409'
+    '~> 410'
 #    :path => '../AnyoneKit'
 end
 
