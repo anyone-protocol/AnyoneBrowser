@@ -76,7 +76,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 	private var nodes = [Node]()
 	private var usedCircuits = [AnonCircuit]()
 
-	private static let onionAddressRegex = try? NSRegularExpression(pattern: "^(.*\\.)?(.*?)\\.(anon|exit)$", options: .caseInsensitive)
+	private static let anyoneAddressRegex = try? NSRegularExpression(pattern: "^(.*\\.)?(.*?)\\.(anyone|exit)$", options: .caseInsensitive)
 
 	private static let beginningOfTime = Date(timeIntervalSince1970: 0)
 
@@ -171,7 +171,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 				if let host = host {
 					var query: String?
 
-					let matches = Self.onionAddressRegex?.matches(
+					let matches = Self.anyoneAddressRegex?.matches(
 						in: host, options: [],
 						range: NSRange(host.startIndex ..< host.endIndex, in: host))
 
@@ -185,7 +185,7 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 						}
 					}
 
-					// Circuits used for .anon addresses can be identified by their
+					// Circuits used for .anyone addresses can be identified by their
 					// rendQuery, which is equal to the "domain".
 					if let query = query {
 						candidates = candidates.filter { circuit in

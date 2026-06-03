@@ -40,7 +40,7 @@ public extension FileManager {
 			return nil
 		}
 
-		// Create anon v3 auth directory if it does not yet exist.
+		// Create anyone v3 auth directory if it does not yet exist.
 		try? createSecureDirIfNotExists(at: url)
 
 		return url

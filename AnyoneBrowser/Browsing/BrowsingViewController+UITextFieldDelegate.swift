@@ -243,7 +243,7 @@ extension BrowsingViewController: UITextFieldDelegate {
 	}
 
 	/**
-	 Will try to create a URL from the given text. If the resulting URL has a `.anon`  host,
+	 Will try to create a URL from the given text. If the resulting URL has a `.anyone`  host,
 	 it will use the `http` scheme, otherwise, it will use the `https`  scheme.
 
 	 Anon-servers often don't use an additional TLS encryption for their traffic, as Anyone already adds
@@ -259,7 +259,7 @@ extension BrowsingViewController: UITextFieldDelegate {
 	private func setHttpsScheme(_ search: String) -> URL? {
 		let url = URL(string: "https://\(search)")
 
-		if url?.isAnon ?? false {
+		if url?.isAnyone ?? false {
 			return URL(string: "http://\(search)")
 		}
 

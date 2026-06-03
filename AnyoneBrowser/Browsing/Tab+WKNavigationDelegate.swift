@@ -33,7 +33,7 @@ extension Tab: WKNavigationDelegate {
 
 		let hs = HostSettings.for(url.host)
 
-		if hs.blockInsecureHttp && url.isHttp && !url.isAnon {
+		if hs.blockInsecureHttp && url.isHttp && !url.isAnyone {
 			return decisionHandler(.cancel, preferences)
 		}
 
@@ -105,20 +105,20 @@ extension Tab: WKNavigationDelegate {
 		let url = webView.url
 
 		// Redirect to provided Anon-Location, if any available, and
-		// - was not already served over an anon site,
+		// - was not already served over an anyone site,
 		// - was served over HTTPS,
 		// - isn't switched off by the user,
-		// - is a valid URL with http: or https: protocol and a .anon hostname,
+		// - is a valid URL with http: or https: protocol and a .anyone hostname,
 		//
 		// https://community.torproject.org/onion-services/advanced/onion-location/
-		if !(url?.isAnon ?? false)
+		if !(url?.isAnyone ?? false)
 			&& (url?.isHttps ?? false)
 			&& HostSettings.for(url?.host).followAnonLocationHeader,
 		   let headers = (navigationResponse.response as? HTTPURLResponse)?.allHeaderFields,
 		   let olHeader = headers.first(where: { ($0.key as? String)?.lowercased() == "anon-location" })?.value as? String,
 		   let anonLocation = URL(string: olHeader),
 		   (anonLocation.isHttp || anonLocation.isHttps)
-			&& anonLocation.isAnon
+			&& anonLocation.isAnyone
 		{
 			Log.debug(for: Self.self, "Redirect to Anon-Location=\(anonLocation.absoluteString)")
 
@@ -406,7 +406,7 @@ extension Tab: WKNavigationDelegate {
 		// Allow the user to enter an authentication key in that case.
 		if error.domain == NSURLErrorDomain
 			&& (error.code == NSURLErrorNetworkConnectionLost /* iOS 14/15 */ || error.code == NSURLErrorNotConnectedToInternet /* iOS 13 */),
-		   failedUrl.isAnon
+		   failedUrl.isAnyone
 		{
 			msg += "\n\n"
 			msg += String(format: NSLocalizedString(

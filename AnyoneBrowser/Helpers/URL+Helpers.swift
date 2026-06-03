@@ -116,8 +116,8 @@ extension URL {
 		["https", "anyonehttps"].contains(scheme?.lowercased())
 	}
 
-	var isAnon: Bool {
-		host?.lowercased().hasSuffix(".anon") ?? false
+	var isAnyone: Bool {
+		host?.lowercased().hasSuffix(".anyone") ?? false
 	}
 
 	var exists: Bool {

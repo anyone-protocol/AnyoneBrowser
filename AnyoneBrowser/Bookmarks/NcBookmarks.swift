@@ -76,7 +76,7 @@ class NcBookmarks {
 		var defaults = [NcBookmark]()
 
 		defaults.append(.init(url: "https://anyone.io/", title: "Anyone"))
-		defaults.append(.init(url: "http://anyone.anon/", title: "Anyone Foundation"))
+		defaults.append(.init(url: "http://anyone.anyone/", title: "Anyone Foundation"))
 		defaults.append(.init(url: "https://docs.anyone.io/", title: "Anyone Docs"))
 
 		return defaults
