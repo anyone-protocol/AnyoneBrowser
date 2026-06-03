@@ -1,5 +1,10 @@
 #  Anyone Browser Changelog
 
+## 1.2.0
+
+- Updated anon to version 0.4.10.2.
+- Hard system-wide change: Anyone services now use the TLD `.anyone` instead of `.anon`.
+
 ## 1.1.2
 
 - Updated anon to version 0.4.9.13.
